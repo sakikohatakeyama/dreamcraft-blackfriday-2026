@@ -29,9 +29,9 @@ img{max-width:100%;height:auto;display:block}
 .jost{font-family:Jost,Futura,sans-serif}
 .nobr{display:inline-block;white-space:nowrap}
 .sp-br{display:none}
-@media(max-width:760px){.pc-br{display:none}.sp-br{display:inline}}
+@media all{.pc-br{display:none}.sp-br{display:inline}}
 .wrap{max-width:var(--cw);margin:0 auto;padding:0 40px}
-@media(max-width:760px){.wrap{padding:0 18px}}
+@media all{.wrap{padding:0 18px}}
 
 /* ---------- header ---------- */
 header{background:var(--black);border-bottom:1px solid #d8b25a40}
@@ -40,7 +40,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;heigh
 .brand b{display:block;font-family:Jost,Futura,sans-serif;font-weight:500;font-size:21px;letter-spacing:.16em;color:var(--gold-l)}
 .brand small{display:block;font-size:10.5px;letter-spacing:.16em;color:var(--sub)}
 .hd-tag{font-family:Jost,sans-serif;font-weight:700;font-size:12px;letter-spacing:.2em;color:var(--pink);border:1px solid var(--pink);padding:3px 12px}
-@media(max-width:760px){header .wrap{height:56px}.brand b{font-size:17px}.brand small{font-size:9.5px;letter-spacing:.08em}.hd-tag{font-size:10px;padding:2px 8px;letter-spacing:.12em}}
+@media all{header .wrap{height:56px}.brand b{font-size:17px}.brand small{font-size:9.5px;letter-spacing:.08em}.hd-tag{font-size:10px;padding:2px 8px;letter-spacing:.12em}}
 
 /* ---------- FV：電球のマーキー看板 ---------- */
 .fv{position:relative;padding:56px 0 64px;overflow:hidden;
@@ -102,7 +102,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;heigh
 .fv-deal .go{display:inline-block;margin-top:10px;font-size:14px;font-weight:700;color:var(--sub)}
 .fv-deal .go::after{content:"";display:inline-block;width:7px;height:7px;margin-left:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg)}
 
-@media(max-width:760px){
+@media all{
   .fv{padding:28px 0 40px}
   .sign{padding:14px;margin:0 12px}
   .sign::before,.sign::after{padding:9px;background-size:18px 18px}
@@ -111,7 +111,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;heigh
   .sign::after{background-image:radial-gradient(circle,var(--pink) 0 2.5px,#ff3d8b77 3.5px,transparent 5px)}
   .sign-in{padding:26px 18px 24px}
   .fv-kicker{font-size:12px;gap:10px;letter-spacing:.1em}
-  .fv-title .en{font-size:clamp(50px,15.5vw,80px)}
+  .fv-title .en{font-size:clamp(50px,15.5cqw,80px)}
   .fv-title .ja{font-size:15px;margin-top:12px;letter-spacing:.24em}
   .fv-catch{font-size:21px;margin-top:18px}
   .fv-term{flex-direction:column;margin-top:20px}
@@ -139,7 +139,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;heigh
   linear-gradient(135deg,var(--gold) 25%,transparent 25.5%) 36px 0/72px 30px repeat-x,
   linear-gradient(225deg,var(--gold) 25%,transparent 25.5%) 36px 0/72px 30px repeat-x}
 .flags::after{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:var(--gold-d)}
-@media(max-width:760px){.flags{height:22px;background-size:26px 22px,26px 22px}.flags::before{background-size:52px 22px,52px 22px;background-position:26px 0,26px 0}}
+@media all{.flags{height:22px;background-size:26px 22px,26px 22px}.flags::before{background-size:52px 22px,52px 22px;background-position:26px 0,26px 0}}
 
 /* ---------- 流れる告知帯 ---------- */
 .ticker{overflow:hidden;background:var(--gold);color:var(--black);border-top:2px solid var(--gold-l);border-bottom:2px solid var(--gold-d)}
@@ -149,7 +149,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;heigh
 .ticker .num{font-size:24px;margin:0 2px}
 @keyframes tick{to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.ticker-in{animation:none}}
-@media(max-width:760px){.ticker span{font-size:14px;padding:8px 16px 8px 0}.ticker span::after{margin-left:16px}.ticker .num{font-size:19px}}
+@media all{.ticker span{font-size:14px;padding:8px 16px 8px 0}.ticker span::after{margin-left:16px}.ticker .num{font-size:19px}}
 
 
 /* FV：BLACK FRIDAY と日付だけ */
@@ -164,9 +164,9 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;heigh
 .fv-date .tm{font-size:30px;color:var(--white)}
 .fv-date .to{width:36px;height:2px;background:var(--pink);position:relative;flex:none}
 .fv-date .to::after{content:"";position:absolute;right:0;top:-6px;width:12px;height:12px;border-top:2px solid var(--pink);border-right:2px solid var(--pink);transform:rotate(45deg)}
-@media(max-width:760px){
+@media all{
   .fv-simple{padding:40px 14px 34px}
-  .fv-simple .fv-title .en{font-size:clamp(60px,21vw,96px)}
+  .fv-simple .fv-title .en{font-size:clamp(60px,21cqw,96px)}
   .fv-date{flex-direction:column;gap:12px;margin-top:28px;padding-top:24px}
   .fv-date .dt{gap:8px}
   .fv-date .dt>.num{font-size:48px}
@@ -176,6 +176,59 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;heigh
   .fv-date .to::after{right:-6px;top:auto;bottom:0;transform:rotate(135deg)}
 }
 
+
+/* ---------- PCもスマホと同じ1カラム＋両サイド固定 ---------- */
+.col{position:relative;z-index:1;width:100%;max-width:430px;margin:0 auto;background:var(--black);container-type:inline-size;box-shadow:0 0 0 1px #d8b25a33,0 0 60px #000}
+.side{display:none}
+@media(min-width:1000px){
+  body{background:
+    radial-gradient(ellipse 40% 50% at 12% 20%,#ff3d8b22,transparent 70%),
+    radial-gradient(ellipse 40% 50% at 88% 80%,#d8b25a1c,transparent 70%),#070606;background-attachment:fixed}
+  .side{display:flex;position:fixed;top:0;bottom:0;width:calc(50% - 215px);align-items:center;justify-content:center;padding:30px 24px;z-index:2}
+  .side-l{left:0}.side-r{right:0}
+  .side-in{width:100%;max-width:300px}
+  .col .cd{display:none}
+}
+.side .brand b{font-size:22px}
+.side-ttl{margin-top:30px;line-height:.9}
+.side-ttl .en{display:block;font-size:64px;letter-spacing:.02em}
+.side-ttl .l1{color:var(--white)}
+.side-ttl .l2{color:var(--pink);text-shadow:0 0 18px #ff3d8b88}
+.side-date{margin-top:14px;font-size:15px;font-weight:700;color:var(--sub);line-height:1.6}
+.side-date .num{font-size:24px;color:var(--gold-l)}
+.side-nav{margin-top:28px;border-top:1px solid #ffffff26}
+.side-nav a{display:flex;align-items:center;gap:14px;padding:14px 4px;border-bottom:1px solid #ffffff26;text-decoration:none;font-weight:700;font-size:16px;transition:color .2s,padding .2s}
+.side-nav a:hover{color:var(--pink);padding-left:10px}
+.side-nav .n{font-family:Jost,Futura,sans-serif;font-size:14px;color:var(--gold)}
+.side-shop{display:inline-block;margin-top:22px;font-size:14px;font-weight:700;color:var(--gold-l);text-decoration:none;border-bottom:1px solid currentColor}
+.side-cd{background:var(--pink);color:var(--black);padding:20px 18px 18px;text-align:center}
+.side-cd .lbl{font-size:16px;font-weight:900;letter-spacing:.08em}
+.side-cd .t{display:flex;justify-content:center;align-items:baseline;gap:2px;margin-top:4px;font-weight:700}
+.side-cd .t .num{font-size:42px;line-height:1}
+.side-cd .t small{font-size:12px;margin-right:4px}
+.side-cd.ended{background:var(--char);color:var(--sub)}
+.side-today{margin-top:18px;border:2px solid var(--gold);padding:18px 18px 14px}
+.st-h{font-size:22px;font-weight:900;color:var(--gold-l)}
+.st-day{margin-top:2px;font-size:14px;font-weight:700;color:var(--sub)}
+.side-today ul{list-style:none;margin:10px 0 0;padding:0}
+.side-today li{padding:9px 0;border-top:1px solid #ffffff1f;font-size:14px;font-weight:700;line-height:1.5}
+.side-today li b{display:block;font-size:19px;color:var(--white)}
+.side-today li.plus{color:var(--pink-l)}
+.side-today li.plus b{color:var(--pink)}
+.side-btn{display:flex;align-items:center;justify-content:center;margin-top:12px;min-height:54px;text-decoration:none;font-weight:900;font-size:16px}
+.side-btn.gold{background:linear-gradient(180deg,#f6e2a6,#d8b25a 55%,#b38b38);color:var(--black);margin-top:18px}
+.side-btn.pink{background:var(--pink);color:var(--white)}
+.side-btn:hover{filter:brightness(1.08)}
+
+/* ---------- 流れる飾り英字 ---------- */
+.deco{overflow:hidden;padding:18px 0 6px;background:var(--black)}
+.deco-in{display:flex;width:max-content;animation:deco 26s linear infinite}
+.deco span{font-family:Jost,Futura,sans-serif;font-weight:700;font-size:72px;line-height:1;white-space:nowrap;padding-right:40px;color:#d8b25a8c;letter-spacing:.02em}
+.deco span:nth-child(3n+2){color:#ff3d8bb3}
+.deco.rev .deco-in{animation-direction:reverse}
+@keyframes deco{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.deco-in{animation:none}}
+
 /* ---------- カウントダウン ---------- */
 .cd{background:var(--pink);color:var(--black)}
 .cd .wrap{display:flex;align-items:center;justify-content:center;gap:28px;padding-top:16px;padding-bottom:16px}
@@ -183,7 +236,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;heigh
 .cd .t{display:flex;align-items:baseline;gap:4px;font-weight:700;font-size:18px}
 .cd .t .num{font-size:52px;line-height:1;min-width:1.15em;text-align:right}
 .cd.ended{background:var(--char);color:var(--sub)}
-@media(max-width:760px){
+@media all{
   .cd .wrap{flex-direction:column;gap:2px;padding-top:12px;padding-bottom:12px}
   .cd .lbl{font-size:15px}
   .cd .t{font-size:14px}
@@ -194,7 +247,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;heigh
 section{padding:110px 0}
 .sec-no{display:flex;align-items:center;gap:14px;font-family:Jost,sans-serif;font-weight:700;font-size:14px;letter-spacing:.24em}
 .sec-no::before{content:"";width:40px;height:2px;background:currentColor}
-@media(max-width:760px){section{padding:72px 0}.sec-no{font-size:12px}}
+@media all{section{padding:72px 0}.sec-no{font-size:12px}}
 
 /* ---------- 01 店内全品5倍 ---------- */
 .p5{background:linear-gradient(180deg,var(--black) 0,#16120a 100%);border-top:1px solid #d8b25a33}
@@ -210,7 +263,7 @@ section{padding:110px 0}
 .entry-btn:hover{transform:translate(3px,3px);box-shadow:3px 3px 0 var(--pink)}
 .entry-btn::after{content:"";width:10px;height:10px;border-top:3px solid currentColor;border-right:3px solid currentColor;transform:rotate(45deg)}
 .p5-note{margin-top:16px;font-size:13px;color:var(--sub)}
-@media(max-width:760px){
+@media all{
   .p5-grid{grid-template-columns:1fr;gap:10px;margin-top:18px}
   .big5{text-align:center}
   .big5 .num{font-size:200px}
@@ -229,7 +282,7 @@ section{padding:110px 0}
 .fv-cp .p .num{font-size:60px;color:var(--gold-l);margin:0 4px}
 .fv-cp .go{margin-left:auto;font-size:14px;font-weight:700}
 .fv-cp .go::after{content:"";display:inline-block;width:7px;height:7px;margin-left:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-2px) rotate(45deg)}
-@media(max-width:760px){.fv-cp{flex-wrap:wrap;gap:4px 14px;padding:12px 16px 14px}.fv-cp .t{font-size:13px}.fv-cp .p{font-size:18px}.fv-cp .p .num{font-size:50px}.fv-cp .go{margin-left:0;width:100%;font-size:13px}}
+@media all{.fv-cp{flex-wrap:wrap;gap:4px 14px;padding:12px 16px 14px}.fv-cp .t{font-size:13px}.fv-cp .p{font-size:18px}.fv-cp .p .num{font-size:50px}.fv-cp .go{margin-left:0;width:100%;font-size:13px}}
 
 /* ---------- 02 クーポン（チケット） ---------- */
 .cp{background:var(--pink);color:var(--black);position:relative}
@@ -254,8 +307,8 @@ section{padding:110px 0}
 .tk-btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:58px;text-decoration:none;font-size:17px;font-weight:900;color:var(--black);background:linear-gradient(180deg,#f6e2a6,#d8b25a 55%,#b38b38);transition:filter .2s}
 .tk-btn:hover{filter:brightness(1.08)}
 .cp-note{margin-top:26px;font-size:13px;font-weight:700;color:#3a0a1d}
-@media(max-width:760px){
-  .cp h2{font-size:clamp(20px,6.4vw,27px);margin-top:16px}
+@media all{
+  .cp h2{font-size:clamp(20px,6.4cqw,27px);margin-top:16px}
   .cp-lead{font-size:15px}
   .tickets{margin-top:28px;gap:16px}
   .ticket{grid-template-columns:1fr;
@@ -295,7 +348,7 @@ section{padding:110px 0}
 .days li.on .m{color:var(--black);background:var(--gold-l);padding:4px 8px}
 .entry-btn.pink{color:var(--white);background:linear-gradient(180deg,#ff6aa6,#ff3d8b 55%,#d81f6c);box-shadow:6px 6px 0 var(--gold)}
 .entry-btn.pink:hover{box-shadow:3px 3px 0 var(--gold)}
-@media(max-width:760px){
+@media all{
   .d05-head{flex-direction:column;align-items:flex-start;gap:14px;margin-top:18px}
   .d05-head h2{font-size:28px}
   .d05-pt{text-align:left}
@@ -352,7 +405,7 @@ section{padding:110px 0}
 .ph-deals .pt .v .num{margin:0 4px}
 .sch-btns{display:flex;flex-wrap:wrap;gap:20px 28px;margin-top:36px}
 .sch-btns .entry-btn{margin-top:0;flex:1;max-width:none;font-size:20px}
-@media(max-width:760px){
+@media all{
   .sch-h{font-size:38px;margin-top:16px}
   .sch-lead{font-size:14.5px}
   .days{margin-top:36px}
@@ -410,7 +463,7 @@ section{padding:110px 0}
 .item .buy:hover{background:var(--pink-d)}
 .item .buy::after{content:"";width:8px;height:8px;border-top:2.5px solid currentColor;border-right:2.5px solid currentColor;transform:rotate(45deg)}
 .p20-note{position:relative;margin-top:28px;font-size:13px;color:var(--sub);line-height:1.8}
-@media(max-width:760px){
+@media all{
   .p20::before{width:300px;height:300px;right:-100px;top:-60px}
   .p20-head{flex-direction:column-reverse;align-items:flex-start;gap:6px;margin-top:18px}
   .p20-head h2{font-size:28px}
@@ -441,7 +494,7 @@ section{padding:110px 0}
 .shop-link{display:inline-flex;align-items:center;gap:12px;margin-top:56px;padding:18px 34px;border:2px solid var(--gold);color:var(--gold-l);text-decoration:none;font-weight:700;font-size:17px;transition:background .2s,color .2s}
 .shop-link:hover{background:var(--gold);color:var(--black)}
 .shop-link::after{content:"";width:8px;height:8px;border-top:2px solid currentColor;border-right:2px solid currentColor;transform:rotate(45deg)}
-@media(max-width:760px){
+@media all{
   .sum h2{font-size:26px;margin-top:16px}
   .sum-list{margin-top:26px}
   .sum-list li{grid-template-columns:1fr;gap:4px;padding:18px 0}
@@ -457,6 +510,41 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
 </style>
 </head>
 <body>
+<aside class="side side-l" aria-label="メニュー">
+  <div class="side-in">
+    <a class="brand" href="https://www.rakuten.co.jp/d-craft/" target="_blank" rel="noopener"><b>DREAM CRAFT</b><small>ドリームクラフト＆ビッグボス 楽天市場店</small></a>
+    <p class="side-ttl"><span class="en l1">BLACK</span><span class="en l2">FRIDAY</span></p>
+    <p class="side-date"><span class="num">11.19</span>（木）20:00 〜<br><span class="num">11.25</span>（水）1:59</p>
+    <nav class="side-nav">
+      <a href="#p5"><span class="n">01</span>エントリーで全品5倍</a>
+      <a href="#schedule"><span class="n">02</span>今日はこれがお得！</a>
+      <a href="#coupon"><span class="n">03</span>先着クーポン</a>
+      <a href="#p20"><span class="n">04</span>お歳暮 24倍</a>
+      <a href="#sum"><span class="n">05</span>おさらい</a>
+    </nav>
+    <a class="side-shop" href="https://www.rakuten.co.jp/d-craft/" target="_blank" rel="noopener">ショップトップへ</a>
+  </div>
+</aside>
+<aside class="side side-r" aria-label="カウントダウンと今日のお得">
+  <div class="side-in">
+    <div class="side-cd cd-box">
+      <p class="lbl" data-cd-lbl>スタートまで</p>
+      <p class="t" data-cd-t><span class="num" data-cd="d">0</span><small>日</small><span class="num" data-cd="h">00</span><small>時間</small><span class="num" data-cd="m">00</span><small>分</small><span class="num" data-cd="s">00</span><small>秒</small></p>
+    </div>
+    <div class="side-today">
+      <p class="st-h">今日はこれがお得！</p>
+      <p class="st-day" id="st-day">11/19（木）20:00 スタート</p>
+      <ul id="st-list">
+        <li>エントリーで店内全品 <b>ポイント5倍</b></li>
+        <li>対象お歳暮ギフト <b>エントリーで24倍</b></li>
+        <li>先着クーポン <b>最大555円OFF</b></li>
+      </ul>
+    </div>
+    <a class="side-btn gold" href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener">5倍エントリーはこちら</a>
+    <a class="side-btn pink" href="#coupon">クーポンを見る</a>
+  </div>
+</aside>
+<div class="col">
 
 <header><div class="wrap">
   <a class="brand" href="https://www.rakuten.co.jp/d-craft/" target="_blank" rel="noopener" aria-label="ドリームクラフト＆ビッグボス 楽天市場店 トップページへ"><b>DREAM CRAFT</b><small>ドリームクラフト＆ビッグボス 楽天市場店</small></a>
@@ -484,12 +572,12 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
   </div>
 </div>
 
-<div class="ticker" aria-hidden="true"><div class="ticker-in"><span>BLACK FRIDAY</span><span>エントリーで店内全品ポイント<b class="num">5</b>倍</span><span>対象のお歳暮ギフト エントリーでポイント<b class="num">24</b>倍</span><span>先着クーポン 最大<b class="num">555</b>円OFF</span><span>20日・24日・25日は名入れ<b class="num">10</b>%OFFクーポン</span><span>20日・25日は0と5のつく日 POINT<b class="num">4</b>倍</span><span>11.19 THU 20:00 START</span><span>BLACK FRIDAY</span><span>エントリーで店内全品ポイント<b class="num">5</b>倍</span><span>対象のお歳暮ギフト エントリーでポイント<b class="num">24</b>倍</span><span>先着クーポン 最大<b class="num">555</b>円OFF</span><span>20日・24日・25日は名入れ<b class="num">10</b>%OFFクーポン</span><span>20日・25日は0と5のつく日 POINT<b class="num">4</b>倍</span><span>11.19 THU 20:00 START</span><span>BLACK FRIDAY</span><span>エントリーで店内全品ポイント<b class="num">5</b>倍</span><span>対象のお歳暮ギフト エントリーでポイント<b class="num">24</b>倍</span><span>先着クーポン 最大<b class="num">555</b>円OFF</span><span>20日・24日・25日は名入れ<b class="num">10</b>%OFFクーポン</span><span>20日・25日は0と5のつく日 POINT<b class="num">4</b>倍</span><span>11.19 THU 20:00 START</span><span>BLACK FRIDAY</span><span>エントリーで店内全品ポイント<b class="num">5</b>倍</span><span>対象のお歳暮ギフト エントリーでポイント<b class="num">24</b>倍</span><span>先着クーポン 最大<b class="num">555</b>円OFF</span><span>20日・24日・25日は名入れ<b class="num">10</b>%OFFクーポン</span><span>20日・25日は0と5のつく日 POINT<b class="num">4</b>倍</span><span>11.19 THU 20:00 START</span></div></div>
+<div class="deco" aria-hidden="true"><div class="deco-in"><span>BLACK FRIDAY</span><span>CHEERS!</span><span>DREAM CRAFT</span><span>BLACK FRIDAY</span><span>CHEERS!</span><span>DREAM CRAFT</span></div></div>
 <!-- カウントダウン -->
-<div class="cd" id="cd" aria-live="polite">
+<div class="cd cd-box" id="cd" aria-live="polite">
   <div class="wrap">
-    <p class="lbl" id="cd-lbl">スタートまで</p>
-    <p class="t" id="cd-t"><span class="num" id="cd-d">0</span>日<span class="num" id="cd-h">00</span>時間<span class="num" id="cd-m">00</span>分<span class="num" id="cd-s">00</span>秒</p>
+    <p class="lbl" data-cd-lbl>スタートまで</p>
+    <p class="t" data-cd-t><span class="num" data-cd="d">0</span>日<span class="num" data-cd="h">00</span>時間<span class="num" data-cd="m">00</span>分<span class="num" data-cd="s">00</span>秒</p>
   </div>
 </div>
 
@@ -651,10 +739,12 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
 </section>
 </main>
 
+<div class="deco rev" aria-hidden="true"><div class="deco-in"><span>THANK YOU</span><span>SEE YOU AGAIN</span><span>THANK YOU</span><span>SEE YOU AGAIN</span></div></div>
 <footer>
   <a class="brand" href="https://www.rakuten.co.jp/d-craft/" target="_blank" rel="noopener" aria-label="ドリームクラフト＆ビッグボス 楽天市場店 トップページへ"><b>DREAM CRAFT</b><small>ドリームクラフト＆ビッグボス 楽天市場店</small></a>
   <p>20歳未満の者の飲酒は法律で禁止されています。</p>
 </footer>
+</div>
 
 <script>
 (function(){
@@ -676,24 +766,28 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
     if(y!==2026||mo!==11)return;
     if(d===19&&h<20)return;
     if(d===25&&h>=2)return;
+    var W='日月火水木金土'.charAt(j.getUTCDay()),dayEl=document.getElementById('st-day'),list=document.getElementById('st-list');
+    if(dayEl)dayEl.textContent='11/'+d+'（'+W+'）'+(d===25?' 1:59まで':'');
+    var add=[];
+    if(d===20||d===24||d===25)add.push('名入れ商品 <b>10%OFFクーポン</b>');
+    if(d===20||d===25)add.push('0と5のつく日 <b>ポイント4倍</b>');
+    if(list&&add.length)list.innerHTML=add.map(function(x){return '<li class="plus">'+x+'</li>'}).join('')+list.innerHTML;
     var li=document.querySelector('.days li[data-day="'+d+'"]');if(li)li.classList.add('is-today');
     [].forEach.call(document.querySelectorAll('.phase'),function(p){if((','+p.dataset.days+',').indexOf(','+d+',')>-1)p.classList.add('is-today')});
   })();
-  // カウントダウン
+  // カウントダウン（中央と右サイドの両方）
   var START=new Date('2026-11-19T20:00:00+09:00').getTime(),
-      END=new Date('2026-11-25T02:00:00+09:00').getTime(),
-      cd=document.getElementById('cd'),lbl=document.getElementById('cd-lbl'),t=document.getElementById('cd-t');
+      END=new Date('2026-11-25T02:00:00+09:00').getTime();
   function pad(n){return n<10?'0'+n:''+n}
+  function all(q,f){[].forEach.call(document.querySelectorAll(q),f)}
   function tick(){
-    var now=Date.now(),target;
-    if(now<START){lbl.textContent='スタートまで';target=START}
-    else if(now<END){lbl.textContent='終了まで あと';target=END}
-    else{cd.classList.add('ended');lbl.textContent='ブラックフライデーは終了しました。ご利用ありがとうございました。';t.hidden=true;return}
-    var d=Math.max(0,target-now),s=Math.floor(d/1000);
-    document.getElementById('cd-d').textContent=Math.floor(s/86400);
-    document.getElementById('cd-h').textContent=pad(Math.floor(s%86400/3600));
-    document.getElementById('cd-m').textContent=pad(Math.floor(s%3600/60));
-    document.getElementById('cd-s').textContent=pad(s%60);
+    var now=Date.now(),target,l;
+    if(now<START){l='スタートまで';target=START}
+    else if(now<END){l='終了まで あと';target=END}
+    else{all('.cd-box',function(e){e.classList.add('ended')});all('[data-cd-lbl]',function(e){e.textContent='ブラックフライデーは終了しました'});all('[data-cd-t]',function(e){e.hidden=true});return}
+    all('[data-cd-lbl]',function(e){e.textContent=l});
+    var s=Math.floor(Math.max(0,target-now)/1000),v={d:Math.floor(s/86400),h:pad(Math.floor(s%86400/3600)),m:pad(Math.floor(s%3600/60)),s:pad(s%60)};
+    all('[data-cd]',function(e){e.textContent=v[e.getAttribute('data-cd')]});
     setTimeout(tick,1000);
   }
   tick();
