@@ -247,6 +247,45 @@ section{padding:110px 0}
   .tk-limit{flex:none;font-size:18px;padding:4px 12px}
 }
 
+
+/* ---------- 02 0と5のつく日 ---------- */
+.d05{background:var(--black2);border-top:1px solid #d8b25a33}
+.d05 .sec-no{color:var(--gold)}
+.d05-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-top:28px}
+.d05-head h2{font-size:44px;line-height:1.35;font-weight:900}
+.d05-head h2 em{font-style:normal;color:var(--pink)}
+.d05-pt{text-align:right;line-height:1.2}
+.d05-pt .s{display:block;font-size:17px;font-weight:700;color:var(--gold-l)}
+.d05-pt .b{display:block;font-family:Jost,Futura,sans-serif;font-weight:700;font-size:40px;color:var(--white)}
+.d05-pt .b .num{font-size:120px;color:var(--pink);margin:0 6px;line-height:1}
+.d05-pt .b{font-size:40px}
+.days{display:grid;grid-template-columns:repeat(7,1fr);margin:44px 0 0;padding:0;list-style:none;border-top:2px solid #ffffff30;border-bottom:2px solid #ffffff30}
+.days li{display:flex;flex-direction:column;align-items:center;padding:18px 4px 20px;border-left:1px solid #ffffff1f;color:#8a8278;min-height:170px}
+.days li:first-child{border-left:0}
+.days .d{font-size:52px;line-height:1.05}
+.days .w{font-size:14px;font-weight:700}
+.days .m{margin-top:10px;font-family:Jost,Futura,sans-serif;font-weight:700;font-size:13px;line-height:1.25;text-align:center;letter-spacing:.06em}
+.days li:first-child{color:var(--gold-l)}
+.days li.on{background:var(--pink);color:var(--white);position:relative}
+.days li.on .m{color:var(--black);background:var(--gold-l);padding:4px 8px}
+.entry-btn.pink{color:var(--white);background:linear-gradient(180deg,#ff6aa6,#ff3d8b 55%,#d81f6c);box-shadow:6px 6px 0 var(--gold)}
+.entry-btn.pink:hover{box-shadow:3px 3px 0 var(--gold)}
+@media(max-width:760px){
+  .d05-head{flex-direction:column;align-items:flex-start;gap:14px;margin-top:18px}
+  .d05-head h2{font-size:28px}
+  .d05-pt{text-align:left}
+  .d05-pt .s{font-size:14px}
+  .d05-pt .b{font-size:28px}
+  .d05-pt .b .num{font-size:90px}
+  .days{margin-top:28px}
+  .days li{padding:12px 0 12px;min-height:118px}
+  .days .d{font-size:26px}
+  .days .w{font-size:11px}
+  .days .m{font-size:9.5px;margin-top:6px;letter-spacing:0}
+  .days li.on .m{padding:3px 3px}
+  .entry-btn.pink{font-size:18px;box-shadow:5px 5px 0 var(--gold)}
+}
+
 /* ---------- 03 お歳暮20倍 ---------- */
 .p20{background:var(--black2);position:relative;overflow:hidden}
 .p20::before{content:"";position:absolute;right:-120px;top:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,#ff3d8b30,transparent 65%);pointer-events:none}
@@ -372,7 +411,7 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
   </div>
 </div>
 
-<div class="ticker" aria-hidden="true"><div class="ticker-in"><span>BLACK FRIDAY</span><span>エントリーで店内全品ポイント<b class="num">5</b>倍</span><span>対象のお歳暮ギフト ポイント<b class="num">20</b>倍</span><span>先着クーポン 最大<b class="num">555</b>円OFF</span><span>11.19 THU 20:00 START</span><span>BLACK FRIDAY</span><span>エントリーで店内全品ポイント<b class="num">5</b>倍</span><span>対象のお歳暮ギフト ポイント<b class="num">20</b>倍</span><span>先着クーポン 最大<b class="num">555</b>円OFF</span><span>11.19 THU 20:00 START</span><span>BLACK FRIDAY</span><span>エントリーで店内全品ポイント<b class="num">5</b>倍</span><span>対象のお歳暮ギフト ポイント<b class="num">20</b>倍</span><span>先着クーポン 最大<b class="num">555</b>円OFF</span><span>11.19 THU 20:00 START</span><span>BLACK FRIDAY</span><span>エントリーで店内全品ポイント<b class="num">5</b>倍</span><span>対象のお歳暮ギフト ポイント<b class="num">20</b>倍</span><span>先着クーポン 最大<b class="num">555</b>円OFF</span><span>11.19 THU 20:00 START</span></div></div>
+<div class="ticker" aria-hidden="true"><div class="ticker-in"><span>BLACK FRIDAY</span><span>エントリーで店内全品ポイント<b class="num">5</b>倍</span><span>対象のお歳暮ギフト ポイント<b class="num">20</b>倍</span><span>先着クーポン 最大<b class="num">555</b>円OFF</span><span>20日・25日は0と5のつく日 POINT<b class="num">4</b>倍</span><span>11.19 THU 20:00 START</span><span>BLACK FRIDAY</span><span>エントリーで店内全品ポイント<b class="num">5</b>倍</span><span>対象のお歳暮ギフト ポイント<b class="num">20</b>倍</span><span>先着クーポン 最大<b class="num">555</b>円OFF</span><span>20日・25日は0と5のつく日 POINT<b class="num">4</b>倍</span><span>11.19 THU 20:00 START</span><span>BLACK FRIDAY</span><span>エントリーで店内全品ポイント<b class="num">5</b>倍</span><span>対象のお歳暮ギフト ポイント<b class="num">20</b>倍</span><span>先着クーポン 最大<b class="num">555</b>円OFF</span><span>20日・25日は0と5のつく日 POINT<b class="num">4</b>倍</span><span>11.19 THU 20:00 START</span><span>BLACK FRIDAY</span><span>エントリーで店内全品ポイント<b class="num">5</b>倍</span><span>対象のお歳暮ギフト ポイント<b class="num">20</b>倍</span><span>先着クーポン 最大<b class="num">555</b>円OFF</span><span>20日・25日は0と5のつく日 POINT<b class="num">4</b>倍</span><span>11.19 THU 20:00 START</span></div></div>
 <!-- カウントダウン -->
 <div class="cd" id="cd" aria-live="polite">
   <div class="wrap">
@@ -397,10 +436,32 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
   </div>
 </section>
 
+<!-- 02 0・5のつく日 -->
+<section class="d05" id="day05">
+  <div class="wrap">
+    <p class="sec-no">02 ／ 0と5のつく日</p>
+    <div class="d05-head">
+      <h2>20日と25日は、<br><em>0と5のつく日。</em></h2>
+      <p class="d05-pt"><span class="s">エントリー＆楽天カードご利用で</span><span class="b">POINT<span class="num">4</span>倍</span></p>
+    </div>
+    <ol class="days" aria-label="ブラックフライデー期間の日付">
+      <li><span class="d num">19</span><span class="w">木</span><span class="m">20:00<br>START</span></li>
+      <li class="on"><span class="d num">20</span><span class="w">金</span><span class="m">POINT<br>4倍</span></li>
+      <li><span class="d num">21</span><span class="w">土</span></li>
+      <li><span class="d num">22</span><span class="w">日</span></li>
+      <li><span class="d num">23</span><span class="w">月</span></li>
+      <li><span class="d num">24</span><span class="w">火</span></li>
+      <li class="on"><span class="d num">25</span><span class="w">水</span><span class="m">POINT<br>4倍</span></li>
+    </ol>
+    <a class="entry-btn pink" href="https://event.rakuten.co.jp/card/pointday/" target="_blank" rel="noopener">0と5のつく日にエントリー</a>
+    <p class="p5-note">※エントリーは各開催日ごとに必要です。楽天カードでのお支払いが対象です。<br>※ブラックフライデーは11/25（水）1:59までです。25日は早めのお買い物がおすすめです。<br>※付与条件・上限などの詳細はキャンペーンページでご確認ください。</p>
+  </div>
+</section>
+
 <!-- 02 クーポン -->
 <section class="cp" id="coupon">
   <div class="wrap">
-    <p class="sec-no">02 ／ 先着クーポン</p>
+    <p class="sec-no">03 ／ 先着クーポン</p>
     <h2>なくなり次第終了。<br><em>先着</em>の<br class="sp-br"><span class="nobr">ブラックフライデークーポン。</span></h2>
     <p class="cp-lead">5倍のポイントに、さらに値引きを重ねて。<br class="pc-br">お歳暮やまとめ買いは、<span class="nobr">15,000円以上で</span><span class="nobr">555円OFF</span>がおトクです。</p>
     <div class="tickets">
@@ -434,7 +495,7 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
 <!-- 02 お歳暮20倍 -->
 <section class="p20" id="p20">
   <div class="wrap">
-    <p class="sec-no">03 ／ お歳暮ギフト</p>
+    <p class="sec-no">04 ／ お歳暮ギフト</p>
     <div class="p20-head">
       <div>
         <h2>贈るなら、いま。<br>対象のお歳暮ギフトが<br><em>ポイント20倍。</em></h2>
@@ -474,10 +535,11 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
 <!-- 03 まとめ -->
 <section class="sum" id="sum">
   <div class="wrap">
-    <p class="sec-no">04 ／ おさらい</p>
+    <p class="sec-no">05 ／ おさらい</p>
     <h2>この6日間で、<br class="sp-br">やることは3つだけ。</h2>
     <ul class="sum-list">
       <li><span class="k">1．エントリー</span><span class="v">店内全品 <span class="hl">ポイント5倍</span></span><a href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener">エントリーページへ</a></li>
+      <li><span class="k">＋ 20日・25日</span><span class="v">0と5のつく日 <span class="hp">ポイント4倍</span><small style="display:block;font-size:13px;color:var(--sub);font-weight:400">エントリー＆楽天カード利用</small></span><a class="pk" href="https://event.rakuten.co.jp/card/pointday/" target="_blank" rel="noopener">エントリーページへ</a></li>
       <li><span class="k">2．クーポン獲得</span><span class="v">先着 <span class="hl">最大555円OFF</span></span><a href="#coupon">クーポンを見る</a></li>
       <li><span class="k">3．お歳暮を選ぶ</span><span class="v">対象ギフト <span class="hp">ポイント20倍</span></span><a class="pk" href="#p20">対象ギフトを見る</a></li>
       <li><span class="k">期間</span><span class="v">11/19（木）20:00 〜 <span class="nobr">11/25（水）1:59</span></span><span></span></li>
