@@ -19,6 +19,7 @@
   --cw:1000px;
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--black);color:var(--white);font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;line-height:1.8;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 h1,h2,h3,p{margin:0}
@@ -523,9 +524,9 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
     <nav class="side-nav">
       <a href="#p5"><span class="n">01</span>エントリーで全品5倍</a>
       <a href="#schedule"><span class="n">02</span>今日はこれがお得！</a>
-      <a href="#coupon"><span class="n">03</span>先着クーポン</a>
-      <a href="#p20"><span class="n">04</span>お歳暮 24倍</a>
-      <a href="#sum"><span class="n">05</span>おさらい</a>
+      <a href="#coupon" hidden><span class="n">03</span>先着クーポン</a>
+      <a href="#p20"><span class="n">03</span>お歳暮 24倍</a>
+      <a href="#sum"><span class="n">04</span>おさらい</a>
     </nav>
     <a class="side-shop" href="https://www.rakuten.co.jp/d-craft/" target="_blank" rel="noopener">ショップトップへ</a>
   </div>
@@ -542,11 +543,12 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
       <ul id="st-list">
         <li>エントリーで店内全品 <b>ポイント5倍</b></li>
         <li>対象お歳暮ギフト <b>エントリーで24倍</b></li>
-        <li>先着クーポン <b>最大555円OFF</b></li>
+        <li hidden>先着クーポン <b>最大555円OFF</b></li>
       </ul>
     </div>
     <a class="side-btn gold" href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener">5倍エントリーはこちら</a>
-    <a class="side-btn pink" href="#coupon">クーポンを見る</a>
+    <a class="side-btn pink" href="#coupon" hidden>クーポンを見る</a>
+    <a class="side-btn pink" href="#p20">お歳暮 24倍を見る</a>
   </div>
 </aside>
 <div class="col">
@@ -607,16 +609,16 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
   <div class="wrap">
     <p class="sec-no">02 ／ 日替わりのお得</p>
     <h2 class="sch-h">今日は、<br class="sp-br"><em>これがお得！</em></h2>
-    <p class="sch-lead">20日と24日・25日は、<span class="nobr">名入れ商品の10%OFFクーポン。</span><br>20日と25日は、<span class="nobr">0と5のつく日でポイント4倍。</span></p>
+    <p class="sch-lead">20日と25日は、<span class="nobr">0と5のつく日でポイント4倍。</span></p>
 
     <ol class="days" aria-label="ブラックフライデー期間の日付">
       <li data-day="19"><span class="today">TODAY</span><span class="d num">19</span><span class="w">木</span><span class="m"><i class="tg st">20:00<br>START</i></span></li>
-      <li data-day="20" class="on"><span class="today">TODAY</span><span class="d num">20</span><span class="w">金</span><span class="m"><i class="tg pt">4倍</i><i class="tg nm">名入れ<br>10%OFF</i></span></li>
+      <li data-day="20" class="on"><span class="today">TODAY</span><span class="d num">20</span><span class="w">金</span><span class="m"><i class="tg pt">4倍</i><i class="tg nm" hidden>名入れ<br>10%OFF</i></span></li>
       <li data-day="21"><span class="today">TODAY</span><span class="d num">21</span><span class="w">土</span></li>
       <li data-day="22"><span class="today">TODAY</span><span class="d num">22</span><span class="w">日</span></li>
       <li data-day="23"><span class="today">TODAY</span><span class="d num">23</span><span class="w">月</span></li>
-      <li data-day="24" class="on"><span class="today">TODAY</span><span class="d num">24</span><span class="w">火</span><span class="m"><i class="tg nm">名入れ<br>10%OFF</i></span></li>
-      <li data-day="25" class="on"><span class="today">TODAY</span><span class="d num">25</span><span class="w">水</span><span class="m"><i class="tg pt">4倍</i><i class="tg nm">名入れ<br>10%OFF</i></span></li>
+      <li data-day="24"><span class="today">TODAY</span><span class="d num">24</span><span class="w">火</span><span class="m"><i class="tg nm" hidden>名入れ<br>10%OFF</i></span></li>
+      <li data-day="25" class="on"><span class="today">TODAY</span><span class="d num">25</span><span class="w">水</span><span class="m"><i class="tg pt">4倍</i><i class="tg nm" hidden>名入れ<br>10%OFF</i></span></li>
     </ol>
 
     <div class="phases">
@@ -627,35 +629,35 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
           <span class="ph-today">今日はこの日！</span>
         </div>
         <ul class="ph-deals">
-          <li class="nm"><span class="k">名入れ商品に使える</span><span class="v"><span class="num">10</span>%OFF<small>クーポン</small></span></li>
+          <li class="nm" hidden><span class="k">名入れ商品に使える</span><span class="v"><span class="num">10</span>%OFF<small>クーポン</small></span></li>
           <li class="pt"><span class="k">0と5のつく日 エントリー＆楽天カードで</span><span class="v">POINT<span class="num">4</span>倍</span></li>
         </ul>
       </article>
-      <article class="phase" data-days="24,25">
+      <article class="phase" data-days="25">
         <div class="ph-head">
           <p class="ph-no">第<span class="num">2</span>弾</p>
-          <p class="ph-date"><span class="num">11.24</span><span class="wk">火</span><span class="and">・</span><span class="num">25</span><span class="wk">水</span></p>
+          <p class="ph-date"><span class="num">11.25</span><span class="wk">水</span></p>
           <span class="ph-today">今日はこの日！</span>
         </div>
         <ul class="ph-deals">
-          <li class="nm"><span class="k">名入れ商品に使える</span><span class="v"><span class="num">10</span>%OFF<small>クーポン</small></span></li>
-          <li class="pt"><span class="k">25日は0と5のつく日 エントリー＆楽天カードで</span><span class="v">POINT<span class="num">4</span>倍</span></li>
+          <li class="nm" hidden><span class="k">名入れ商品に使える</span><span class="v"><span class="num">10</span>%OFF<small>クーポン</small></span></li>
+          <li class="pt"><span class="k">0と5のつく日 エントリー＆楽天カードで</span><span class="v">POINT<span class="num">4</span>倍</span></li>
         </ul>
       </article>
     </div>
 
-    <p class="get-early"><span class="lb">先どり獲得OK</span><span class="tx"><span class="nobr">名入れ10%OFFクーポンは、</span><br><span class="nobr"><span class="num">11.12</span>（木）<span class="num">10:00</span>から</span><span class="nobr">獲得できます。</span></span></p>
+    <p class="get-early" hidden><span class="lb">先どり獲得OK</span><span class="tx"><span class="nobr">名入れ10%OFFクーポンは、</span><br><span class="nobr"><span class="num">11.12</span>（木）<span class="num">10:00</span>から</span><span class="nobr">獲得できます。</span></span></p>
     <div class="sch-btns">
       <!-- TODO: 名入れ10%OFFクーポンの獲得URLが届いたら href を差し替え -->
-      <a class="entry-btn" href="#schedule" data-todo="coupon-naire">名入れ10%OFFクーポンを獲得</a>
+      <a class="entry-btn" href="#schedule" data-todo="coupon-naire" hidden>名入れ10%OFFクーポンを獲得</a>
       <a class="entry-btn pink" href="https://event.rakuten.co.jp/card/pointday/" target="_blank" rel="noopener">0と5のつく日にエントリー</a>
     </div>
-    <p class="p5-note">※名入れクーポンは11/12（木）10:00から獲得できます。ご利用は11/20（金）と11/24（火）・25（水）です。対象商品などは、クーポンページでご確認ください。<br>※0と5のつく日は、開催日ごとにエントリーが必要です。楽天カードでのお支払いが対象です。<br>※ブラックフライデーは11/25（水）1:59までです。25日は早めのお買い物がおすすめです。</p>
+    <p class="p5-note">※0と5のつく日は、開催日ごとにエントリーが必要です。楽天カードでのお支払いが対象です。<br>※ブラックフライデーは11/25（水）1:59までです。25日は早めのお買い物がおすすめです。</p>
   </div>
 </section>
 
 <!-- 02 クーポン -->
-<section class="cp" id="coupon">
+<section class="cp" id="coupon" hidden>
   <div class="wrap">
     <p class="sec-no">03 ／ 先着クーポン</p>
     <h2>なくなり次第終了。<br><em>先着</em>の<br class="sp-br"><span class="nobr">ブラックフライデークーポン。</span></h2>
@@ -691,7 +693,7 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
 <!-- 02 お歳暮20倍 -->
 <section class="p20" id="p20">
   <div class="wrap">
-    <p class="sec-no">04 ／ お歳暮ギフト</p>
+    <p class="sec-no">03 ／ お歳暮ギフト</p>
     <div class="p20-head">
       <div>
         <h2>贈るなら、いま。<br>対象のお歳暮ギフトが<br><em>エントリーで<span class="nobr">ポイント24倍。</span></em></h2>
@@ -731,13 +733,13 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
 <!-- 03 まとめ -->
 <section class="sum" id="sum">
   <div class="wrap">
-    <p class="sec-no">05 ／ おさらい</p>
-    <h2>この6日間で、<br class="sp-br">やることは3つだけ。</h2>
+    <p class="sec-no">04 ／ おさらい</p>
+    <h2>この6日間で、<br class="sp-br">やることは2つだけ。</h2>
     <ul class="sum-list">
       <li><span class="k">1．エントリー</span><span class="v">店内全品 <span class="hl">ポイント5倍</span></span><a href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener">エントリーページへ</a></li>
-      <li><span class="k">＋ 20日・24日・25日</span><span class="v">名入れ商品 <span class="hl">10%OFFクーポン</span><small style="display:block;font-size:13px;color:var(--sub);font-weight:400">クーポン獲得は11/12（木）10:00から。20日・25日は0と5のつく日でポイント4倍も</small></span><a class="pk" href="#schedule">日替わりのお得を見る</a></li>
-      <li><span class="k">2．クーポン獲得</span><span class="v">先着 <span class="hl">最大555円OFF</span></span><a href="#coupon">クーポンを見る</a></li>
-      <li><span class="k">3．お歳暮を選ぶ</span><span class="v">対象ギフト <span class="hp">エントリーでポイント24倍</span></span><a class="pk" href="#p20">対象ギフトを見る</a></li>
+      <li><span class="k">＋ 20日・25日</span><span class="v">0と5のつく日 <span class="hp">ポイント4倍</span><small style="display:block;font-size:13px;color:var(--sub);font-weight:400">エントリー＆楽天カード利用</small></span><a class="pk" href="https://event.rakuten.co.jp/card/pointday/" target="_blank" rel="noopener">エントリーページへ</a></li>
+      <li hidden><span class="k">2．クーポン獲得</span><span class="v">先着 <span class="hl">最大555円OFF</span></span><a href="#coupon">クーポンを見る</a></li>
+      <li><span class="k">2．お歳暮を選ぶ</span><span class="v">対象ギフト <span class="hp">エントリーでポイント24倍</span></span><a class="pk" href="#p20">対象ギフトを見る</a></li>
       <li><span class="k">期間</span><span class="v">11/19（木）20:00 〜 <span class="nobr">11/25（水）1:59</span></span><span></span></li>
     </ul>
     <a class="shop-link" href="https://www.rakuten.co.jp/d-craft/" target="_blank" rel="noopener">ショップトップで商品をさがす</a>
@@ -775,7 +777,6 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
     var W='日月火水木金土'.charAt(j.getUTCDay()),dayEl=document.getElementById('st-day'),list=document.getElementById('st-list');
     if(dayEl)dayEl.textContent='11/'+d+'（'+W+'）'+(d===25?' 1:59まで':'');
     var add=[];
-    if(d===20||d===24||d===25)add.push('名入れ商品 <b>10%OFFクーポン</b>');
     if(d===20||d===25)add.push('0と5のつく日 <b>ポイント4倍</b>');
     if(list&&add.length)list.innerHTML=add.map(function(x){return '<li class="plus">'+x+'</li>'}).join('')+list.innerHTML;
     var li=document.querySelector('.days li[data-day="'+d+'"]');if(li)li.classList.add('is-today');
