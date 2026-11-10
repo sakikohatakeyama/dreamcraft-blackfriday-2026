@@ -14,7 +14,7 @@
 :root{
   --black:#0b0a0a;--black2:#151312;--char:#211e1c;
   --gold:#d8b25a;--gold-l:#f3dc9c;--gold-d:#94712b;
-  --pink:#39ff14;--pink-l:#a6ff8f;--pink-d:#2bd10f;
+  --pink:#dcff2b;--pink-l:#ecff8a;--pink-d:#c2e600;
   --white:#fffaf3;--sub:#bdb4a6;
   --cw:1000px;
 }
@@ -46,7 +46,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;heigh
 /* ---------- FV：電球のマーキー看板 ---------- */
 .fv{position:relative;padding:56px 0 64px;overflow:hidden;
   background:
-    radial-gradient(ellipse 60% 55% at 78% 30%,#39ff1426,transparent 70%),
+    radial-gradient(ellipse 60% 55% at 78% 30%,#dcff2b26,transparent 70%),
     radial-gradient(ellipse 55% 60% at 15% 85%,#d8b25a1f,transparent 70%),
     var(--black)}
 /* 立ちのぼる金の泡（グラスの中の泡＝酒屋の乾杯） */
@@ -64,7 +64,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;heigh
           mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);
   padding:13px;animation:bulbs 1.2s steps(2) infinite}
 .sign::after{content:"";position:absolute;inset:0;border-radius:6px;
-  background:radial-gradient(circle,var(--pink) 0 3.5px,#39ff1477 4.5px,transparent 7px) 13px 13px/26px 26px;
+  background:radial-gradient(circle,var(--pink) 0 3.5px,#dcff2b77 4.5px,transparent 7px) 13px 13px/26px 26px;
   -webkit-mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);
           mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);
   padding:13px;animation:bulbs 1.2s steps(2) infinite reverse}
@@ -77,7 +77,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;heigh
 .fv-title{margin-top:10px;line-height:.86}
 .fv-title .en{display:block;font-size:122px;letter-spacing:.02em}
 .fv-title .l1{color:var(--white)}
-.fv-title .l2{color:var(--pink);text-shadow:0 0 18px #39ff1488,0 0 46px #39ff1455}
+.fv-title .l2{color:var(--pink);text-shadow:0 0 18px #dcff2b88,0 0 46px #dcff2b55}
 .fv-title .ja{display:block;margin-top:18px;font-size:22px;letter-spacing:.3em;color:var(--gold-l);font-weight:700}
 .fv-catch{margin-top:26px;font-size:30px;font-weight:900;line-height:1.5}
 .fv-catch em{font-style:normal;color:var(--gold-l)}
@@ -109,7 +109,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;heigh
   .sign::before,.sign::after{padding:9px;background-size:18px 18px}
   .sign::after{background-position:9px 9px}
   .sign::before{background-image:radial-gradient(circle,var(--gold-l) 0 2.5px,#d8b25a66 3.5px,transparent 5px)}
-  .sign::after{background-image:radial-gradient(circle,var(--pink) 0 2.5px,#39ff1477 3.5px,transparent 5px)}
+  .sign::after{background-image:radial-gradient(circle,var(--pink) 0 2.5px,#dcff2b77 3.5px,transparent 5px)}
   .sign-in{padding:26px 18px 24px}
   .fv-kicker{font-size:12px;gap:10px;letter-spacing:.1em}
   .fv-title .en{font-size:clamp(50px,15.5cqw,80px)}
@@ -183,7 +183,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;heigh
 .side{display:none}
 @media(min-width:1000px){
   body{background:
-    radial-gradient(ellipse 40% 50% at 12% 20%,#39ff1422,transparent 70%),
+    radial-gradient(ellipse 40% 50% at 12% 20%,#dcff2b22,transparent 70%),
     radial-gradient(ellipse 40% 50% at 88% 80%,#d8b25a1c,transparent 70%),#070606;background-attachment:fixed}
   .side{display:flex;position:fixed;top:0;bottom:0;width:calc(50% - 215px);align-items:center;justify-content:center;padding:30px 24px;z-index:2}
   .side-l{left:0}.side-r{right:0}
@@ -194,7 +194,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;heigh
 .side-ttl{margin-top:30px;line-height:.9}
 .side-ttl .en{display:block;font-size:64px;letter-spacing:.02em}
 .side-ttl .l1{color:var(--white)}
-.side-ttl .l2{color:var(--pink);text-shadow:0 0 18px #39ff1488}
+.side-ttl .l2{color:var(--pink);text-shadow:0 0 18px #dcff2b88}
 .side-date{margin-top:14px;font-size:15px;font-weight:700;color:var(--sub);line-height:1.6}
 .side-date .num{font-size:24px;color:var(--gold-l)}
 .side-nav{margin-top:28px;border-top:1px solid #ffffff26}
@@ -225,7 +225,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;heigh
 .deco{overflow:hidden;padding:18px 0 6px;background:var(--black)}
 .deco-in{display:flex;width:max-content;animation:deco 26s linear infinite}
 .deco span{font-family:Jost,Futura,sans-serif;font-weight:700;font-size:72px;line-height:1;white-space:nowrap;padding-right:40px;color:#d8b25a8c;letter-spacing:.02em}
-.deco span:nth-child(3n+2){color:#39ff14b3}
+.deco span:nth-child(3n+2){color:#dcff2bb3}
 .deco.rev .deco-in{animation-direction:reverse}
 @keyframes deco{to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.deco-in{animation:none}}
@@ -307,7 +307,7 @@ section{padding:110px 0}
 .tk-limit{font-size:26px;font-weight:900;color:var(--pink);border:2px solid var(--pink);padding:2px 22px}
 .tk-btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:58px;text-decoration:none;font-size:17px;font-weight:900;color:var(--black);background:linear-gradient(180deg,#f6e2a6,#d8b25a 55%,#b38b38);transition:filter .2s}
 .tk-btn:hover{filter:brightness(1.08)}
-.cp-note{margin-top:26px;font-size:13px;font-weight:700;color:#0c3a06}
+.cp-note{margin-top:26px;font-size:13px;font-weight:700;color:#2f3600}
 @media all{
   .cp h2{font-size:clamp(20px,6.4cqw,27px);margin-top:16px}
   .cp-lead{font-size:15px}
@@ -347,7 +347,7 @@ section{padding:110px 0}
 .days li:first-child{color:var(--gold-l)}
 .days li.on{background:var(--pink);color:var(--black);position:relative}
 .days li.on .m{color:var(--black);background:var(--gold-l);padding:4px 8px}
-.entry-btn.pink{color:var(--black);background:linear-gradient(180deg,#8dff6e,#39ff14 55%,#26d40c);box-shadow:6px 6px 0 var(--gold)}
+.entry-btn.pink{color:var(--black);background:linear-gradient(180deg,#eaff6e,#dcff2b 55%,#b8db00);box-shadow:6px 6px 0 var(--gold)}
 .entry-btn.pink:hover{box-shadow:3px 3px 0 var(--gold)}
 @media all{
   .d05-head{flex-direction:column;align-items:flex-start;gap:14px;margin-top:18px}
@@ -392,7 +392,7 @@ section{padding:110px 0}
 .ph-date .wk{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--black);color:var(--white);font-size:13px;font-weight:900}
 .ph-date .and{font-weight:900;font-size:20px}
 .ph-today{display:none;position:absolute;right:-2px;top:-34px;font-size:15px;font-weight:900;background:var(--gold-l);color:var(--black);padding:5px 14px;line-height:1.4}
-.phase.is-today{box-shadow:0 0 0 4px var(--gold-l),0 0 40px #39ff1466}
+.phase.is-today{box-shadow:0 0 0 4px var(--gold-l),0 0 40px #dcff2b66}
 .phase.is-today .ph-today{display:block}
 .ph-deals{list-style:none;margin:0;padding:6px 22px 14px}
 .ph-deals li{display:flex;flex-direction:column;padding:14px 0;border-bottom:1px solid #ffffff1f}
@@ -435,7 +435,7 @@ section{padding:110px 0}
 
 /* ---------- 03 お歳暮20倍 ---------- */
 .p20{background:var(--black2);position:relative;overflow:hidden}
-.p20::before{content:"";position:absolute;right:-120px;top:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,#39ff1430,transparent 65%);pointer-events:none}
+.p20::before{content:"";position:absolute;right:-120px;top:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,#dcff2b30,transparent 65%);pointer-events:none}
 .p20 .sec-no{color:var(--pink)}
 .p20-head{position:relative;display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-top:28px}
 .p20-head h2{font-size:46px;line-height:1.35;font-weight:900}
@@ -448,7 +448,7 @@ section{padding:110px 0}
 .badge20 .calc .plus{color:var(--pink);font-size:18px}
 .badge20 p{margin:0}
 .badge20 .x{display:block;font-family:Jost,Futura,sans-serif;font-size:22px;font-weight:700;color:var(--white);letter-spacing:.1em;margin-bottom:12px}
-.badge20 .num{font-size:180px;color:var(--pink);text-shadow:0 0 30px #39ff1466}
+.badge20 .num{font-size:180px;color:var(--pink);text-shadow:0 0 30px #dcff2b66}
 .badge20 b{font-size:52px}
 
 .items{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:56px}
