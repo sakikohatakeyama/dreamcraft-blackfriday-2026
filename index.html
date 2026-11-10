@@ -311,6 +311,69 @@ section{padding:110px 0}
   .entry-btn.pink{font-size:18px;box-shadow:5px 5px 0 var(--gold)}
 }
 
+
+/* ---------- 02 日替わりスケジュール ---------- */
+.sch-h{margin-top:24px;font-size:56px;line-height:1.25;font-weight:900}
+.sch-h em{font-style:normal;color:var(--pink)}
+.sch-lead{margin-top:16px;font-size:18px;font-weight:700;color:#e9e2d6}
+.days li{position:relative}
+.days .today{display:none;position:absolute;top:-14px;left:50%;transform:translateX(-50%);font-family:Jost,Futura,sans-serif;font-weight:700;font-size:12px;letter-spacing:.1em;background:var(--gold-l);color:var(--black);padding:2px 10px;white-space:nowrap}
+.days li.is-today{outline:3px solid var(--gold-l);outline-offset:-3px;z-index:1}
+.days li.is-today .today{display:block}
+.days .m{display:flex;flex-direction:column;gap:6px;align-items:center}
+.days .tg{font-style:normal;display:block;padding:4px 6px;line-height:1.2}
+.days .tg.st{color:var(--gold-l)}
+.days li.on .tg.pt{background:var(--black);color:var(--pink-l)}
+.days li.on .tg.nm{background:var(--gold-l);color:var(--black)}
+.days li.on .m{background:none;padding:0;color:inherit}
+.phases{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:64px}
+.phase{position:relative;border:2px solid var(--gold);background:#0d0b0b}
+.phase+.phase{border-color:var(--pink)}
+.ph-head{display:flex;align-items:center;gap:16px;padding:16px 22px;background:var(--gold);color:var(--black)}
+.phase+.phase .ph-head{background:var(--pink);color:var(--white)}
+.ph-no{font-size:22px;font-weight:900;line-height:1;white-space:nowrap}
+.ph-no .num{font-size:40px;margin:0 2px}
+.ph-date{display:flex;align-items:center;gap:6px;line-height:1}
+.ph-date .num{font-size:32px}
+.ph-date .wk{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--black);color:var(--white);font-size:13px;font-weight:900}
+.ph-date .and{font-weight:900;font-size:20px}
+.ph-today{display:none;position:absolute;right:-2px;top:-34px;font-size:15px;font-weight:900;background:var(--gold-l);color:var(--black);padding:5px 14px;line-height:1.4}
+.phase.is-today{box-shadow:0 0 0 4px var(--gold-l),0 0 40px #ff3d8b66}
+.phase.is-today .ph-today{display:block}
+.ph-deals{list-style:none;margin:0;padding:6px 22px 14px}
+.ph-deals li{display:flex;flex-direction:column;padding:14px 0;border-bottom:1px solid #ffffff1f}
+.ph-deals li:last-child{border-bottom:0}
+.ph-deals .k{font-size:14px;font-weight:700;color:var(--sub)}
+.ph-deals .v{font-family:Jost,Futura,sans-serif;font-weight:700;font-size:28px;line-height:1.05}
+.ph-deals .v .num{font-size:72px;margin-right:2px}
+.ph-deals .v small{font-family:"Noto Sans JP",sans-serif;font-size:18px;margin-left:6px}
+.ph-deals .nm .v{color:var(--gold-l)}
+.ph-deals .pt .v{color:var(--pink)}
+.ph-deals .pt .v .num{margin:0 4px}
+.sch-btns{display:flex;flex-wrap:wrap;gap:20px 28px;margin-top:36px}
+.sch-btns .entry-btn{margin-top:0;flex:1;max-width:none;font-size:20px}
+@media(max-width:760px){
+  .sch-h{font-size:38px;margin-top:16px}
+  .sch-lead{font-size:14.5px}
+  .days{margin-top:36px}
+  .days .today{font-size:9px;padding:1px 4px;letter-spacing:.04em;top:-11px}
+  .days .m{gap:4px}
+  .days .tg{padding:3px 1px;font-size:8.5px}
+  .phases{grid-template-columns:1fr;gap:44px;margin-top:44px}
+  .ph-head{padding:12px 14px;gap:12px}
+  .ph-no{font-size:18px}.ph-no .num{font-size:32px}
+  .ph-date .num{font-size:26px}
+  .ph-date .wk{width:22px;height:22px;font-size:11px}
+  .ph-today{font-size:12px}
+  .ph-deals{padding:4px 16px 10px}
+  .ph-deals .k{font-size:12.5px}
+  .ph-deals .v{font-size:22px}
+  .ph-deals .v .num{font-size:56px}
+  .ph-deals .v small{font-size:15px}
+  .sch-btns{flex-direction:column;gap:18px;margin-top:28px}
+  .sch-btns .entry-btn{font-size:16px;letter-spacing:.02em;min-height:62px;padding:12px 18px;white-space:nowrap}
+}
+
 /* ---------- 03 お歳暮20倍 ---------- */
 .p20{background:var(--black2);position:relative;overflow:hidden}
 .p20::before{content:"";position:absolute;right:-120px;top:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,#ff3d8b30,transparent 65%);pointer-events:none}
@@ -421,7 +484,7 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
   </div>
 </div>
 
-<div class="ticker" aria-hidden="true"><div class="ticker-in"><span>BLACK FRIDAY</span><span>エントリーで店内全品ポイント<b class="num">5</b>倍</span><span>対象のお歳暮ギフト エントリーでポイント<b class="num">24</b>倍</span><span>先着クーポン 最大<b class="num">555</b>円OFF</span><span>20日・25日は0と5のつく日 POINT<b class="num">4</b>倍</span><span>11.19 THU 20:00 START</span><span>BLACK FRIDAY</span><span>エントリーで店内全品ポイント<b class="num">5</b>倍</span><span>対象のお歳暮ギフト エントリーでポイント<b class="num">24</b>倍</span><span>先着クーポン 最大<b class="num">555</b>円OFF</span><span>20日・25日は0と5のつく日 POINT<b class="num">4</b>倍</span><span>11.19 THU 20:00 START</span><span>BLACK FRIDAY</span><span>エントリーで店内全品ポイント<b class="num">5</b>倍</span><span>対象のお歳暮ギフト エントリーでポイント<b class="num">24</b>倍</span><span>先着クーポン 最大<b class="num">555</b>円OFF</span><span>20日・25日は0と5のつく日 POINT<b class="num">4</b>倍</span><span>11.19 THU 20:00 START</span><span>BLACK FRIDAY</span><span>エントリーで店内全品ポイント<b class="num">5</b>倍</span><span>対象のお歳暮ギフト エントリーでポイント<b class="num">24</b>倍</span><span>先着クーポン 最大<b class="num">555</b>円OFF</span><span>20日・25日は0と5のつく日 POINT<b class="num">4</b>倍</span><span>11.19 THU 20:00 START</span></div></div>
+<div class="ticker" aria-hidden="true"><div class="ticker-in"><span>BLACK FRIDAY</span><span>エントリーで店内全品ポイント<b class="num">5</b>倍</span><span>対象のお歳暮ギフト エントリーでポイント<b class="num">24</b>倍</span><span>先着クーポン 最大<b class="num">555</b>円OFF</span><span>20日・24日・25日は名入れ<b class="num">10</b>%OFFクーポン</span><span>20日・25日は0と5のつく日 POINT<b class="num">4</b>倍</span><span>11.19 THU 20:00 START</span><span>BLACK FRIDAY</span><span>エントリーで店内全品ポイント<b class="num">5</b>倍</span><span>対象のお歳暮ギフト エントリーでポイント<b class="num">24</b>倍</span><span>先着クーポン 最大<b class="num">555</b>円OFF</span><span>20日・24日・25日は名入れ<b class="num">10</b>%OFFクーポン</span><span>20日・25日は0と5のつく日 POINT<b class="num">4</b>倍</span><span>11.19 THU 20:00 START</span><span>BLACK FRIDAY</span><span>エントリーで店内全品ポイント<b class="num">5</b>倍</span><span>対象のお歳暮ギフト エントリーでポイント<b class="num">24</b>倍</span><span>先着クーポン 最大<b class="num">555</b>円OFF</span><span>20日・24日・25日は名入れ<b class="num">10</b>%OFFクーポン</span><span>20日・25日は0と5のつく日 POINT<b class="num">4</b>倍</span><span>11.19 THU 20:00 START</span><span>BLACK FRIDAY</span><span>エントリーで店内全品ポイント<b class="num">5</b>倍</span><span>対象のお歳暮ギフト エントリーでポイント<b class="num">24</b>倍</span><span>先着クーポン 最大<b class="num">555</b>円OFF</span><span>20日・24日・25日は名入れ<b class="num">10</b>%OFFクーポン</span><span>20日・25日は0と5のつく日 POINT<b class="num">4</b>倍</span><span>11.19 THU 20:00 START</span></div></div>
 <!-- カウントダウン -->
 <div class="cd" id="cd" aria-live="polite">
   <div class="wrap">
@@ -446,25 +509,54 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
   </div>
 </section>
 
-<!-- 02 0・5のつく日 -->
-<section class="d05" id="day05">
+<!-- 02 日替わりスケジュール -->
+<section class="d05" id="schedule">
   <div class="wrap">
-    <p class="sec-no">02 ／ 0と5のつく日</p>
-    <div class="d05-head">
-      <h2>20日と25日は、<br><em>0と5のつく日。</em></h2>
-      <p class="d05-pt"><span class="s">エントリー＆楽天カードご利用で</span><span class="b">POINT<span class="num">4</span>倍</span></p>
-    </div>
+    <p class="sec-no">02 ／ 日替わりのお得</p>
+    <h2 class="sch-h">今日は、<br class="sp-br"><em>これがお得！</em></h2>
+    <p class="sch-lead">20日と24日・25日は、<span class="nobr">名入れ商品の10%OFFクーポン。</span><br>20日と25日は、<span class="nobr">0と5のつく日でポイント4倍。</span></p>
+
     <ol class="days" aria-label="ブラックフライデー期間の日付">
-      <li><span class="d num">19</span><span class="w">木</span><span class="m">20:00<br>START</span></li>
-      <li class="on"><span class="d num">20</span><span class="w">金</span><span class="m">POINT<br>4倍</span></li>
-      <li><span class="d num">21</span><span class="w">土</span></li>
-      <li><span class="d num">22</span><span class="w">日</span></li>
-      <li><span class="d num">23</span><span class="w">月</span></li>
-      <li><span class="d num">24</span><span class="w">火</span></li>
-      <li class="on"><span class="d num">25</span><span class="w">水</span><span class="m">POINT<br>4倍</span></li>
+      <li data-day="19"><span class="today">TODAY</span><span class="d num">19</span><span class="w">木</span><span class="m"><i class="tg st">20:00<br>START</i></span></li>
+      <li data-day="20" class="on"><span class="today">TODAY</span><span class="d num">20</span><span class="w">金</span><span class="m"><i class="tg pt">4倍</i><i class="tg nm">名入れ<br>10%OFF</i></span></li>
+      <li data-day="21"><span class="today">TODAY</span><span class="d num">21</span><span class="w">土</span></li>
+      <li data-day="22"><span class="today">TODAY</span><span class="d num">22</span><span class="w">日</span></li>
+      <li data-day="23"><span class="today">TODAY</span><span class="d num">23</span><span class="w">月</span></li>
+      <li data-day="24" class="on"><span class="today">TODAY</span><span class="d num">24</span><span class="w">火</span><span class="m"><i class="tg nm">名入れ<br>10%OFF</i></span></li>
+      <li data-day="25" class="on"><span class="today">TODAY</span><span class="d num">25</span><span class="w">水</span><span class="m"><i class="tg pt">4倍</i><i class="tg nm">名入れ<br>10%OFF</i></span></li>
     </ol>
-    <a class="entry-btn pink" href="https://event.rakuten.co.jp/card/pointday/" target="_blank" rel="noopener">0と5のつく日にエントリー</a>
-    <p class="p5-note">※エントリーは各開催日ごとに必要です。楽天カードでのお支払いが対象です。<br>※ブラックフライデーは11/25（水）1:59までです。25日は早めのお買い物がおすすめです。<br>※付与条件・上限などの詳細はキャンペーンページでご確認ください。</p>
+
+    <div class="phases">
+      <article class="phase" data-days="20">
+        <div class="ph-head">
+          <p class="ph-no">第<span class="num">1</span>弾</p>
+          <p class="ph-date"><span class="num">11.20</span><span class="wk">金</span></p>
+          <span class="ph-today">今日はこの日！</span>
+        </div>
+        <ul class="ph-deals">
+          <li class="nm"><span class="k">名入れ商品に使える</span><span class="v"><span class="num">10</span>%OFF<small>クーポン</small></span></li>
+          <li class="pt"><span class="k">0と5のつく日 エントリー＆楽天カードで</span><span class="v">POINT<span class="num">4</span>倍</span></li>
+        </ul>
+      </article>
+      <article class="phase" data-days="24,25">
+        <div class="ph-head">
+          <p class="ph-no">第<span class="num">2</span>弾</p>
+          <p class="ph-date"><span class="num">11.24</span><span class="wk">火</span><span class="and">・</span><span class="num">25</span><span class="wk">水</span></p>
+          <span class="ph-today">今日はこの日！</span>
+        </div>
+        <ul class="ph-deals">
+          <li class="nm"><span class="k">名入れ商品に使える</span><span class="v"><span class="num">10</span>%OFF<small>クーポン</small></span></li>
+          <li class="pt"><span class="k">25日は0と5のつく日 エントリー＆楽天カードで</span><span class="v">POINT<span class="num">4</span>倍</span></li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="sch-btns">
+      <!-- TODO: 名入れ10%OFFクーポンの獲得URLが届いたら href を差し替え -->
+      <a class="entry-btn" href="#schedule" data-todo="coupon-naire">名入れ10%OFFクーポンを獲得</a>
+      <a class="entry-btn pink" href="https://event.rakuten.co.jp/card/pointday/" target="_blank" rel="noopener">0と5のつく日にエントリー</a>
+    </div>
+    <p class="p5-note">※名入れクーポンのご利用期間・対象商品は、クーポンページでご確認ください。<br>※0と5のつく日は、開催日ごとにエントリーが必要です。楽天カードでのお支払いが対象です。<br>※ブラックフライデーは11/25（水）1:59までです。25日は早めのお買い物がおすすめです。</p>
   </div>
 </section>
 
@@ -549,7 +641,7 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
     <h2>この6日間で、<br class="sp-br">やることは3つだけ。</h2>
     <ul class="sum-list">
       <li><span class="k">1．エントリー</span><span class="v">店内全品 <span class="hl">ポイント5倍</span></span><a href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener">エントリーページへ</a></li>
-      <li><span class="k">＋ 20日・25日</span><span class="v">0と5のつく日 <span class="hp">ポイント4倍</span><small style="display:block;font-size:13px;color:var(--sub);font-weight:400">エントリー＆楽天カード利用</small></span><a class="pk" href="https://event.rakuten.co.jp/card/pointday/" target="_blank" rel="noopener">エントリーページへ</a></li>
+      <li><span class="k">＋ 20日・24日・25日</span><span class="v">名入れ商品 <span class="hl">10%OFFクーポン</span><small style="display:block;font-size:13px;color:var(--sub);font-weight:400">20日・25日は0と5のつく日でポイント4倍も</small></span><a class="pk" href="#schedule">日替わりのお得を見る</a></li>
       <li><span class="k">2．クーポン獲得</span><span class="v">先着 <span class="hl">最大555円OFF</span></span><a href="#coupon">クーポンを見る</a></li>
       <li><span class="k">3．お歳暮を選ぶ</span><span class="v">対象ギフト <span class="hp">エントリーでポイント24倍</span></span><a class="pk" href="#p20">対象ギフトを見る</a></li>
       <li><span class="k">期間</span><span class="v">11/19（木）20:00 〜 <span class="nobr">11/25（水）1:59</span></span><span></span></li>
@@ -578,6 +670,15 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
       box.appendChild(b);
     }
   }
+  // 今日のお得をハイライト（日本時間）
+  (function(){
+    var j=new Date(Date.now()+9*3600*1000),y=j.getUTCFullYear(),mo=j.getUTCMonth()+1,d=j.getUTCDate(),h=j.getUTCHours();
+    if(y!==2026||mo!==11)return;
+    if(d===19&&h<20)return;
+    if(d===25&&h>=2)return;
+    var li=document.querySelector('.days li[data-day="'+d+'"]');if(li)li.classList.add('is-today');
+    [].forEach.call(document.querySelectorAll('.phase'),function(p){if((','+p.dataset.days+',').indexOf(','+d+',')>-1)p.classList.add('is-today')});
+  })();
   // カウントダウン
   var START=new Date('2026-11-19T20:00:00+09:00').getTime(),
       END=new Date('2026-11-25T02:00:00+09:00').getTime(),
