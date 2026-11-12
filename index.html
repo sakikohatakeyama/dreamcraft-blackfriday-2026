@@ -1168,6 +1168,11 @@ document.addEventListener('DOMContentLoaded',function(){
 .big5.bigx .br .num{font-size:clamp(190px,56cqw,280px)!important}
 .badge20.bigx .br .num{font-size:clamp(150px,44cqw,220px)!important}
 </style>
+<style>
+/* 文章中の数字もすべて Archivo（数字と , . : % だけに適用） */
+@font-face{font-family:"ArchivoDigits";font-style:normal;font-weight:400 900;font-display:swap;src:url(https://fonts.gstatic.com/s/archivo/v25/k3kPo8UDI-1M0wlSV9XAw6lQkqWY8Q82sLydOxKsv4Rn.woff2) format("woff2");unicode-range:U+0025,U+002C,U+002E,U+0030-003A}
+body,button,.shout,.bigx .bl,.bigx .pt{font-family:"ArchivoDigits","Noto Sans JP",sans-serif!important}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
