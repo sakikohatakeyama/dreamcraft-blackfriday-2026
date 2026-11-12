@@ -1604,6 +1604,30 @@ document.addEventListener('DOMContentLoaded',function(){
 .pp .pq-fav{width:42px!important;height:42px!important}
 .pp .pq-fav svg{width:20px!important;height:20px!important}
 </style>
+<style>
+/* 抽選ブロックの枠線なし */
+.bk::before{display:none!important}
+/* ブロックの上下余白を詰める */
+.calx,.p5,.p20,.bk,.os,.pp{padding-top:clamp(44px,12cqw,72px)!important;padding-bottom:clamp(44px,12cqw,72px)!important}
+.bk-note{margin-bottom:0!important}
+</style>
+<style>
+/* スマホのはみ出し修正：見出しは欄の幅に収まる大きさに */
+.p5 .shout .s2{font-size:min(9.4cqw,64px)!important}
+.bk .shout .s2{font-size:min(9.4cqw,66px)!important}
+.os .shout .s2{font-size:min(6.6cqw,48px)!important}
+.bk-present{font-size:min(13cqw,96px)!important;letter-spacing:.02em!important}
+.calx-lead,.p5-body,.p5-txt>p,.p20-head p:not(.bl):not(.br):not(.calc),.p5-note,.p20-note,.pp-note{margin-left:0!important;margin-right:0!important}
+.p20 .shout .stamp{transform:translate(40%,-58%)!important}
+@container (max-width:340px){.calx-open .en{display:none}.p20-entry span{font-size:15px}}
+</style>
+<style>
+/* お歳暮ビール：黄色→金 */
+.os .shout .s2{color:#f0cf6a!important;-webkit-text-fill-color:#f0cf6a!important}
+.os .pq{border-color:#d8b25a!important}
+.os .os-more{background:#d8b25a!important;color:#0b0b0c!important}
+.os .os-more:hover{background:#f0cf6a!important}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
