@@ -1635,6 +1635,20 @@ document.addEventListener('DOMContentLoaded',function(){
 .os .os-more{background:linear-gradient(112deg,#b8862a 0%,#f6d22a 22%,#fff3b8 34%,#f2c81e 48%,#e2a910 70%,#9a6a10 100%)!important;color:#3a2600!important}
 .os .os-more:hover{filter:brightness(1.1)}
 </style>
+<style>
+/* 掲示板の中に色プレート（読みやすく）、スクロールで捲れる */
+.led-board::after{display:none!important}
+.led-board .best{gap:clamp(8px,2.2cqw,12px)!important;align-items:stretch!important;perspective:800px}
+.led-board .bt{display:block!important;padding:.1em .3em .14em!important;border-radius:.16em!important;font-size:clamp(34px,10cqw,58px)!important;letter-spacing:.06em!important;color:#0b0b0c!important;text-shadow:none!important;position:relative;box-shadow:0 .08em 0 #0008,inset 0 -.06em 0 #0002!important}
+.led-board .bt::after{content:""!important;display:block!important;position:absolute;left:0;right:0;top:50%;height:2px;background:#0004}
+.led-board .b1{background:#dcff2b!important}
+.led-board .b2{background:#ff5ac8!important;color:#fff!important}
+.led-board .b3{background:#3ad7ff!important}
+.led-board.go .bt{animation:plateFlip .9s cubic-bezier(.2,1.1,.4,1) both!important;transform-origin:50% 0}
+.led-board.go .b2{animation-delay:.3s!important}.led-board.go .b3{animation-delay:.6s!important}
+@keyframes plateFlip{0%{transform:rotateX(-100deg);opacity:0}25%{opacity:1}55%{transform:rotateX(18deg)}75%{transform:rotateX(-8deg)}100%{transform:none;opacity:1}}
+.led-ticker{color:#ffc23a!important;text-shadow:0 0 6px #ffb020!important}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
