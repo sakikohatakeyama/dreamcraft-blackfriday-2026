@@ -14,7 +14,7 @@
 :root{
   --black:#0b0a0a;--black2:#151312;--char:#211e1c;
   --gold:#d8b25a;--gold-l:#f3dc9c;--gold-d:#94712b;
-  --pink:#22c7ff;--pink-l:#8ee3ff;--pink-d:#0aa6e0;
+  --pink:#dcff2b;--pink-l:#ecff8a;--pink-d:#b3d400;
   --white:#fffaf3;--sub:#bdb4a6;
   --cw:1000px;
 }
@@ -46,7 +46,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;heigh
 /* ---------- FV：電球のマーキー看板 ---------- */
 .fv{position:relative;padding:56px 0 64px;overflow:hidden;
   background:
-    radial-gradient(ellipse 60% 55% at 78% 30%,#22c7ff26,transparent 70%),
+    radial-gradient(ellipse 60% 55% at 78% 30%,#dcff2b26,transparent 70%),
     radial-gradient(ellipse 55% 60% at 15% 85%,#d8b25a1f,transparent 70%),
     var(--black)}
 /* 立ちのぼる金の泡（グラスの中の泡＝酒屋の乾杯） */
@@ -64,7 +64,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;heigh
           mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);
   padding:13px;animation:bulbs 1.2s steps(2) infinite}
 .sign::after{content:"";position:absolute;inset:0;border-radius:6px;
-  background:radial-gradient(circle,var(--pink) 0 3.5px,#22c7ff77 4.5px,transparent 7px) 13px 13px/26px 26px;
+  background:radial-gradient(circle,var(--pink) 0 3.5px,#dcff2b77 4.5px,transparent 7px) 13px 13px/26px 26px;
   -webkit-mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);
           mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);
   padding:13px;animation:bulbs 1.2s steps(2) infinite reverse}
@@ -77,7 +77,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;heigh
 .fv-title{margin-top:10px;line-height:.86}
 .fv-title .en{display:block;font-size:122px;letter-spacing:.02em}
 .fv-title .l1{color:var(--white)}
-.fv-title .l2{color:var(--pink);text-shadow:0 0 18px #22c7ff88,0 0 46px #22c7ff55}
+.fv-title .l2{color:var(--pink);text-shadow:0 0 18px #dcff2b88,0 0 46px #dcff2b55}
 .fv-title .ja{display:block;margin-top:18px;font-size:22px;letter-spacing:.3em;color:var(--gold-l);font-weight:700}
 .fv-catch{margin-top:26px;font-size:30px;font-weight:900;line-height:1.5}
 .fv-catch em{font-style:normal;color:var(--gold-l)}
@@ -109,7 +109,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;heigh
   .sign::before,.sign::after{padding:9px;background-size:18px 18px}
   .sign::after{background-position:9px 9px}
   .sign::before{background-image:radial-gradient(circle,var(--gold-l) 0 2.5px,#d8b25a66 3.5px,transparent 5px)}
-  .sign::after{background-image:radial-gradient(circle,var(--pink) 0 2.5px,#22c7ff77 3.5px,transparent 5px)}
+  .sign::after{background-image:radial-gradient(circle,var(--pink) 0 2.5px,#dcff2b77 3.5px,transparent 5px)}
   .sign-in{padding:26px 18px 24px}
   .fv-kicker{font-size:12px;gap:10px;letter-spacing:.1em}
   .fv-title .en{font-size:clamp(50px,15.5cqw,80px)}
@@ -183,7 +183,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;heigh
 .side{display:none}
 @media(min-width:1000px){
   body{background:
-    radial-gradient(ellipse 40% 50% at 12% 20%,#22c7ff22,transparent 70%),
+    radial-gradient(ellipse 40% 50% at 12% 20%,#dcff2b22,transparent 70%),
     radial-gradient(ellipse 40% 50% at 88% 80%,#d8b25a1c,transparent 70%),#070606;background-attachment:fixed}
   .side{display:flex;position:fixed;top:0;bottom:0;width:calc(50% - 215px);align-items:center;justify-content:center;padding:30px 24px;z-index:2}
   .side-l{left:0}.side-r{right:0}
@@ -194,7 +194,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;heigh
 .side-ttl{margin-top:30px;line-height:.9}
 .side-ttl .en{display:block;font-size:64px;letter-spacing:.02em}
 .side-ttl .l1{color:var(--white)}
-.side-ttl .l2{color:var(--pink);text-shadow:0 0 18px #22c7ff88}
+.side-ttl .l2{color:var(--pink);text-shadow:0 0 18px #dcff2b88}
 .side-date{margin-top:14px;font-size:15px;font-weight:700;color:var(--sub);line-height:1.6}
 .side-date .num{font-size:24px;color:var(--gold-l)}
 .side-nav{margin-top:28px;border-top:1px solid #ffffff26}
@@ -225,7 +225,7 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;heigh
 .deco{overflow:hidden;padding:18px 0 6px;background:var(--black)}
 .deco-in{display:flex;width:max-content;animation:deco 26s linear infinite}
 .deco span{font-family:Jost,Futura,sans-serif;font-weight:700;font-size:72px;line-height:1;white-space:nowrap;padding-right:40px;color:#d8b25a8c;letter-spacing:.02em}
-.deco span:nth-child(3n+2){color:#22c7ffb3}
+.deco span:nth-child(3n+2){color:#dcff2bb3}
 .deco.rev .deco-in{animation-direction:reverse}
 @keyframes deco{to{transform:translateX(-50%)}}
 @media(prefers-reduced-motion:reduce){.deco-in{animation:none}}
@@ -307,7 +307,7 @@ section{padding:110px 0}
 .tk-limit{font-size:26px;font-weight:900;color:var(--pink);border:2px solid var(--pink);padding:2px 22px}
 .tk-btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:58px;text-decoration:none;font-size:17px;font-weight:900;color:var(--black);background:linear-gradient(180deg,#f6e2a6,#d8b25a 55%,#b38b38);transition:filter .2s}
 .tk-btn:hover{filter:brightness(1.08)}
-.cp-note{margin-top:26px;font-size:13px;font-weight:700;color:#05293a}
+.cp-note{margin-top:26px;font-size:13px;font-weight:700;color:#2a3300}
 @media all{
   .cp h2{font-size:clamp(20px,6.4cqw,27px);margin-top:16px}
   .cp-lead{font-size:15px}
@@ -347,7 +347,7 @@ section{padding:110px 0}
 .days li:first-child{color:var(--gold-l)}
 .days li.on{background:var(--pink);color:var(--black);position:relative}
 .days li.on .m{color:var(--black);background:var(--gold-l);padding:4px 8px}
-.entry-btn.pink{color:var(--black);background:linear-gradient(180deg,#6fdcff,#22c7ff 55%,#0ba3dc);box-shadow:6px 6px 0 var(--gold)}
+.entry-btn.pink{color:var(--black);background:linear-gradient(180deg,#e8ff6a,#dcff2b 55%,#a9c800);box-shadow:6px 6px 0 var(--gold)}
 .entry-btn.pink:hover{box-shadow:3px 3px 0 var(--gold)}
 @media all{
   .d05-head{flex-direction:column;align-items:flex-start;gap:14px;margin-top:18px}
@@ -392,7 +392,7 @@ section{padding:110px 0}
 .ph-date .wk{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--black);color:var(--white);font-size:13px;font-weight:900}
 .ph-date .and{font-weight:900;font-size:20px}
 .ph-today{display:none;position:absolute;right:-2px;top:-34px;font-size:15px;font-weight:900;background:var(--gold-l);color:var(--black);padding:5px 14px;line-height:1.4}
-.phase.is-today{box-shadow:0 0 0 4px var(--gold-l),0 0 40px #22c7ff66}
+.phase.is-today{box-shadow:0 0 0 4px var(--gold-l),0 0 40px #dcff2b66}
 .phase.is-today .ph-today{display:block}
 .ph-deals{list-style:none;margin:0;padding:6px 22px 14px}
 .ph-deals li{display:flex;flex-direction:column;padding:14px 0;border-bottom:1px solid #ffffff1f}
@@ -468,7 +468,7 @@ section{padding:110px 0}
 
 /* ---------- 03 お歳暮20倍 ---------- */
 .p20{background:var(--black2);position:relative;overflow:hidden}
-.p20::before{content:"";position:absolute;right:-120px;top:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,#22c7ff30,transparent 65%);pointer-events:none}
+.p20::before{content:"";position:absolute;right:-120px;top:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,#dcff2b30,transparent 65%);pointer-events:none}
 .p20 .sec-no{color:var(--pink)}
 .p20-head{position:relative;display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-top:28px}
 .p20-head h2{font-size:46px;line-height:1.35;font-weight:900}
@@ -481,7 +481,7 @@ section{padding:110px 0}
 .badge20 .calc .plus{color:var(--pink);font-size:18px}
 .badge20 p{margin:0}
 .badge20 .x{display:block;font-family:Jost,Futura,sans-serif;font-size:22px;font-weight:700;color:var(--white);letter-spacing:.1em;margin-bottom:12px}
-.badge20 .num{font-size:180px;color:var(--pink);text-shadow:0 0 30px #22c7ff66}
+.badge20 .num{font-size:180px;color:var(--pink);text-shadow:0 0 30px #dcff2b66}
 .badge20 b{font-size:52px}
 
 .items{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:56px}
@@ -557,7 +557,7 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
    #0b0b0c}
 .tapes{position:absolute;inset:0;pointer-events:none}
 .tape{position:absolute;left:-20%;width:140%;background:var(--pink);color:var(--black);overflow:hidden;box-shadow:0 6px 16px #0008}
-.tape.dim{background:#0e6d8f;color:#062736}
+.tape.dim{background:#5a6b10;color:#1f2606}
 .tape-in{display:flex;width:max-content;animation:tapeRun 30s linear infinite}
 .tape span{font-family:Jost,Futura,sans-serif;font-weight:700;font-style:italic;font-size:22px;letter-spacing:.02em;padding:7px 30px;white-space:nowrap;line-height:1.2}
 .t1{top:62px;transform:rotate(-7deg)}
@@ -596,6 +596,56 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
 /* 中抜き文字の重なり線を消す */
 .fvt-title .l2{color:#0d0d0e!important;-webkit-text-stroke:5px var(--pink)!important;paint-order:stroke fill}
 @media all{.fvt-title .l2{-webkit-text-stroke-width:clamp(3px,1cqw,5px)!important}}
+</style>
+<style>
+/* ---------- FV改（2026-11-12）：帯は角に平行2本、文字は正体、背景にピュンピュン光 ---------- */
+.fv-tape{min-height:0!important;display:block}
+.tape{left:-30%;width:90%}
+.t1{top:clamp(26px,8cqw,48px)!important;bottom:auto!important;left:-28%;transform:rotate(-24deg)!important}
+.t2{top:auto!important;bottom:clamp(30px,9cqw,60px)!important;left:auto;right:-28%;transform:rotate(-24deg)!important}
+.t2 .tape-in{animation-direction:reverse}
+.tape span{font-style:normal!important;font-weight:800}
+.fvt-in{padding:clamp(110px,30cqw,160px) 16px clamp(56px,16cqw,90px)!important}
+.fvt-kick,.fvt-title .en,.fv-tape .fv-date .dt>.num,.fv-tape .fv-date .tm{font-style:normal!important}
+.fvt-title .en{letter-spacing:.01em!important}
+.fvt-title .l1,.fvt-title .l3{text-shadow:0 0 24px #dcff2b55!important}
+/* 日付は1行 */
+.fv-tape .fv-date{flex-direction:row!important;flex-wrap:nowrap;gap:clamp(5px,1.6cqw,12px)!important;margin-top:clamp(18px,5cqw,28px)!important}
+.fv-tape .fv-date .dt{gap:clamp(4px,1.3cqw,8px)!important}
+.fv-tape .fv-date .dt>.num{font-size:clamp(21px,6.3cqw,36px)!important}
+.fv-tape .fv-date .tm{font-size:clamp(15px,4.4cqw,24px)!important}
+.fv-tape .fv-date .wk{width:clamp(20px,6cqw,28px)!important;height:clamp(20px,6cqw,28px)!important;font-size:clamp(11px,3.2cqw,14px)!important}
+.fv-tape .fv-date .to{width:clamp(16px,5cqw,30px)!important;height:2px!important}
+.fv-tape .fv-date .to::after{right:0!important;top:-5px!important;bottom:auto!important;width:10px;height:10px;transform:rotate(45deg)!important}
+/* 画像枠 */
+.fvt-img{position:relative;z-index:2;margin:clamp(24px,7cqw,40px) auto 0;aspect-ratio:4/3;max-width:560px;display:flex;align-items:center;justify-content:center;border:2px dashed #dcff2b88;background:#ffffff08;color:#dcff2b;font-weight:700;font-size:14px;letter-spacing:.1em}
+.fvt-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+/* ピュンピュン光 */
+.beams{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.burst{position:absolute;left:50%;top:clamp(220px,58cqw,330px);width:1400px;height:1400px;margin:-700px 0 0 -700px;
+  background:repeating-conic-gradient(from 0deg,#dcff2b14 0 4deg,transparent 4deg 15deg);
+  -webkit-mask:radial-gradient(circle,#000 0,#000 18%,transparent 52%);mask:radial-gradient(circle,#000 0,#000 18%,transparent 52%);
+  animation:burstSpin 60s linear infinite}
+@keyframes burstSpin{to{transform:rotate(360deg)}}
+.beams i{position:absolute;left:50%;top:clamp(220px,58cqw,330px);width:220px;height:2px;border-radius:2px;transform-origin:0 50%;
+  background:linear-gradient(90deg,transparent,#dcff2b 70%,#fff);opacity:0;animation:pew 2.4s cubic-bezier(.3,.6,.4,1) infinite}
+.beams i:nth-child(2){--a:-8deg;animation-delay:0s}
+.beams i:nth-child(3){--a:32deg;animation-delay:.4s;width:160px}
+.beams i:nth-child(4){--a:68deg;animation-delay:1.1s}
+.beams i:nth-child(5){--a:112deg;animation-delay:.7s;width:140px}
+.beams i:nth-child(6){--a:150deg;animation-delay:1.6s}
+.beams i:nth-child(7){--a:188deg;animation-delay:.2s;width:180px}
+.beams i:nth-child(8){--a:222deg;animation-delay:1.3s}
+.beams i:nth-child(9){--a:258deg;animation-delay:.9s;width:150px;height:3px}
+.beams i:nth-child(10){--a:292deg;animation-delay:1.9s}
+.beams i:nth-child(11){--a:325deg;animation-delay:.55s;width:200px}
+.beams i:nth-child(12){--a:12deg;animation-delay:2s;width:120px}
+.beams i:nth-child(13){--a:205deg;animation-delay:1.45s;width:130px}
+@keyframes pew{
+  0%{opacity:0;transform:rotate(var(--a)) translateX(60px) scaleX(.2)}
+  15%{opacity:1}
+  100%{opacity:0;transform:rotate(var(--a)) translateX(520px) scaleX(1)}}
+@media(prefers-reduced-motion:reduce){.burst,.beams i{animation:none}}
 </style>
 </head>
 <body>
@@ -640,11 +690,10 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
 <main>
 <!-- FV -->
 <div class="fv fv-tape">
+  <div class="beams" aria-hidden="true"><div class="burst"></div><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <div class="tapes" aria-hidden="true">
-    <div class="tape t1 dim"><div class="tape-in"><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span></div></div>
+    <div class="tape t1"><div class="tape-in"><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span></div></div>
     <div class="tape t2"><div class="tape-in"><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span></div></div>
-    <div class="tape t3 dim"><div class="tape-in"><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span></div></div>
-    <div class="tape t4"><div class="tape-in"><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span></div></div>
   </div>
   <div class="fvt-in">
     <p class="fvt-kick en">DREAM CRAFT'S</p>
@@ -659,6 +708,7 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
       <span class="to" aria-label="から"></span>
       <span class="dt"><span class="num">11.25</span><span class="wk">水</span><span class="tm num">1:59</span></span>
     </p>
+    <div class="fvt-img"><!-- FV画像：img/fv.jpg を入れる --><span>画像が入ります</span></div>
   </div>
 </div>
 
