@@ -1530,6 +1530,33 @@ document.addEventListener('DOMContentLoaded',function(){
 .calx-hd span:nth-child(3) b{color:#d8b25a!important}
 </style>
 <style>body.lock .hb{display:none!important}</style>
+<style>
+/* お歳暮目玉2商品：文字を大きく・送料・お気に入り */
+.p20 .item .body{padding:clamp(18px,5cqw,28px) clamp(16px,4.6cqw,28px) clamp(18px,5cqw,26px)!important}
+.p20 .item .cat{font-size:clamp(13px,3.6cqw,16px)!important}
+.p20 .item h3{font-size:clamp(21px,6cqw,30px)!important;line-height:1.4!important}
+.p20 .item .spec{font-size:clamp(15px,4.2cqw,18px)!important;line-height:1.75!important}
+.p20 .item .price{font-size:clamp(18px,5cqw,24px)!important;margin-bottom:6px!important}
+.p20 .item .price .num{font-size:clamp(52px,15cqw,80px)!important}
+.p20 .item .price small{font-size:clamp(12px,3.3cqw,14px)!important}
+.it-ship{margin:4px 0 0}
+.it-ship .sp.free{font-size:clamp(13px,3.6cqw,15px)!important;padding:4px 12px!important;background:#dcff2b!important;color:#0b0b0c!important;border-radius:6px}
+.it-btns{display:flex;gap:10px;align-items:center;margin-top:16px}
+.p20 .it-btns .buy{flex:1;margin:0!important;font-size:clamp(16px,4.6cqw,20px)!important;min-height:58px}
+.p20 .it-fav{flex:none;width:58px!important;height:58px!important;border:2px solid #c4121c;color:#c4121c;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff}
+.p20 .it-fav svg{width:26px!important;height:26px!important}
+.p20 .it-fav:hover{background:#c4121c;color:#fff}
+</style>
+<style>.bk-present{display:block!important;background:none!important;padding:0!important;border-radius:0!important;margin:0 0 6px!important;font-size:clamp(48px,15cqw,96px)!important;letter-spacing:.06em!important;line-height:1;color:#000!important;-webkit-text-stroke:clamp(1.5px,.5cqw,2.5px) #dcff2b;paint-order:stroke fill;text-shadow:0 0 22px #dcff2b55}</style>
+<style>
+/* お歳暮ビールは濃い赤 */
+section.os{background:#8e0a14!important}
+.os .shout .s2{color:#ffe14a!important;text-shadow:none!important}
+.os-lead{color:#fff!important}
+.os .pq{border-color:#ffe14a!important}
+.os .os-more{background:#ffe14a!important;color:#0b0b0c!important}
+.os .os-more:hover{background:#fff!important}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -1694,7 +1721,7 @@ document.addEventListener('DOMContentLoaded',function(){
           <h3>サッポロ ビールセット<br>Sセット おつまみ付き</h3>
           <p class="spec">350ml × 12缶＋おつまみ2個<br>ラガー・黒ラベル・ヱビス4種など12本に、チーズスナック2個を添えて。</p>
           <p class="price"><span class="num">4<span class="cm">,</span>380</span>円<small>（税込）</small></p>
-          <a class="buy" href="https://item.rakuten.co.jp/d-craft/2101900000300/" target="_blank" rel="noopener">商品ページへ</a>
+          <p class="it-ship"><span class="sp free">送料無料（本州のみ）</span></p><div class="it-btns"><a class="buy" href="https://item.rakuten.co.jp/d-craft/2101900000300/" target="_blank" rel="noopener">商品ページへ</a><a class="pq-fav it-fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=S&amp;shop_bid=296346&amp;iid=10019763" target="_blank" rel="noopener" aria-label="お気に入りに追加"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.5 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.5 21.6 11.8 19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/></svg></a></div>
         </div>
       </article>
       <article class="item">
@@ -1705,7 +1732,7 @@ document.addEventListener('DOMContentLoaded',function(){
           <h3>ノンアルコールビール<br>12種セット Fセット</h3>
           <p class="spec">350ml × 12缶・送料無料<br>オールフリー・ドライゼロ・パーフェクトフリーなど4社12種。お酒を飲まない方への贈り物にも。</p>
           <p class="price"><span class="num">3<span class="cm">,</span>281</span>円<small>（税込）</small></p>
-          <a class="buy" href="https://item.rakuten.co.jp/d-craft/2140110000779/" target="_blank" rel="noopener">商品ページへ</a>
+          <p class="it-ship"><span class="sp free">送料無料</span></p><div class="it-btns"><a class="buy" href="https://item.rakuten.co.jp/d-craft/2140110000779/" target="_blank" rel="noopener">商品ページへ</a><a class="pq-fav it-fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=S&amp;shop_bid=296346&amp;iid=10015083" target="_blank" rel="noopener" aria-label="お気に入りに追加"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.5 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.5 21.6 11.8 19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/></svg></a></div>
         </div>
       </article>
     </div>
