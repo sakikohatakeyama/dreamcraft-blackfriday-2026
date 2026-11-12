@@ -790,6 +790,24 @@ document.addEventListener('DOMContentLoaded',function(){
 .shout .s2{font-size:clamp(42px,12.4cqw,64px)!important;color:var(--pink)!important;-webkit-text-stroke:0!important;text-shadow:0 0 18px #dcff2b77,0 0 40px #dcff2b33}
 .shout .s2 .num,.shout .s2{font-feature-settings:"palt"}
 </style>
+<style>
+/* ---------- 見出しは中央、説明は左詰め、左右の余白をそろえる ---------- */
+.calx-h em,.p5-txt h2 em,.p20-head h2 em,.sum h2 em{display:inline!important;margin:0!important;padding:0!important;background:none!important;box-shadow:none!important;color:var(--pink)!important}
+.calx .sec-no,.p5 .sec-no,.p20 .sec-no,.sum .sec-no{justify-content:center}
+.calx .sec-no::after,.p5 .sec-no::after,.p20 .sec-no::after,.sum .sec-no::after{content:"";width:40px;height:2px;background:currentColor}
+.shout,.calx-h,.p5-txt h2,.p20-head h2,.sum h2,.p5-term{text-align:center}
+.calx-lead,.p5-txt>p,.p20-head p,.p5-note,.p20-note{text-align:left}
+.p5-txt{min-width:0}
+.p20-head{align-items:stretch!important}
+.badge20{text-align:center!important;width:100%;align-self:stretch!important}
+.badge20 p,.badge20 .x{text-align:center!important}
+.badge20 .calc{justify-content:center!important}
+/* ボタンの影は真下だけにして左右の余白を同じに */
+.calx-open,.entry-btn,.entry-btn.pink{box-shadow:0 6px 0 var(--gold)!important;margin-left:auto!important;margin-right:auto!important}
+.entry-btn{box-shadow:0 6px 0 var(--pink)!important}
+.calx-open:hover,.entry-btn:hover{transform:translateY(3px)!important;box-shadow:0 3px 0 var(--gold)!important}
+.entry-btn:hover{box-shadow:0 3px 0 var(--pink)!important}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
