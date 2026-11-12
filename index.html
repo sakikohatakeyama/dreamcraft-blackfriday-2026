@@ -808,6 +808,34 @@ document.addEventListener('DOMContentLoaded',function(){
 .calx-open:hover,.entry-btn:hover{transform:translateY(3px)!important;box-shadow:0 3px 0 var(--gold)!important}
 .entry-btn:hover{box-shadow:0 3px 0 var(--pink)!important}
 </style>
+<style>
+/* ---------- ブロックごとに色を変えて区切りをはっきり ---------- */
+.calx,.p5,.p20,.sum{border-top:4px solid #0b0b0c!important;position:relative}
+.calx::before,.p5::before,.p20::after,.sum::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:repeating-linear-gradient(90deg,var(--gold) 0 14px,transparent 14px 22px);opacity:.0}
+/* 01 カレンダー：黄緑 */
+.calx{--pink:#0b0b0c;--white:#0b0b0c;--sub:#2f3a00;background:#dcff2b!important;color:#0b0b0c}
+.calx .shout .s2{text-shadow:none!important;color:#0b0b0c!important}
+.calx .shout .s1{color:#0b0b0c!important}
+.calx-open{background:#0b0b0c!important;color:#dcff2b!important;box-shadow:0 6px 0 #6b7d00!important}
+.calx-open:hover{box-shadow:0 3px 0 #6b7d00!important}
+/* 02 全品5倍：黒（そのまま） */
+.p5{background:#0b0b0c!important}
+/* 03 お歳暮：金 */
+.p20{--pink:#0b0b0c;--white:#0b0b0c;--sub:#4a3a16;background:linear-gradient(180deg,#e6c472,#d8b25a 40%,#c9a14a)!important;color:#0b0b0c}
+.p20::before{display:none}
+.p20 .shout .s2{text-shadow:none!important}
+.p20 .badge20 .num{text-shadow:none!important}
+.p20 .badge20 .calc span:not(.plus){border-color:#0b0b0c66!important}
+.p20 .badge20 .calc .num{color:#0b0b0c!important}
+.p20 .badge20 b,.p20 .badge20 .x{color:#0b0b0c!important}
+.p20-head p{color:#2a2110!important}
+.p20 .item{--pink:#dcff2b;--white:#fffaf3;--sub:#bdb4a6;box-shadow:0 10px 0 #0b0b0c22}
+.p20 .item .ribbon{background:#0b0b0c!important;color:#dcff2b!important}
+.p20 .item .buy{background:#0b0b0c!important;color:#dcff2b!important}
+.p20-note{color:#3a2e12!important}
+/* 04 おさらい：黒 */
+.sum{background:#0b0b0c!important}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
