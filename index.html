@@ -730,6 +730,59 @@ document.addEventListener('DOMContentLoaded',function(){
 .calx-h em,.p5-txt h2 em,.p20-head h2 em,.sum h2 em{display:inline-block;margin-top:8px;padding:.04em .3em .1em;background:var(--pink);color:var(--black)!important;font-style:normal;box-shadow:.14em .14em 0 var(--gold)}
 .sum h2{font-size:clamp(32px,9cqw,44px)!important}
 </style>
+<style>
+/* ---------- カレンダーはポップアップ ---------- */
+.calx-open{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;margin-top:28px;padding:18px 22px;border:0;cursor:pointer;background:var(--pink);color:var(--black);font-family:inherit;font-weight:900;font-size:18px;box-shadow:6px 6px 0 var(--gold);transition:transform .15s,box-shadow .15s}
+.calx-open:hover{transform:translate(3px,3px);box-shadow:3px 3px 0 var(--gold)}
+.calx-open>span{white-space:nowrap;font-size:clamp(15px,4.6cqw,18px)}
+.calx-open .en{font-family:Jost,sans-serif;font-weight:800;font-size:clamp(10px,3cqw,13px);letter-spacing:.2em;display:flex;align-items:center;gap:8px}
+.calx-open .en::after{content:"+";font-size:24px;line-height:1}
+.calx-pop{position:fixed;inset:0;z-index:100;background:#000c;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:24px 12px 40px;display:flex;justify-content:center;align-items:flex-start}
+.calx-pop[hidden]{display:none!important}
+.calx-panel{position:relative;width:100%;max-width:440px;background:#0b0b0c;border:2px solid var(--pink);padding:22px 16px 26px;container-type:inline-size;animation:popIn .25s ease-out}
+@keyframes popIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.calx-close{position:absolute;right:10px;top:10px;border:0;background:var(--pink);color:var(--black);font-family:Jost,sans-serif;font-weight:800;font-size:12px;letter-spacing:.14em;padding:6px 10px;cursor:pointer}
+.calx-ph{font-size:20px;font-weight:900;color:var(--white)}
+.calx-ph .en{display:block;font-family:Jost,sans-serif;font-size:12px;font-weight:700;letter-spacing:.24em;color:var(--pink);margin-bottom:2px}
+.calx-panel .calx-tbl{margin-top:20px}
+body.lock{overflow:hidden}
+/* ---------- 両サイドをコンパクトに ---------- */
+@media(min-width:1000px){.side{padding:24px 20px}.side-in{max-width:230px}}
+.side .brand b{font-size:17px}
+.side .brand small{font-size:9px}
+.side-ttl{margin-top:18px}
+.side-ttl .en{font-size:46px}
+.side-date{margin-top:10px;font-size:12px;line-height:1.7!important}
+.side-date .num{font-size:19px}
+.side-nav{margin-top:18px}
+.side-nav a{padding:10px 2px;font-size:13px;gap:10px}
+.side-nav .n{font-size:12px}
+.side-shop{margin-top:16px;font-size:12px}
+.side-cd{padding:14px 12px 12px}
+.side-cd .lbl{font-size:13px}
+.side-cd .t .num{font-size:32px}
+.side-cd .t small{font-size:10px;margin-right:3px}
+.side-today{margin-top:12px;padding:12px 14px 8px}
+.st-h{font-size:16px}
+.st-day{font-size:11px}
+.side-today ul{margin-top:6px}
+.side-today li{padding:7px 0;font-size:11px}
+.side-today li b{font-size:15px}
+.side-btn{min-height:44px;font-size:13px;margin-top:8px}
+.side-btn.gold{margin-top:12px}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var pop=document.getElementById('calPop'),btn=document.getElementById('calOpen'),cl=document.getElementById('calClose');
+  if(!pop||!btn)return;
+  document.body.appendChild(pop);
+  function open(){pop.hidden=false;document.body.classList.add('lock');btn.setAttribute('aria-expanded','true');cl.focus()}
+  function close(){pop.hidden=true;document.body.classList.remove('lock');btn.setAttribute('aria-expanded','false')}
+  btn.addEventListener('click',open);cl.addEventListener('click',close);
+  pop.addEventListener('click',function(e){if(e.target===pop)close()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!pop.hidden)close()});
+});
+</script>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -737,12 +790,12 @@ document.addEventListener('DOMContentLoaded',function(){
     <a class="brand" href="https://www.rakuten.co.jp/d-craft/" target="_blank" rel="noopener"><b>DREAM CRAFT</b><small>ドリームクラフト＆ビッグボス 楽天市場店</small></a>
     <p class="side-ttl"><span class="en l1">BLACK</span><span class="en l2">FRIDAY</span></p>
     <p class="side-date"><span class="num">11.19</span>（木）20:00 〜<br><span class="num">11.25</span>（水）1:59</p>
-    <div class="side-cal">
-      <p class="sc-h"><span class="en">CALENDAR</span>おトクカレンダー</p>
-      <div class="sc-hd" aria-hidden="true"><span></span><span></span><span>全品<br>5倍</span><span>お歳暮<br>24倍</span><span>0と5<br>4倍</span><span></span></div>
-      <ul><li class="scr" data-d="19"><span class="d">19</span><span class="w">木</span><i class="k1"></i><i class="k2"></i><i class="off"></i><span class="nt">20:00〜</span></li><li class="scr hot" data-d="20"><span class="d">20</span><span class="w">金</span><i class="k1"></i><i class="k2"></i><i class="k3"></i><span class="nt"></span></li><li class="scr we" data-d="21"><span class="d">21</span><span class="w">土</span><i class="k1"></i><i class="k2"></i><i class="off"></i><span class="nt"></span></li><li class="scr we" data-d="22"><span class="d">22</span><span class="w">日</span><i class="k1"></i><i class="k2"></i><i class="off"></i><span class="nt"></span></li><li class="scr" data-d="23"><span class="d">23</span><span class="w">月</span><i class="k1"></i><i class="k2"></i><i class="off"></i><span class="nt"></span></li><li class="scr" data-d="24"><span class="d">24</span><span class="w">火</span><i class="k1"></i><i class="k2"></i><i class="off"></i><span class="nt"></span></li><li class="scr hot" data-d="25"><span class="d">25</span><span class="w">水</span><i class="k1"></i><i class="k2"></i><i class="k3"></i><span class="nt">〜1:59</span></li></ul>
-      <a class="sc-more" href="#calendar">カレンダーをくわしく見る</a>
-    </div>
+    <nav class="side-nav">
+      <a href="#calendar"><span class="n">01</span>カレンダー</a>
+      <a href="#p5"><span class="n">02</span>全品ポイント5倍</a>
+      <a href="#p20"><span class="n">03</span>お歳暮目玉 24倍</a>
+      <a href="#sum"><span class="n">04</span>おさらい</a>
+    </nav>
     <a class="side-shop" href="https://www.rakuten.co.jp/d-craft/" target="_blank" rel="noopener">ショップトップへ</a>
   </div>
 </aside>
@@ -752,12 +805,11 @@ document.addEventListener('DOMContentLoaded',function(){
       <p class="lbl" data-cd-lbl>ブラックフライデーまで</p>
       <p class="t" data-cd-t><span class="num" data-cd="d">0</span><small>日</small><span class="num" data-cd="h">00</span><small>時間</small><span class="num" data-cd="m">00</span><small>分</small><span class="num" data-cd="s">00</span><small>秒</small></p>
     </div>
-    <nav class="side-nav side-nav-r">
-      <a href="#calendar"><span class="n">01</span>カレンダー</a>
-      <a href="#p5"><span class="n">02</span>全品ポイント5倍</a>
-      <a href="#p20"><span class="n">03</span>お歳暮目玉 24倍</a>
-      <a href="#sum"><span class="n">04</span>おさらい</a>
-    </nav>
+    <div class="side-today">
+      <p class="st-h">今日はこれがお得！</p>
+      <p class="st-day" id="st-day"></p>
+      <ul id="st-list"></ul>
+    </div>
     <a class="side-btn gold" id="st-btn1" href="#p20">お歳暮目玉 24倍を見る</a>
     <a class="side-btn pink" id="st-btn2" href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener">5倍エントリーはこちら</a>
   </div>
@@ -811,23 +863,30 @@ document.addEventListener('DOMContentLoaded',function(){
     <p class="shout" aria-hidden="true"><span class="s1">7DAYS</span><span class="s2">FESTIVAL</span></p>
     <h2 class="calx-h">7日間まるごと<br><em>おトク祭り</em></h2>
     <p class="calx-lead"><span class="nobr">毎日5倍＆24倍。</span><span class="nobr">20日と25日は</span><span class="nobr">0と5のつく日も重なる</span><span class="nobr">おトク3連発！</span></p>
+    <button type="button" class="calx-open" id="calOpen" aria-controls="calPop" aria-expanded="false"><span>日ごとのおトクを見る</span><b class="en">CALENDAR</b></button>
+    <div class="calx-pop" id="calPop" role="dialog" aria-modal="true" aria-label="7日間のおトクカレンダー" hidden>
+      <div class="calx-panel">
+        <button type="button" class="calx-close" id="calClose" aria-label="閉じる">CLOSE</button>
+        <p class="calx-ph"><span class="en">NOVEMBER 2026</span>7日間のおトクカレンダー</p>
     <div class="calx-tbl">
-      <div class="calx-hd" aria-hidden="true"><span></span><span>全品<br><b class="num">5</b>倍</span><span>お歳暮目玉<br><b class="num">24</b>倍</span><span>0と5の日<br><b class="num">4</b>倍</span><span>おトク<br>の数</span></div>
-      <ul>
-      <li class="cr" data-d="19"><span class="cd8"><span class="num">19</span><span class="w">木</span></span><span class="cx on k1"><small>20:00〜</small></span><span class="cx on k2"><small>20:00〜</small></span><span class="cx off"></span><span class="ct"><b class="num">2</b>つ</span></li>
-      <li class="cr hot" data-d="20"><span class="cd8"><span class="num">20</span><span class="w">金</span></span><span class="cx on k1"></span><span class="cx on k2"></span><span class="cx on k3"></span><span class="ct"><b class="num">3</b>つ</span><span class="hotlbl">W</span></li>
-      <li class="cr we" data-d="21"><span class="cd8"><span class="num">21</span><span class="w">土</span></span><span class="cx on k1"></span><span class="cx on k2"></span><span class="cx off"></span><span class="ct"><b class="num">2</b>つ</span></li>
-      <li class="cr we" data-d="22"><span class="cd8"><span class="num">22</span><span class="w">日</span></span><span class="cx on k1"></span><span class="cx on k2"></span><span class="cx off"></span><span class="ct"><b class="num">2</b>つ</span></li>
-      <li class="cr" data-d="23"><span class="cd8"><span class="num">23</span><span class="w">月</span></span><span class="cx on k1"></span><span class="cx on k2"></span><span class="cx off"></span><span class="ct"><b class="num">2</b>つ</span></li>
-      <li class="cr" data-d="24"><span class="cd8"><span class="num">24</span><span class="w">火</span></span><span class="cx on k1"></span><span class="cx on k2"></span><span class="cx off"></span><span class="ct"><b class="num">2</b>つ</span></li>
-      <li class="cr hot" data-d="25"><span class="cd8"><span class="num">25</span><span class="w">水</span></span><span class="cx on k1"><small>〜1:59</small></span><span class="cx on k2"><small>〜1:59</small></span><span class="cx on k3"></span><span class="ct"><b class="num">3</b>つ</span><span class="hotlbl">W</span></li>
-      </ul>
+          <div class="calx-hd" aria-hidden="true"><span></span><span>全品<br><b class="num">5</b>倍</span><span>お歳暮目玉<br><b class="num">24</b>倍</span><span>0と5の日<br><b class="num">4</b>倍</span><span>おトク<br>の数</span></div>
+          <ul>
+          <li class="cr" data-d="19"><span class="cd8"><span class="num">19</span><span class="w">木</span></span><span class="cx on k1"><small>20:00〜</small></span><span class="cx on k2"><small>20:00〜</small></span><span class="cx off"></span><span class="ct"><b class="num">2</b>つ</span></li>
+          <li class="cr hot" data-d="20"><span class="cd8"><span class="num">20</span><span class="w">金</span></span><span class="cx on k1"></span><span class="cx on k2"></span><span class="cx on k3"></span><span class="ct"><b class="num">3</b>つ</span><span class="hotlbl">W</span></li>
+          <li class="cr we" data-d="21"><span class="cd8"><span class="num">21</span><span class="w">土</span></span><span class="cx on k1"></span><span class="cx on k2"></span><span class="cx off"></span><span class="ct"><b class="num">2</b>つ</span></li>
+          <li class="cr we" data-d="22"><span class="cd8"><span class="num">22</span><span class="w">日</span></span><span class="cx on k1"></span><span class="cx on k2"></span><span class="cx off"></span><span class="ct"><b class="num">2</b>つ</span></li>
+          <li class="cr" data-d="23"><span class="cd8"><span class="num">23</span><span class="w">月</span></span><span class="cx on k1"></span><span class="cx on k2"></span><span class="cx off"></span><span class="ct"><b class="num">2</b>つ</span></li>
+          <li class="cr" data-d="24"><span class="cd8"><span class="num">24</span><span class="w">火</span></span><span class="cx on k1"></span><span class="cx on k2"></span><span class="cx off"></span><span class="ct"><b class="num">2</b>つ</span></li>
+          <li class="cr hot" data-d="25"><span class="cd8"><span class="num">25</span><span class="w">水</span></span><span class="cx on k1"><small>〜1:59</small></span><span class="cx on k2"><small>〜1:59</small></span><span class="cx on k3"></span><span class="ct"><b class="num">3</b>つ</span><span class="hotlbl">W</span></li>
+          </ul>
+        </div>
+        <ul class="calx-key">
+          <li><i class="k1"></i><span><b>エントリーで店内全品ポイント5倍</b>11/19（木）20:00〜11/25（水）1:59</span></li>
+          <li><i class="k2"></i><span><b>お歳暮目玉商品 エントリーでポイント24倍</b>11/19（木）20:00〜11/25（水）1:59</span></li>
+          <li><i class="k3"></i><span><b>0と5のつく日 エントリー＆楽天カードで4倍</b>11/20（金）・11/25（水）</span></li>
+        </ul>
+      </div>
     </div>
-    <ul class="calx-key">
-      <li><i class="k1"></i><span><b>エントリーで店内全品ポイント5倍</b>11/19（木）20:00〜11/25（水）1:59</span></li>
-      <li><i class="k2"></i><span><b>お歳暮目玉商品 エントリーでポイント24倍</b>11/19（木）20:00〜11/25（水）1:59</span></li>
-      <li><i class="k3"></i><span><b>0と5のつく日 エントリー＆楽天カードで4倍</b>11/20（金）・11/25（水）</span></li>
-    </ul>
   </div>
 </section>
 
