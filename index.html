@@ -1037,6 +1037,24 @@ document.addEventListener('DOMContentLoaded',function(){
 .fv-tape .fv-date .wk{width:clamp(18px,5.4cqw,25px)!important;height:clamp(18px,5.4cqw,25px)!important;font-size:clamp(10px,2.9cqw,13px)!important}
 .fvt-kick{font-size:clamp(14px,4.2cqw,22px)!important}
 </style>
+<style>
+/* FV：矢印なし、ページを開いたらロゴがドーンと出る */
+.fvt-title .l1::after,.fvt-title .l2::after{display:none!important}
+.fvt-title .l1{margin-bottom:0}
+.fvt-title .l1,.fvt-title .l2{animation:doon .62s cubic-bezier(.2,.9,.3,1.25) both}
+.fvt-title .l1{animation-delay:.25s}
+.fvt-title .l2{animation-delay:.55s}
+@keyframes doon{0%{opacity:0;transform:scale(2.6);filter:blur(6px)}55%{opacity:1;transform:scale(.92);filter:blur(0)}75%{transform:scale(1.04)}100%{opacity:1;transform:none}}
+.fvt-kick{animation:fadeDown .5s ease-out both}
+.fv-tape .fv-date{animation:fadeUp .6s ease-out 1.05s both}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.fvt-in{animation:shake .4s ease-out .62s both}
+@keyframes shake{0%,100%{transform:none}20%{transform:translate(-5px,3px)}40%{transform:translate(5px,-3px)}60%{transform:translate(-3px,2px)}80%{transform:translate(2px,-1px)}}
+.fv-tape::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(circle at 50% 38%,#ffffffcc,#dcff2b66 30%,transparent 65%);opacity:0;animation:flash .7s ease-out .5s both}
+@keyframes flash{0%{opacity:0}20%{opacity:1}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.fvt-title .l1,.fvt-title .l2,.fvt-kick,.fv-tape .fv-date,.fvt-in,.fv-tape::after{animation:none!important}}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -1309,10 +1327,10 @@ document.addEventListener('DOMContentLoaded',function(){
     var a=t.querySelector('.l1'),b=t.querySelector('.l2');if(!a||!b)return;
     [a,b].forEach(function(e){e.style.removeProperty('font-size');e.style.display='inline-block'});
     var W=(t.parentNode.clientWidth-32)*.84,fb=parseFloat(getComputedStyle(b).fontSize);
-    var nb=fb*W/b.getBoundingClientRect().width;nb=Math.min(nb,fb*1.25);
+    var nb=fb*W/b.offsetWidth;nb=Math.min(nb,fb*1.25);
     b.style.setProperty('font-size',nb+'px','important');
-    var wb=b.getBoundingClientRect().width,fa=parseFloat(getComputedStyle(a).fontSize);
-    a.style.setProperty('font-size',(fa*wb/a.getBoundingClientRect().width)+'px','important');
+    var wb=b.offsetWidth,fa=parseFloat(getComputedStyle(a).fontSize);
+    a.style.setProperty('font-size',(fa*wb/a.offsetWidth)+'px','important');
     [a,b].forEach(function(e){e.style.removeProperty('display')});
   }
   if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
