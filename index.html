@@ -783,6 +783,13 @@ document.addEventListener('DOMContentLoaded',function(){
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!pop.hidden)close()});
 });
 </script>
+<style>
+/* 大見出しは日本語 */
+.shout{font-family:"Noto Sans JP",sans-serif!important;font-weight:900!important;line-height:1.15!important;letter-spacing:.02em!important}
+.shout .s1{font-size:clamp(26px,7.6cqw,38px)!important;color:var(--white)!important;text-shadow:none!important}
+.shout .s2{font-size:clamp(42px,12.4cqw,64px)!important;color:var(--pink)!important;-webkit-text-stroke:0!important;text-shadow:0 0 18px #dcff2b77,0 0 40px #dcff2b33}
+.shout .s2 .num,.shout .s2{font-feature-settings:"palt"}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -860,8 +867,8 @@ document.addEventListener('DOMContentLoaded',function(){
 <section class="calx" id="calendar">
   <div class="wrap">
     <p class="sec-no">01 ／ カレンダー</p>
-    <p class="shout" aria-hidden="true"><span class="s1">7DAYS</span><span class="s2">FESTIVAL</span></p>
-    <h2 class="calx-h">7日間まるごと<br><em>おトク祭り</em></h2>
+    <p class="shout" aria-hidden="true"><span class="s1">年に一度の</span><span class="s2">お祭り7日間</span></p>
+    <h2 class="calx-h">毎日が<br><em>おトクな日</em></h2>
     <p class="calx-lead"><span class="nobr">毎日5倍＆24倍。</span><span class="nobr">20日と25日は</span><span class="nobr">0と5のつく日も重なる</span><span class="nobr">おトク3連発！</span></p>
     <button type="button" class="calx-open" id="calOpen" aria-controls="calPop" aria-expanded="false"><span>日ごとのおトクを見る</span><b class="en">CALENDAR</b></button>
     <div class="calx-pop" id="calPop" role="dialog" aria-modal="true" aria-label="7日間のおトクカレンダー" hidden>
@@ -894,12 +901,12 @@ document.addEventListener('DOMContentLoaded',function(){
 <section class="p5" id="p5">
   <div class="wrap">
     <p class="sec-no">02 ／ 全品ポイント5倍</p>
-    <p class="shout" aria-hidden="true"><span class="s1">POINT ×5</span><span class="s2">CHEERS!</span></p>
+    <p class="shout" aria-hidden="true"><span class="s1">店内全品</span><span class="s2">ポイント5倍</span></p>
     <p class="p5-term"><span class="num">11.19</span>（木）<span class="num">20:00</span> 〜 <span class="nobr"><span class="num">11.25</span>（水）<span class="num">1:59</span></span></p>
     <div class="p5-grid">
       <p class="big5" aria-hidden="true"><span class="num">5</span><b>倍</b></p>
       <div class="p5-txt">
-        <h2>乾杯の前に<br>まずはエントリー<br><em>全品ポイント5倍</em></h2>
+        <h2>乾杯の前に<br><em>まずはエントリー</em></h2>
         <p>ビールもワインも日本酒も、ぜんぶ5倍。<br class="pc-br">ご自宅用のまとめ買いも、年末年始の買い置きも、<br class="pc-br">この期間にどうぞ。</p>
         <a class="entry-btn" href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener">まずはエントリー</a>
         <p class="p5-note">※ポイントアップの対象になるのは、エントリー後のご購入分からです。お買い物の前にエントリーをお済ませください。<br>※付与条件・上限などの詳細はエントリーページでご確認ください。</p>
@@ -916,10 +923,10 @@ document.addEventListener('DOMContentLoaded',function(){
 <section class="p20" id="p20">
   <div class="wrap">
     <p class="sec-no">03 ／ お歳暮目玉商品</p>
-    <p class="shout" aria-hidden="true"><span class="s1">GIFT ×24</span><span class="s2">BIG DEAL</span></p>
+    <p class="shout" aria-hidden="true"><span class="s1">お歳暮が</span><span class="s2">ポイント24倍</span></p>
     <div class="p20-head">
       <div>
-        <h2>お歳暮だって<br>大盤振る舞い<br><em>ポイント24倍</em></h2>
+        <h2>対象の2商品は<br><em>大盤振る舞い</em></h2>
         <p>この2点はお歳暮ギフトの20倍に、<br><span class="nobr">店内全品5倍</span>のエントリー分が重なって<span class="nobr">24倍に。</span><br><span class="nobr">のし・包装も承ります。</span></p>
       </div>
       <div class="badge20" aria-hidden="true"><p class="calc"><span>お歳暮ギフト <b class="num">20</b>倍</span><span class="plus">＋</span><span>エントリー <b class="num">5</b>倍</span></p><p class="x">POINT</p><p><span class="num">24</span><b>倍</b></p></div>
@@ -957,8 +964,8 @@ document.addEventListener('DOMContentLoaded',function(){
 <section class="sum" id="sum">
   <div class="wrap">
     <p class="sec-no">04 ／ おさらい</p>
-    <p class="shout" aria-hidden="true"><span class="s1">CHECK!</span><span class="s2">LAST CALL</span></p>
-    <h2>酔う前に<br><em>おさらい</em></h2>
+    <p class="shout" aria-hidden="true"><span class="s1">酔う前に</span><span class="s2">おさらい</span></p>
+    <h2>ブラックフライデー<br><em>ここをチェック</em></h2>
     <ul class="sum-list">
       <li><span class="k">11/19（木）20:00〜11/25（水）1:59</span><span class="v">エントリーで店内全品 <span class="hp">ポイント5倍</span></span><a class="pk" href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener">エントリーページへ</a></li>
       <li><span class="k">お歳暮目玉商品</span><span class="v">エントリーで <span class="hp">ポイント24倍</span></span><a class="pk" href="#p20">対象ギフトを見る</a></li>
