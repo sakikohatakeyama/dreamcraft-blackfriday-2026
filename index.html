@@ -1464,12 +1464,24 @@ document.addEventListener('DOMContentLoaded',function(){
 });
 </script>
 <style>.fvt-in{padding-top:clamp(64px,17cqw,120px)!important}.t1{top:clamp(10px,3cqw,26px)!important}</style>
+<style>
+/* PC：両サイドがある時はヘッダー不要 */
+@media(min-width:1220px){.col>header{display:none!important}}
+.side-ttl-link{display:block;text-decoration:none;transition:opacity .2s}
+.side-ttl-link:hover{opacity:.8}
+.side .brand b{color:#fff!important}
+html{scroll-behavior:smooth}
+/* FV：画像を少し上へ、光の動きを戻す（背景は黒のまま） */
+.fv-cans{margin-top:clamp(4px,2cqw,14px)!important}
+.fv-tape .beams{display:block!important}
+.fv-tape .burst{display:block!important;opacity:.55}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
   <div class="side-in">
     <a class="brand" href="https://www.rakuten.co.jp/d-craft/" target="_blank" rel="noopener"><b>DREAM CRAFT</b><small>ドリームクラフト＆ビッグボス 楽天市場店</small></a>
-    <p class="side-ttl"><span class="en l1">BLACK</span><span class="en l2">FRIDAY</span></p>
+    <a class="side-ttl-link" href="#top" aria-label="ページの先頭へ"><p class="side-ttl"><span class="en l1">BLACK</span><span class="en l2">FRIDAY</span></p></a>
     <p class="side-date"><span class="num">11.19</span>（木）20:00 〜<br><span class="num">11.25</span>（水）1:59</p>
     <nav class="side-nav">
       <a href="#p5"><span class="n">01</span>全品ポイント5倍</a>
@@ -1505,7 +1517,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
 <main>
 <!-- FV -->
-<div class="fv fv-tape">
+<div id="top" class="fv fv-tape">
   <div class="beams" aria-hidden="true"><div class="burst"></div><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <div class="tapes" aria-hidden="true">
     <div class="tape t1"><div class="tape-in"><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span><span>BLACK FRIDAY</span></div></div>
