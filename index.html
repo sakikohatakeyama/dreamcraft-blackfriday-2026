@@ -888,6 +888,118 @@ document.addEventListener('DOMContentLoaded',function(){
 /* 大見出しの数字は Futura 風（Jost） */
 .shout .sn{display:inline!important;white-space:nowrap;font-family:Jost,Futura,sans-serif;font-weight:800;font-size:1.22em;line-height:1;margin:0 .04em;letter-spacing:-.01em;vertical-align:-.04em}
 </style>
+<style>
+/* ---------- 04 ジャンル別 人気の商品 ---------- */
+.pp{background:#0b0b0c;border-top:4px solid #0b0b0c;padding:clamp(64px,18cqw,110px) 0}
+.pp .sec-no{color:var(--pink);justify-content:center}
+.pp .sec-no::after{content:"";width:40px;height:2px;background:currentColor}
+.pp-h{margin-top:22px;text-align:center;font-size:clamp(28px,8.4cqw,40px);line-height:1.3;font-weight:900}
+.pp-h em{font-style:normal;color:var(--pink)}
+.pp-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:28px}
+.pp-tab{border:2px solid var(--pink);background:transparent;color:var(--white);font-family:inherit;font-weight:900;font-size:clamp(13px,3.7cqw,15px);padding:7px 14px;cursor:pointer;transition:background .15s,color .15s}
+.pp-tab:hover{background:#dcff2b22}
+.pp-tab.on{background:var(--pink);color:#0b0b0c}
+.pp-panel{margin-top:22px}
+.pp-panel[hidden]{display:none}
+.pp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.pp-card{display:flex;flex-direction:column;background:#fffaf3;color:#0b0b0c;text-decoration:none;transition:transform .15s}
+.pp-card:hover{transform:translateY(-3px)}
+.pp-card .ph{display:block;aspect-ratio:1;background:#fff;overflow:hidden}
+.pp-card img{width:100%;height:100%;object-fit:contain;display:block}
+.pp-card .nm{padding:8px 8px 0;font-size:clamp(10.5px,3cqw,13px);font-weight:700;line-height:1.45;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.pp-card .pr{margin-top:auto;padding:6px 8px 10px;font-size:11px;font-weight:700;color:#c4121c}
+.pp-card .pr b{font-family:Jost,sans-serif;font-size:clamp(16px,4.8cqw,20px);margin-right:1px}
+.pp-more{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:16px;min-height:56px;background:var(--pink);color:#0b0b0c;text-decoration:none;font-weight:900;font-size:16px;box-shadow:0 5px 0 #6b7d00}
+.pp-more::after{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg)}
+.pp-more:hover{transform:translateY(2px);box-shadow:0 3px 0 #6b7d00}
+.pp-note{margin-top:18px;font-size:11.5px;color:var(--sub);line-height:1.7}
+.pp-all{display:flex;align-items:center;justify-content:center;margin-top:24px;min-height:56px;border:2px solid var(--gold);color:var(--gold-l);text-decoration:none;font-weight:900;font-size:15px}
+.pp-all:hover{background:#d8b25a1a}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var tabs=[].slice.call(document.querySelectorAll('.pp-tab')),ps=[].slice.call(document.querySelectorAll('.pp-panel'));
+  tabs.forEach(function(t){t.addEventListener('click',function(){var n=t.dataset.pp;tabs.forEach(function(x){var on=x===t;x.classList.toggle('on',on);x.setAttribute('aria-selected',on)});ps.forEach(function(p){p.hidden=p.dataset.pp!==n})})});
+});
+</script>
+<style>
+/* ---------- 03 お歳暮：蛍光黄緑・柄なし ---------- */
+.p20{--pink:#0b0b0c;--white:#0b0b0c;--sub:#2f3a00;color:#0b0b0c;background:#dcff2b!important}
+.p20::before{display:none!important;animation:none!important}
+.p20 .sec-no{color:#0b0b0c!important}
+.p20 .shout .s1{color:#0b0b0c!important}
+.p20 .shout .s2{color:#0b0b0c!important;text-shadow:none!important}
+.p20-head h2{color:#0b0b0c}
+.p20-head h2 em{color:#0b0b0c!important;background:linear-gradient(transparent 62%,#fff 62%)}
+.p20-head p{color:#1d2400!important}
+.p20 .badge20 .num{color:#0b0b0c!important;text-shadow:5px 5px 0 #fff!important}
+.p20 .badge20 b,.p20 .badge20 .x{color:#0b0b0c!important}
+.p20 .badge20 .calc span:not(.plus){border-color:#0b0b0c!important;color:#0b0b0c}
+.p20 .badge20 .calc .num,.p20 .badge20 .calc .plus{color:#0b0b0c!important}
+.stamp{background:#0b0b0c!important;color:#dcff2b!important;box-shadow:0 0 0 3px #dcff2b,0 0 0 5px #0b0b0c,0 6px 14px #0004!important}
+.p20 .item{box-shadow:0 8px 0 #0b0b0c!important}
+.p20 .item .ribbon{background:#0b0b0c!important;color:#dcff2b!important}
+.p20 .item .buy{background:#0b0b0c!important;color:#dcff2b!important}
+.p20 .item .buy:hover{background:#333!important}
+.p20-note{color:#2a3300!important}
+.p20 .stamp b{color:#dcff2b!important}
+/* クラッカー */
+.popper{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:3}
+.popper i{position:absolute;bottom:58%;width:9px;height:14px;opacity:0}
+.popper.go i{animation:pop 1.6s cubic-bezier(.15,.7,.3,1) forwards}
+@keyframes pop{
+  0%{opacity:1;transform:translate(0,0) rotate(0)}
+  70%{opacity:1}
+  100%{opacity:0;transform:translate(var(--x),var(--y)) rotate(var(--r))}}
+/* ---------- スクロールで少し動く ---------- */
+.js .mv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .mv.in{opacity:1;transform:none}
+.js .mv.zoom{transform:scale(.7)}
+.js .mv.zoom.in{transform:none;transition-timing-function:cubic-bezier(.3,1.6,.5,1)}
+@media(prefers-reduced-motion:reduce){.js .mv{opacity:1;transform:none;transition:none}.popper{display:none}}
+</style>
+<script>
+document.documentElement.classList.add('js');
+document.addEventListener('DOMContentLoaded',function(){
+  var q=function(sel){return [].slice.call(document.querySelectorAll(sel))};
+  var list=q('main section .sec-no,main section .shout,main section h2,main section .calx-lead,.calx-open,.p5-term,.big5,.p5-txt>p,.entry-btn,.d05-mini,.badge20,.p20-head p,.item,.pp-tabs,.pp-card,.pp-more,.pp-all');
+  list.forEach(function(e){e.classList.add('mv')});
+  q('.big5,.badge20').forEach(function(e){e.classList.add('zoom')});
+  q('.pp-grid,.items').forEach(function(g){[].forEach.call(g.children,function(c,i){c.style.transitionDelay=(i*.12)+'s'})});
+  if(!('IntersectionObserver' in window)){list.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{rootMargin:'0px 0px -12% 0px'});
+  list.forEach(function(e){io.observe(e)});
+  // タブ切替時に新しいカードも表示
+  q('.pp-tab').forEach(function(t){t.addEventListener('click',function(){q('.pp-card').forEach(function(c){c.classList.add('in')})})});
+  // クラッカー
+  var pop=document.querySelector('.popper');
+  if(pop&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var C=['#0b0b0c','#ffffff','#d8b25a','#ff3b5c','#2ec4ff','#0b0b0c'];
+    [['8%',1],['92%',-1]].forEach(function(side){
+      for(var i=0;i<26;i++){
+        var c=document.createElement('i'),a=(20+Math.random()*55)*Math.PI/180,d=180+Math.random()*260;
+        c.style.left=side[0];
+        c.style.background=C[i%C.length];
+        if(i%3===0){c.style.borderRadius='50%';c.style.width=c.style.height='8px'}
+        if(i%4===1){c.style.width='4px';c.style.height='18px'}
+        c.style.setProperty('--x',(side[1]*Math.cos(a)*d)+'px');
+        c.style.setProperty('--y',(-Math.sin(a)*d+120+Math.random()*160)+'px');
+        c.style.setProperty('--r',(Math.random()*900-450)+'deg');
+        c.style.animationDelay=(Math.random()*.15)+'s';
+        pop.appendChild(c);
+      }
+    });
+    var io2=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){pop.classList.remove('go');void pop.offsetWidth;pop.classList.add('go')}})},{threshold:.25});
+    io2.observe(document.getElementById('p20'));
+  }
+});
+</script>
+<style>
+/* タイマー：フォントはデジタル風のまま、枠はなし */
+.cd-box [data-cd]{background:none!important;border:0!important;box-shadow:none!important;padding:0!important;min-width:0!important;margin:0 .06em 0 .22em!important;color:#0b0b0c!important;text-shadow:none!important}
+.cd .t [data-cd]{font-size:clamp(28px,8.4cqw,40px)!important}
+.side-cd .t [data-cd]{font-size:26px!important}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -899,7 +1011,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <a href="#calendar"><span class="n">01</span>カレンダー</a>
       <a href="#p5"><span class="n">02</span>全品ポイント5倍</a>
       <a href="#p20"><span class="n">03</span>お歳暮目玉 24倍</a>
-      <a href="#sum"><span class="n">04</span>おさらい</a>
+      <a href="#popular"><span class="n">04</span>人気の商品</a>
     </nav>
     <a class="side-shop" href="https://www.rakuten.co.jp/d-craft/" target="_blank" rel="noopener">ショップトップへ</a>
   </div>
@@ -1018,6 +1130,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
 <!-- 02 お歳暮目玉 -->
 <section class="p20" id="p20">
+  <div class="popper" aria-hidden="true"></div>
   <div class="wrap">
     <p class="sec-no">03 ／ お歳暮目玉商品</p>
     <p class="shout" aria-hidden="true"><span class="s1">店長一推しの<br>お歳暮飲み比べギフトが</span><span class="s2">ポイント<span class="sn">24</span>倍</span></p>
@@ -1057,18 +1170,43 @@ document.addEventListener('DOMContentLoaded',function(){
   </div>
 </section>
 
-<!-- 03 おさらい -->
-<section class="sum" id="sum">
+<!-- 04 人気の商品 -->
+<section class="pp" id="popular">
   <div class="wrap">
-    <p class="sec-no">04 ／ おさらい</p>
-    <p class="shout" aria-hidden="true"><span class="s1">酔う前に</span><span class="s2">おさらい</span></p>
-    <h2>ブラックフライデー<br><em>ここをチェック</em></h2>
-    <ul class="sum-list">
-      <li><span class="k">11/19（木）20:00〜11/25（水）1:59</span><span class="v">エントリーで店内全品 <span class="hp">ポイント5倍</span></span><a class="pk" href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener">エントリーページへ</a></li>
-      <li><span class="k">お歳暮目玉商品</span><span class="v">エントリーで <span class="hp">ポイント24倍</span></span><a class="pk" href="#p20">対象ギフトを見る</a></li>
-      <li><span class="k">20日・25日</span><span class="v">0と5のつく日 <span class="hp">ポイント4倍</span><small style="display:block;font-size:13px;color:var(--sub);font-weight:400">エントリー＆楽天カード利用</small></span><a class="pk" href="https://event.rakuten.co.jp/card/pointday/" target="_blank" rel="noopener">エントリーページへ</a></li>
-    </ul>
-    <a class="shop-link" href="https://www.rakuten.co.jp/d-craft/" target="_blank" rel="noopener">ショップトップで商品をさがす</a>
+    <p class="sec-no">04 ／ 人気の商品</p>
+    <p class="shout" aria-hidden="true"><span class="s1">飲みたいお酒から</span><span class="s2">さがそう</span></p>
+    <h2 class="pp-h">ジャンル別<br><em>人気の商品</em></h2>
+    <div class="pp-tabs" role="tablist"><button type="button" class="pp-tab on" data-pp="0" aria-selected="true">お歳暮</button><button type="button" class="pp-tab" data-pp="1" aria-selected="false">飲み比べ</button><button type="button" class="pp-tab" data-pp="2" aria-selected="false">ビール</button><button type="button" class="pp-tab" data-pp="3" aria-selected="false">チューハイ</button><button type="button" class="pp-tab" data-pp="4" aria-selected="false">ウイスキー</button><button type="button" class="pp-tab" data-pp="5" aria-selected="false">日本酒</button><button type="button" class="pp-tab" data-pp="6" aria-selected="false">ワイン</button></div>
+      <div class="pp-panel" data-pp="0">
+        <div class="pp-grid"><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/4902715652207/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/c55/6s4902715924205.jpg?_ex=300x300" width="300" height="300" alt="丸大食品 ハムギフト 煌彩セット" loading="lazy"></span><span class="nm">丸大食品 ハムギフト 煌彩セット</span><span class="pr"><b class="num">2,999</b>円</span></a><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/4902115610999/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/c55/6s4902115716493.jpg?_ex=300x300" width="300" height="300" alt="日本ハム ハムギフト 本格派" loading="lazy"></span><span class="nm">日本ハム ハムギフト 本格派</span><span class="pr"><b class="num">2,099</b>円</span></a><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/4901004061713/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/c55/a4901004061713.jpg?_ex=300x300" width="300" height="300" alt="アサヒ スーパードライ＆ウェルチ ギフト" loading="lazy"></span><span class="nm">アサヒ スーパードライ＆ウェルチ ギフト</span><span class="pr"><b class="num">4,899</b>円</span></a></div>
+        <a class="pp-more" href="https://search.rakuten.co.jp/search/mall/%E3%81%8A%E6%AD%B3%E6%9A%AE/?sid=296346" target="_blank" rel="noopener">お歳暮をもっと見る</a>
+      </div>
+      <div class="pp-panel" data-pp="1" hidden>
+        <div class="pp-grid"><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/4901777323834/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/c55/s4901777458161.jpg?_ex=300x300" width="300" height="300" alt="サントリー プレモル 6種11缶 飲み比べ" loading="lazy"></span><span class="nm">サントリー プレモル 6種11缶 飲み比べ</span><span class="pr"><b class="num">2,828</b>円</span></a><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/4901880884147-nsi/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/c55/4901880217877.jpg?_ex=300x300" width="300" height="300" alt="サッポロ ヱビス 飲み比べギフト" loading="lazy"></span><span class="nm">サッポロ ヱビス 飲み比べギフト</span><span class="pr"><b class="num">2,966</b>円</span></a><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/2180010000271/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/c19/2180010000271_c0.jpg?_ex=300x300" width="300" height="300" alt="日本酒 飲み比べ ミニ7本セット" loading="lazy"></span><span class="nm">日本酒 飲み比べ ミニ7本セット</span><span class="pr"><b class="num">3,980</b>円</span></a></div>
+        <a class="pp-more" href="https://search.rakuten.co.jp/search/mall/%E9%A3%B2%E3%81%BF%E6%AF%94%E3%81%B9/?sid=296346" target="_blank" rel="noopener">飲み比べをもっと見る</a>
+      </div>
+      <div class="pp-panel" data-pp="2" hidden>
+        <div class="pp-grid"><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/4901004045874/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/c55/a4901004068286.jpg?_ex=300x300" width="300" height="300" alt="アサヒ 5種12缶 飲み比べギフト" loading="lazy"></span><span class="nm">アサヒ 5種12缶 飲み比べギフト</span><span class="pr"><b class="num">2,966</b>円</span></a><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/4901004010988/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/c55/a4901004010988.jpg?_ex=300x300" width="300" height="300" alt="アサヒ スーパードライ ギフト" loading="lazy"></span><span class="nm">アサヒ スーパードライ ギフト</span><span class="pr"><b class="num">2,966</b>円</span></a><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/4901411040493/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/c55/k4901411080413.jpg?_ex=300x300" width="300" height="300" alt="キリン 一番搾り 12缶ギフト" loading="lazy"></span><span class="nm">キリン 一番搾り 12缶ギフト</span><span class="pr"><b class="num">2,966</b>円</span></a></div>
+        <a class="pp-more" href="https://search.rakuten.co.jp/search/mall/%E3%83%93%E3%83%BC%E3%83%AB/?sid=296346" target="_blank" rel="noopener">ビールをもっと見る</a>
+      </div>
+      <div class="pp-panel" data-pp="3" hidden>
+        <div class="pp-grid"><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/2114900000157/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/c55/2114900000157_c0.jpg?_ex=300x300" width="300" height="300" alt="究極のチューハイ 限定3本入り" loading="lazy"></span><span class="nm">究極のチューハイ 限定3本入り</span><span class="pr"><b class="num">5,199</b>円</span></a><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/4901880208226-yml-2/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/c55/4901880208226-y2_c0.jpg?_ex=300x300" width="300" height="300" alt="サッポロ ニッポンのシン レモンサワー 48本" loading="lazy"></span><span class="nm">サッポロ ニッポンのシン レモンサワー 48本</span><span class="pr"><b class="num">5,963</b>円</span></a><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/4901777393981-yml-2/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/20260819sucp/4901777393981-f2.jpg?_ex=300x300" width="300" height="300" alt="サントリー -196℃ 無糖ダブルレモン 48本" loading="lazy"></span><span class="nm">サントリー -196℃ 無糖ダブルレモン 48本</span><span class="pr"><b class="num">6,292</b>円</span></a></div>
+        <a class="pp-more" href="https://search.rakuten.co.jp/search/mall/%E3%83%81%E3%83%A5%E3%83%BC%E3%83%8F%E3%82%A4/?sid=296346" target="_blank" rel="noopener">チューハイをもっと見る</a>
+      </div>
+      <div class="pp-panel" data-pp="4" hidden>
+        <div class="pp-grid"><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/4901777284289lbp/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/c1/4901777284289lbp_c0.jpg?_ex=300x300" width="300" height="300" alt="名入れ サントリー 角瓶 700ml" loading="lazy"></span><span class="nm">名入れ サントリー 角瓶 700ml</span><span class="pr"><b class="num">5,060</b>円</span></a><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/2180060000085/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/c46/2180060000085_c0.jpg?_ex=300x300" width="300" height="300" alt="マツイウイスキー 3本飲み比べ" loading="lazy"></span><span class="nm">マツイウイスキー 3本飲み比べ</span><span class="pr"><b class="num">3,397</b>円</span></a><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/4589454733055/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/c15/4589454733055_c0.jpg?_ex=300x300" width="300" height="300" alt="国産ウイスキー 富士乃森 4L" loading="lazy"></span><span class="nm">国産ウイスキー 富士乃森 4L</span><span class="pr"><b class="num">3,169</b>円</span></a></div>
+        <a class="pp-more" href="https://search.rakuten.co.jp/search/mall/%E3%82%A6%E3%82%A4%E3%82%B9%E3%82%AD%E3%83%BC/?sid=296346" target="_blank" rel="noopener">ウイスキーをもっと見る</a>
+      </div>
+      <div class="pp-panel" data-pp="5" hidden>
+        <div class="pp-grid"><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/2180010000752/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/c14/2180010000752_c0.jpg?_ex=300x300" width="300" height="300" alt="日本酒 大吟醸 飲み比べ5本セット" loading="lazy"></span><span class="nm">日本酒 大吟醸 飲み比べ5本セット</span><span class="pr"><b class="num">3,788</b>円</span></a><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/4989880304018/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/c16/7ken-kansan1800.jpg?_ex=300x300" width="300" height="300" alt="七賢 甘酸辛苦渋 本醸造 1.8L" loading="lazy"></span><span class="nm">七賢 甘酸辛苦渋 本醸造 1.8L</span><span class="pr"><b class="num">1,892</b>円</span></a><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/4969333000452/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/c14/4969333000452_c0.jpg?_ex=300x300" width="300" height="300" alt="官兵衛 純金箔入り 1.8L" loading="lazy"></span><span class="nm">官兵衛 純金箔入り 1.8L</span><span class="pr"><b class="num">2,380</b>円</span></a></div>
+        <a class="pp-more" href="https://search.rakuten.co.jp/search/mall/%E6%97%A5%E6%9C%AC%E9%85%92/?sid=296346" target="_blank" rel="noopener">日本酒をもっと見る</a>
+      </div>
+      <div class="pp-panel" data-pp="6" hidden>
+        <div class="pp-grid"><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/10003720/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/c15/4582404893410.jpg?_ex=300x300" width="300" height="300" alt="金賞受賞 シャトー ピュイ ドゥ ギランド" loading="lazy"></span><span class="nm">金賞受賞 シャトー ピュイ ドゥ ギランド</span><span class="pr"><b class="num">908</b>円</span></a><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/4901777403680-f1/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/c46/4901777403680-f1_c0.jpg?_ex=300x300" width="300" height="300" alt="サントリー スパークリングワイン 白泡 24本" loading="lazy"></span><span class="nm">サントリー スパークリングワイン 白泡 24本</span><span class="pr"><b class="num">5,000</b>円</span></a><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/4901777384897-3/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/c14/4901777384897-3_c0.jpg?_ex=300x300" width="300" height="300" alt="サントリー デリカメゾン 甘口赤 1.8L×3" loading="lazy"></span><span class="nm">サントリー デリカメゾン 甘口赤 1.8L×3</span><span class="pr"><b class="num">3,599</b>円</span></a></div>
+        <a class="pp-more" href="https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%B3/?sid=296346" target="_blank" rel="noopener">ワインをもっと見る</a>
+      </div>
+    <p class="pp-note">※価格は2026年11月12日時点のものです。最新の価格・在庫は各商品ページでご確認ください。</p>
+    <a class="pp-all" href="https://search.rakuten.co.jp/search/mall/?sid=296346" target="_blank" rel="noopener">ショップの全商品を見る</a>
   </div>
 </section>
 </main>
