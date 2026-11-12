@@ -1228,6 +1228,38 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
 .bigx .br b{-webkit-text-stroke:1px currentColor}
 </style>
 <style>main section .sec-no{display:none!important}main section .shout{margin-top:0!important}</style>
+<style>
+/* FV：缶がわしゃーっと飛び出す */
+.fv-cans{position:relative;z-index:2;width:100%;max-width:560px;aspect-ratio:5/3.4;margin:clamp(20px,6cqw,36px) auto 0}
+.fv-cans .cn{position:absolute;bottom:var(--b);left:var(--l);width:var(--w,19%);height:auto;transform:rotate(var(--r));filter:drop-shadow(0 10px 14px #000c);animation:canPop .75s cubic-bezier(.2,1.4,.4,1) both;animation-delay:var(--d)}
+.fv-cans .c1{--l:2%;--b:2%;--r:-17deg;--dx:150%;--d:1.05s}
+.fv-cans .c2{--l:15%;--b:14%;--r:-8deg;--dx:90%;--d:1.15s}
+.fv-cans .c3{--l:31%;--b:20%;--r:-2deg;--w:21%;--dx:20%;--d:1.0s;z-index:3}
+.fv-cans .c4{--l:49%;--b:20%;--r:3deg;--w:21%;--dx:-20%;--d:1.1s;z-index:3}
+.fv-cans .c5{--l:66%;--b:14%;--r:9deg;--dx:-90%;--d:1.2s;z-index:2}
+.fv-cans .c6{--l:79%;--b:2%;--r:17deg;--dx:-150%;--d:1.25s;z-index:2}
+@keyframes canPop{0%{opacity:0;transform:translate(var(--dx),45%) scale(.25) rotate(0)}60%{opacity:1;transform:translate(0,-10%) scale(1.08) rotate(var(--r))}100%{opacity:1;transform:rotate(var(--r))}}
+.fc-burst{position:absolute;left:50%;bottom:28%;width:120%;aspect-ratio:1;transform:translate(-50%,50%) scale(.2);border-radius:50%;background:radial-gradient(circle,#dcff2b66 0,#dcff2b22 35%,transparent 62%);opacity:0;animation:burstIn .9s ease-out .95s both}
+@keyframes burstIn{0%{opacity:0;transform:translate(-50%,50%) scale(.2)}35%{opacity:1}100%{opacity:.75;transform:translate(-50%,50%) scale(1)}}
+@media(prefers-reduced-motion:reduce){.fv-cans .cn,.fc-burst{animation:none;opacity:1}}
+/* ブラックが当たる抽選 */
+.bk{background:#000;border-top:4px solid #0b0b0c;padding:clamp(64px,18cqw,110px) 0}
+.bk .shout .s1{color:#fff!important}
+.bk .shout .s2{color:var(--pink)!important}
+.bk-lead{margin-top:18px;text-align:center;font-size:clamp(14px,3.8cqw,16px);font-weight:700;line-height:1.8}
+.bk-lead b{font-size:1.5em;color:var(--pink);margin:0 2px}
+.bk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}
+.bk-card{display:flex;flex-direction:column;background:#111;border:2px solid #333;border-radius:14px;overflow:hidden;text-decoration:none;color:#fff;transition:border-color .15s,transform .15s}
+.bk-card:hover{border-color:var(--pink);transform:translateY(-3px)}
+.bk-ph{display:block;aspect-ratio:1;background:#fff}
+.bk-ph img{width:100%;height:100%;object-fit:contain;display:block}
+.bk-n{display:block;margin:10px 8px 0;text-align:center;background:var(--pink);color:#0b0b0c;font-weight:900;font-size:clamp(11px,3.2cqw,14px);border-radius:999px;padding:4px 0;line-height:1.2}
+.bk-n b{font-size:1.6em;margin:0 1px;vertical-align:-.08em}
+.bk-nm{display:block;margin:8px 8px 0;font-size:clamp(11px,3.1cqw,14px);font-weight:900;line-height:1.45;text-align:center}
+.bk-sub{display:block;margin:4px 8px 12px;font-size:clamp(9.5px,2.6cqw,11.5px);color:#aaa;text-align:center;line-height:1.4}
+.bk-note{margin-top:20px;font-size:11.5px;color:var(--sub);line-height:1.8;text-align:center}
+</style>
+<style>.bk .shout .s1{font-size:clamp(20px,6.2cqw,34px)!important;white-space:nowrap}.bk .shout .s2{font-size:clamp(34px,10.2cqw,58px)!important;white-space:nowrap}</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -1239,7 +1271,8 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
       <a href="#calendar"><span class="n">01</span>カレンダー</a>
       <a href="#p5"><span class="n">02</span>全品ポイント5倍</a>
       <a href="#p20"><span class="n">03</span>お歳暮目玉 24倍</a>
-      <a href="#popular"><span class="n">04</span>人気の商品</a>
+      <a href="#lottery"><span class="n">04</span>ブラックが当たる抽選</a>
+      <a href="#popular"><span class="n">05</span>人気の商品</a>
     </nav>
     <a class="side-shop" href="https://www.rakuten.co.jp/d-craft/" target="_blank" rel="noopener">ショップトップへ</a>
   </div>
@@ -1286,7 +1319,7 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
       <span class="to" aria-label="から"></span>
       <span class="dt"><span class="num">11.25</span><span class="wk">水</span><span class="tm num">1:59</span></span>
     </p>
-    <div class="fvt-img"><!-- FV画像：img/fv.jpg を入れる --><span>画像が入ります</span></div>
+    <div class="fv-cans"><span class="fc-burst" aria-hidden="true"></span><img class="cn c1" src="img/can-kuro.png" width="272" height="520" alt="サッポロ生ビール黒ラベル"><img class="cn c2" src="img/can-yebisu.png" width="272" height="520" alt="ヱビスビール"><img class="cn c3" src="img/can-black.png" width="272" height="520" alt="ヱビス プレミアムブラック"><img class="cn c4" src="img/can-ale.png" width="272" height="520" alt="ヱビス プレミアムエール"><img class="cn c5" src="img/can-mugi.png" width="272" height="520" alt="ヱビス 麦紡ぐ"><img class="cn c6" src="img/can-dryzero.png" width="272" height="520" alt="アサヒ ドライゼロ"></div>
   </div>
 </div>
 
@@ -1395,7 +1428,17 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
   </div>
 </section>
 
-<!-- 04 人気の商品 -->
+<!-- 04 ブラックが当たる抽選 -->
+<section class="bk" id="lottery">
+  <div class="wrap">
+    <h2 class="shout"><span class="s1">ブラックフライデーだけに</span><span class="s2">ブラックが当たる！</span></h2>
+    <p class="bk-lead">期間中にお買い物いただいた方の中から、抽選で計<b class="num">5</b>名様に「ブラック」なアイテムをプレゼント。</p>
+    <div class="bk-grid"><a class="bk-card" href="https://item.rakuten.co.jp/d-craft/5000267024233lb/" target="_blank" rel="noopener"><span class="bk-ph"><img src="img/prize-5000267024233lb.jpg" width="600" height="600" alt="名入れ ジョニーウォーカー ブラック 700ml" loading="lazy"></span><span class="bk-n">抽選で<b class="num">1</b>名様</span><span class="bk-nm">名入れ ジョニーウォーカー ブラック 700ml</span><span class="bk-sub">数量限定グラス付き</span></a><a class="bk-card" href="https://item.rakuten.co.jp/d-craft/2101900000126/" target="_blank" rel="noopener"><span class="bk-ph"><img src="img/prize-2101900000126.jpg" width="600" height="600" alt="ギネス ドラフト 330ml缶×8本" loading="lazy"></span><span class="bk-n">抽選で<b class="num">1</b>名様</span><span class="bk-nm">ギネス ドラフト 330ml缶×8本</span><span class="bk-sub">専用パイントグラス付き</span></a><a class="bk-card" href="https://item.rakuten.co.jp/d-craft/4589850828423-f1/" target="_blank" rel="noopener"><span class="bk-ph"><img src="img/prize-4589850828423-f1.jpg" width="600" height="600" alt="ポッカコーヒー ブラック 185g×30本" loading="lazy"></span><span class="bk-n">抽選で<b class="num">3</b>名様</span><span class="bk-nm">ポッカコーヒー ブラック 185g×30本</span><span class="bk-sub">無糖の缶コーヒー1ケース</span></a></div>
+    <p class="bk-note">※対象期間：11/19（木）20:00〜11/25（水）1:59のご注文。<br>※当選者の発表は、賞品の発送をもってかえさせていただきます。<br>※賞品は選べません。20歳未満の方はお酒の賞品の対象外です。</p>
+  </div>
+</section>
+
+<!-- 05 人気の商品 -->
 <section class="pp" id="popular">
   <div class="wrap">
     <p class="sec-no">04 ／ 人気の商品</p>
