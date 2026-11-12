@@ -1108,6 +1108,13 @@ document.addEventListener('DOMContentLoaded',function(){
 .bigx .br .num{font-family:"Dela Gothic One",sans-serif!important;font-variation-settings:normal;font-stretch:normal}
 </style>
 <style>.fv-tape .fv-date .dt>.num{font-size:clamp(17px,5cqw,28px)!important}.fv-tape .fv-date .tm{font-size:clamp(12px,3.6cqw,19px)!important}</style>
+<style>
+/* メインコンテンツ 680px */
+.col{max-width:680px!important}
+@media(min-width:1000px){.side{width:calc(50% - 340px)!important}}
+@media(min-width:1000px) and (max-width:1219px){.side{display:none!important}.col .cd{display:block!important}}
+@media(min-width:600px){.wrap{padding:0 40px!important}}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
