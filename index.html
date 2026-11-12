@@ -869,6 +869,31 @@ document.addEventListener('DOMContentLoaded',function(){
 .fv-retro .fv-date .to::after{border-color:#ffb14a!important}
 .fv-retro .fvt-img{border-color:#ff9a0088;color:#ffb14a;background:#ffffff06}
 </style>
+<style>
+/* ---------- 03 お歳暮：赤で特大のお得感 ---------- */
+.p20{--pink:#ffe14a;--white:#ffffff;--sub:#ffd6cc;color:#fff;background:radial-gradient(circle at 50% 28%,#ff3b2f 0,#d4111b 45%,#9e0a12 100%)!important;overflow:hidden}
+.p20::before{display:block!important;content:""!important;position:absolute;left:50%;top:clamp(380px,100cqw,560px);width:1600px;height:1600px;margin:-800px 0 0 -800px;border-radius:0;background:repeating-conic-gradient(#ffffff14 0 6deg,transparent 6deg 15deg)!important;animation:burstSpin 80s linear infinite;pointer-events:none;-webkit-mask:radial-gradient(circle,#000 0,#000 20%,transparent 50%);mask:radial-gradient(circle,#000 0,#000 20%,transparent 50%);opacity:1}
+.p20 .wrap{position:relative;z-index:1}
+.p20 .sec-no{color:#ffe14a!important}
+.p20 .shout .s1{color:#fff!important;font-size:clamp(20px,6cqw,30px)!important;line-height:1.35}
+.p20 .shout .s2{color:#ffe14a!important;text-shadow:0 4px 0 #6b0008,0 0 24px #ffb30066!important}
+.p20-head h2{color:#fff}
+.p20-head h2 em{color:#ffe14a!important}
+.p20-head p{color:#fff3ef!important}
+.p20 .badge20{position:relative}
+.p20 .badge20 .num{color:#ffe14a!important;text-shadow:0 6px 0 #6b0008,0 0 40px #ffcc0055!important}
+.p20 .badge20 b,.p20 .badge20 .x{color:#fff!important}
+.p20 .badge20 .calc span:not(.plus){border-color:#ffffffaa!important;color:#fff}
+.p20 .badge20 .calc .num{color:#ffe14a!important;text-shadow:none!important}
+.p20 .badge20 .calc .plus{color:#ffe14a!important}
+.stamp{position:absolute;right:clamp(0px,2cqw,20px);top:clamp(46px,13cqw,70px);z-index:2;width:clamp(74px,21cqw,96px);aspect-ratio:1;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#ffe14a;color:#b00d16;font-weight:900;font-size:clamp(13px,3.8cqw,17px);line-height:1.15;box-shadow:0 0 0 4px #b00d16,0 0 0 6px #ffe14a,0 6px 14px #0006}
+.stamp b{font-size:1.25em}
+.p20 .item{--pink:#ffe14a;--white:#fffaf3;--sub:#bdb4a6;box-shadow:0 10px 0 #6b000866}
+.p20 .item .ribbon{background:#0b0b0c!important;color:#ffe14a!important}
+.p20 .item .buy{background:#d4111b!important;color:#fff!important}
+.p20 .item .buy:hover{background:#b00d16!important}
+.p20-note{color:#ffe3dc!important}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -1002,13 +1027,13 @@ document.addEventListener('DOMContentLoaded',function(){
 <section class="p20" id="p20">
   <div class="wrap">
     <p class="sec-no">03 ／ お歳暮目玉商品</p>
-    <p class="shout" aria-hidden="true"><span class="s1">お歳暮が</span><span class="s2">ポイント24倍</span></p>
+    <p class="shout" aria-hidden="true"><span class="s1">店長一推しの<br>お歳暮飲み比べギフトが</span><span class="s2">ポイント24倍</span></p>
     <div class="p20-head">
       <div>
-        <h2>対象の2商品は<br><em>大盤振る舞い</em></h2>
+        <h2>この2商品だけの<br><em>特大ポイント</em></h2>
         <p>この2点はお歳暮ギフトの20倍に、<br><span class="nobr">店内全品5倍</span>のエントリー分が重なって<span class="nobr">24倍に。</span><br><span class="nobr">のし・包装も承ります。</span></p>
       </div>
-      <div class="badge20" aria-hidden="true"><p class="calc"><span>お歳暮ギフト <b class="num">20</b>倍</span><span class="plus">＋</span><span>エントリー <b class="num">5</b>倍</span></p><p class="x">POINT</p><p><span class="num">24</span><b>倍</b></p></div>
+      <div class="badge20" aria-hidden="true"><span class="stamp"><b>店長</b>一推し</span><p class="calc"><span>お歳暮ギフト <b class="num">20</b>倍</span><span class="plus">＋</span><span>エントリー <b class="num">5</b>倍</span></p><p class="x">POINT</p><p><span class="num">24</span><b>倍</b></p></div>
     </div>
 
     <div class="items">
