@@ -887,7 +887,6 @@ document.addEventListener('DOMContentLoaded',function(){
     <h1 class="fv-title fvt-title">
       <span class="en l1">BLACK</span>
       <span class="en l2">FRIDAY</span>
-      <span class="en l3">SALE</span>
       <span class="vh">ブラックフライデー</span>
     </h1>
     <p class="fv-date">
@@ -1073,6 +1072,24 @@ document.addEventListener('DOMContentLoaded',function(){
     setTimeout(tick,1000);
   }
   tick();
+})();
+</script>
+<script>
+/* FV：BLACK と FRIDAY の左右をそろえる */
+(function(){
+  function fit(){
+    var t=document.querySelector('.fvt-title');if(!t)return;
+    var a=t.querySelector('.l1'),b=t.querySelector('.l2');if(!a||!b)return;
+    [a,b].forEach(function(e){e.style.removeProperty('font-size');e.style.display='inline-block'});
+    var W=t.parentNode.clientWidth-32,fb=parseFloat(getComputedStyle(b).fontSize);
+    var nb=fb*W/b.getBoundingClientRect().width;nb=Math.min(nb,fb*1.25);
+    b.style.setProperty('font-size',nb+'px','important');
+    var wb=b.getBoundingClientRect().width,fa=parseFloat(getComputedStyle(a).fontSize);
+    a.style.setProperty('font-size',(fa*wb/a.getBoundingClientRect().width)+'px','important');
+    [a,b].forEach(function(e){e.style.display='block'});
+  }
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
+  addEventListener('load',fit);addEventListener('resize',fit);
 })();
 </script>
 </body>
