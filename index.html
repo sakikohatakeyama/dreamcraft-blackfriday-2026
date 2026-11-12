@@ -1435,6 +1435,35 @@ section.p20{background:linear-gradient(112deg,#b8862a 0%,#e0b52e 8%,#f6d22a 18%,
 .board-top span{white-space:nowrap}
 @container (max-width:420px){.board-top span{display:none}}
 </style>
+<style>
+.fv-cans .g2{bottom:3%!important;left:25%!important;width:50%!important}
+/* ボタン：角丸・影なし・ホバーで色が変わる */
+.entry-btn,.entry-btn.pink,.calx-open,.pp-more,.os-more,.p20-entry,.pp-all{border-radius:999px!important;box-shadow:none!important;transform:none!important;transition:background .2s,color .2s,filter .2s!important}
+.p5 .entry-btn{background:#dcff2b!important;color:#0b0b0c!important}
+.p5 .entry-btn:hover{background:#fff!important}
+.calx-open{background:#0b0b0c!important;color:#dcff2b!important}
+.calx-open:hover{background:#333!important}
+.pp-more,.os-more{background:#dcff2b!important;color:#0b0b0c!important}
+.pp-more:hover,.os-more:hover{background:#fff!important}
+.p20-entry{background:#0b0b0c!important}
+.p20-entry:hover{background:#333!important}
+.pp-all:hover{background:#d8b25a!important;color:#0b0b0c!important}
+.entry-btn:hover,.calx-open:hover,.pp-more:hover,.os-more:hover,.p20-entry:hover{transform:none!important;box-shadow:none!important}
+/* 0と5のつく日（20日・25日だけ表示） */
+.d05-mini{margin-top:26px!important;padding:20px 16px 22px!important;border:0!important;border-radius:16px;background:#ff8a1f!important;color:#0b0b0c!important;text-align:center;box-shadow:0 0 30px #ff8a1f55}
+.d05-mini p{font-size:clamp(14px,4cqw,18px)!important;font-weight:900;line-height:1.7;color:#0b0b0c}
+.d05-mini .lb{background:#0b0b0c!important;color:#ff8a1f!important;font-size:clamp(12px,3.4cqw,14px)!important;padding:3px 12px!important;border-radius:999px}
+.d05-mini b{display:block;font-size:clamp(30px,9cqw,44px)!important;color:#0b0b0c!important;margin:4px 0 0!important;line-height:1.2}
+.d05-mini a{display:inline-flex!important;align-items:center;justify-content:center;margin-top:12px!important;min-height:48px;padding:0 26px;background:#0b0b0c;color:#ff8a1f!important;border:0!important;border-radius:999px;font-size:clamp(14px,3.9cqw,16px)!important;font-weight:900;transition:background .2s}
+.d05-mini a:hover{background:#333}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var j=new Date(Date.now()+9*3600*1000),m=j.getUTCMonth()+1,d=j.getUTCDate(),y=j.getUTCFullYear();
+  if(y===2026&&m===11&&(d===20||d===25)){[].forEach.call(document.querySelectorAll('.d05-mini'),function(e){e.hidden=false})}
+});
+</script>
+<style>.fvt-in{padding-top:clamp(64px,17cqw,120px)!important}.t1{top:clamp(10px,3cqw,26px)!important}</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -1494,7 +1523,7 @@ section.p20{background:linear-gradient(112deg,#b8862a 0%,#e0b52e 8%,#f6d22a 18%,
       <span class="to" aria-label="から"></span>
       <span class="dt"><span class="num">11.25</span><span class="wk">水</span><span class="tm num">1:59</span></span>
     </p>
-    <div class="fv-cans"><span class="fc-burst" aria-hidden="true"></span><img class="cn c1" src="img/can-kuro.png" width="272" height="520" alt="サッポロ生ビール黒ラベル"><img class="cn c2" src="img/can-yebisu.png" width="272" height="520" alt="ヱビスビール"><img class="cn c3" src="img/can-black.png" width="272" height="520" alt="ヱビス プレミアムブラック"><img class="cn c4" src="img/can-ale.png" width="272" height="520" alt="ヱビス プレミアムエール"><img class="cn c5" src="img/can-mugi.png" width="272" height="520" alt="ヱビス 麦紡ぐ"><img class="cn c6" src="img/can-dryzero.png" width="272" height="520" alt="アサヒ ドライゼロ"><img class="gf g1" src="img/gift-bp5ag.png" width="520" height="421" alt="サントリー プレミアムモルツ 7種18缶 お歳暮ギフト"><img class="gf g2" src="img/gift-fj3s.png" width="520" height="353" alt="サントリー プレミアムモルツ ファミリー お歳暮ギフト"><img class="gf g3" src="img/gift-vm4s.png" width="520" height="380" alt="サントリー プレミアムモルツ マスターズドリーム入り お歳暮ギフト"></div>
+    <div class="fv-cans"><span class="fc-burst" aria-hidden="true"></span><img class="cn c1" src="img/can-kuro.png" width="272" height="520" alt="サッポロ生ビール黒ラベル"><img class="cn c2" src="img/can-yebisu.png" width="272" height="520" alt="ヱビスビール"><img class="cn c3" src="img/can-black.png" width="272" height="520" alt="ヱビス プレミアムブラック"><img class="cn c4" src="img/can-ale.png" width="272" height="520" alt="ヱビス プレミアムエール"><img class="cn c5" src="img/can-mugi.png" width="272" height="520" alt="ヱビス 麦紡ぐ"><img class="cn c6" src="img/can-dryzero.png" width="272" height="520" alt="アサヒ ドライゼロ"><img class="gf g1" src="img/gift-bp5ag.png" width="520" height="421" alt="サントリー プレミアムモルツ 7種18缶 お歳暮ギフト"><img class="gf g2" src="img/gift-vm4s.png" width="520" height="380" alt="サントリー プレミアムモルツ マスターズドリーム入り お歳暮ギフト"><img class="gf g3" src="img/gift-fj3s.png" width="520" height="353" alt="サントリー プレミアムモルツ ファミリー お歳暮ギフト"></div>
   </div>
 </div>
 
@@ -1554,7 +1583,7 @@ section.p20{background:linear-gradient(112deg,#b8862a 0%,#e0b52e 8%,#f6d22a 18%,
         <p class="p5-body">ビールもワインも日本酒も、ぜんぶ5倍。ご自宅用のまとめ買いも、年末年始の買い置きも、この期間にどうぞ。</p>
         <a class="entry-btn" href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener">まずはエントリー</a>
         <p class="p5-note">※ポイントアップの対象は、エントリー後のご購入分からです。お買い物の前にエントリーをお済ませください。<br>※付与条件・上限などの詳細はエントリーページでご確認ください。</p>
-        <div class="d05-mini">
+        <div class="d05-mini" hidden>
           <p><span class="lb">さらに</span><span class="nobr">20日・25日は</span><span class="nobr">0と5のつく日。</span><br><span class="nobr">エントリー＆楽天カードで</span><b>ポイント4倍</b></p>
           <a href="https://event.rakuten.co.jp/card/pointday/" target="_blank" rel="noopener">0と5のつく日のエントリーへ</a>
         </div>
