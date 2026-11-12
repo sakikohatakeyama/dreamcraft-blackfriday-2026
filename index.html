@@ -690,9 +690,33 @@ footer p{margin-top:12px;font-size:11px;color:#7d756a}
 document.addEventListener('DOMContentLoaded',function(){
   var j=new Date(Date.now()+9*3600*1000),m=j.getUTCMonth()+1,d=j.getUTCDate();
   if(m!==11)return;
-  [].forEach.call(document.querySelectorAll('.cr'),function(r){var x=+r.dataset.d;if(x===d)r.classList.add('today');else if(x<d)r.classList.add('past')});
+  [].forEach.call(document.querySelectorAll('.cr,.scr'),function(r){var x=+r.dataset.d;if(x===d)r.classList.add('today');else if(x<d)r.classList.add('past')});
 });
 </script>
+<style>
+/* ---------- 左サイドのミニカレンダー／右サイドのメニュー ---------- */
+.side-cal{margin-top:20px;padding-top:16px;border-top:1px solid #ffffff26}
+.sc-h{font-size:15px;font-weight:900;color:var(--white)}
+.sc-h .en{display:block;font-family:Jost,sans-serif;font-size:12px;font-weight:700;letter-spacing:.24em;color:var(--pink);margin-bottom:2px}
+.side-cal .sc-hd,.side-cal li{display:grid;grid-template-columns:34px 22px 1fr 1fr 1fr 48px;gap:3px;align-items:center}
+.sc-hd{margin-top:12px}
+.sc-hd span{font-size:10px;font-weight:700;color:var(--sub);text-align:center;line-height:1.25;padding-bottom:4px}
+.side-cal ul{list-style:none;margin:0;padding:0;display:grid;gap:3px}
+.side-cal li{height:24px;position:relative}
+.side-cal li .d{font-family:Jost,sans-serif;font-weight:700;font-size:17px;line-height:1;color:var(--white);text-align:right;padding-right:2px}
+.side-cal li .w{font-size:11px;font-weight:700;color:var(--sub)}
+.side-cal li.we .w{color:var(--pink)}
+.side-cal li i{display:block;height:100%}
+.side-cal li i.k1{background:var(--pink)}.side-cal li i.k2{background:var(--gold)}.side-cal li i.k3{background:var(--white)}
+.side-cal li i.off{border:1px solid #ffffff14;background:repeating-linear-gradient(135deg,#ffffff0a 0 2px,transparent 2px 5px)}
+.side-cal li .nt{font-family:Jost,sans-serif;font-size:10px;font-weight:600;color:var(--sub);white-space:nowrap;padding-left:3px}
+.side-cal li.hot{outline:2px solid var(--pink);outline-offset:1px}
+.side-cal li.hot .d{color:var(--pink)}
+.side-cal li.today::after{content:"TODAY";position:absolute;right:0;top:50%;transform:translateY(-50%);font-family:Jost,sans-serif;font-size:9px;font-weight:700;letter-spacing:.1em;color:var(--black);background:var(--pink);padding:2px 4px}
+.side-cal li.past{opacity:.35}
+.sc-more{display:inline-block;margin-top:12px;font-size:13px;font-weight:700;color:var(--pink);text-decoration:none;border-bottom:1px solid currentColor}
+.side-nav-r{margin-top:22px}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -700,12 +724,12 @@ document.addEventListener('DOMContentLoaded',function(){
     <a class="brand" href="https://www.rakuten.co.jp/d-craft/" target="_blank" rel="noopener"><b>DREAM CRAFT</b><small>ドリームクラフト＆ビッグボス 楽天市場店</small></a>
     <p class="side-ttl"><span class="en l1">BLACK</span><span class="en l2">FRIDAY</span></p>
     <p class="side-date"><span class="num">11.19</span>（木）20:00 〜<br><span class="num">11.25</span>（水）1:59</p>
-    <nav class="side-nav">
-      <a href="#calendar"><span class="n">01</span>カレンダー</a>
-      <a href="#p5"><span class="n">02</span>全品ポイント5倍</a>
-      <a href="#p20"><span class="n">03</span>お歳暮目玉 24倍</a>
-      <a href="#sum"><span class="n">04</span>おさらい</a>
-    </nav>
+    <div class="side-cal">
+      <p class="sc-h"><span class="en">CALENDAR</span>おトクカレンダー</p>
+      <div class="sc-hd" aria-hidden="true"><span></span><span></span><span>全品<br>5倍</span><span>お歳暮<br>24倍</span><span>0と5<br>4倍</span><span></span></div>
+      <ul><li class="scr" data-d="19"><span class="d">19</span><span class="w">木</span><i class="k1"></i><i class="k2"></i><i class="off"></i><span class="nt">20:00〜</span></li><li class="scr hot" data-d="20"><span class="d">20</span><span class="w">金</span><i class="k1"></i><i class="k2"></i><i class="k3"></i><span class="nt"></span></li><li class="scr we" data-d="21"><span class="d">21</span><span class="w">土</span><i class="k1"></i><i class="k2"></i><i class="off"></i><span class="nt"></span></li><li class="scr we" data-d="22"><span class="d">22</span><span class="w">日</span><i class="k1"></i><i class="k2"></i><i class="off"></i><span class="nt"></span></li><li class="scr" data-d="23"><span class="d">23</span><span class="w">月</span><i class="k1"></i><i class="k2"></i><i class="off"></i><span class="nt"></span></li><li class="scr" data-d="24"><span class="d">24</span><span class="w">火</span><i class="k1"></i><i class="k2"></i><i class="off"></i><span class="nt"></span></li><li class="scr hot" data-d="25"><span class="d">25</span><span class="w">水</span><i class="k1"></i><i class="k2"></i><i class="k3"></i><span class="nt">〜1:59</span></li></ul>
+      <a class="sc-more" href="#calendar">カレンダーをくわしく見る</a>
+    </div>
     <a class="side-shop" href="https://www.rakuten.co.jp/d-craft/" target="_blank" rel="noopener">ショップトップへ</a>
   </div>
 </aside>
@@ -715,11 +739,12 @@ document.addEventListener('DOMContentLoaded',function(){
       <p class="lbl" data-cd-lbl>ブラックフライデーまで</p>
       <p class="t" data-cd-t><span class="num" data-cd="d">0</span><small>日</small><span class="num" data-cd="h">00</span><small>時間</small><span class="num" data-cd="m">00</span><small>分</small><span class="num" data-cd="s">00</span><small>秒</small></p>
     </div>
-    <div class="side-today">
-      <p class="st-h">今日はこれがお得！</p>
-      <p class="st-day" id="st-day">11/19（木）20:00 スタート</p>
-      <ul id="st-list"></ul>
-    </div>
+    <nav class="side-nav side-nav-r">
+      <a href="#calendar"><span class="n">01</span>カレンダー</a>
+      <a href="#p5"><span class="n">02</span>全品ポイント5倍</a>
+      <a href="#p20"><span class="n">03</span>お歳暮目玉 24倍</a>
+      <a href="#sum"><span class="n">04</span>おさらい</a>
+    </nav>
     <a class="side-btn gold" id="st-btn1" href="#p20">お歳暮目玉 24倍を見る</a>
     <a class="side-btn pink" id="st-btn2" href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener">5倍エントリーはこちら</a>
   </div>
@@ -898,6 +923,7 @@ document.addEventListener('DOMContentLoaded',function(){
   var L2=['エントリーで店内全品 <b>ポイント5倍</b>','お歳暮目玉商品 <b>エントリーで24倍</b>'];
   function setToday(now){
     var ph=phaseOf(now),day=document.getElementById('st-day'),list=document.getElementById('st-list'),b1=document.getElementById('st-btn1'),b2=document.getElementById('st-btn2'),items;
+    if(!day||!list)return;
     var j=new Date(now+9*3600*1000),d=j.getUTCDate(),W='日月火水木金土'.charAt(j.getUTCDay());
     if(ph===1){day.textContent='11/19（木）20:00 スタート';items=L2}
     else if(ph===2){day.textContent='開催中｜11/'+d+'（'+W+'）';items=L2.slice();if(d===20||d===25)items.unshift('0と5のつく日 <b>ポイント4倍</b>')}
