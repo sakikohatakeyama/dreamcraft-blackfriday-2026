@@ -717,6 +717,19 @@ document.addEventListener('DOMContentLoaded',function(){
 .sc-more{display:inline-block;margin-top:12px;font-size:13px;font-weight:700;color:var(--pink);text-decoration:none;border-bottom:1px solid currentColor}
 .side-nav-r{margin-top:22px}
 </style>
+<style>
+/* ---------- お祭り感の見出し ---------- */
+.shout{margin-top:22px;font-family:Jost,Futura,sans-serif;font-weight:800;line-height:.86;letter-spacing:-.01em;text-transform:uppercase}
+.shout span{display:block;font-size:clamp(52px,16cqw,92px);white-space:nowrap}
+.shout .s1{color:var(--pink);text-shadow:0 0 22px #dcff2b55}
+.shout .s2{color:#0d0d0e;-webkit-text-stroke:clamp(2px,.7cqw,3px) var(--pink);paint-order:stroke fill;font-size:clamp(40px,12.5cqw,72px);animation:neon 3.2s steps(1) infinite}
+@keyframes neon{0%,100%{opacity:1}6%{opacity:.25}8%{opacity:1}10%{opacity:.4}12%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.shout .s2{animation:none}}
+/* 日本語見出し：em を提灯の札のような黄緑ブロックに */
+.calx-h,.p5-txt h2,.p20-head h2,.sum h2{margin-top:22px!important;line-height:1.3!important;font-weight:900}
+.calx-h em,.p5-txt h2 em,.p20-head h2 em,.sum h2 em{display:inline-block;margin-top:8px;padding:.04em .3em .1em;background:var(--pink);color:var(--black)!important;font-style:normal;box-shadow:.14em .14em 0 var(--gold)}
+.sum h2{font-size:clamp(32px,9cqw,44px)!important}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -795,8 +808,9 @@ document.addEventListener('DOMContentLoaded',function(){
 <section class="calx" id="calendar">
   <div class="wrap">
     <p class="sec-no">01 ／ カレンダー</p>
-    <h2 class="calx-h">7日間の<br><em>おトクカレンダー</em></h2>
-    <p class="calx-lead"><span class="nobr">20日と25日は</span><span class="nobr">0と5のつく日が重なる</span><span class="nobr">おトクな日。</span></p>
+    <p class="shout" aria-hidden="true"><span class="s1">7DAYS</span><span class="s2">FESTIVAL</span></p>
+    <h2 class="calx-h">7日間まるごと<br><em>おトク祭り</em></h2>
+    <p class="calx-lead"><span class="nobr">毎日5倍＆24倍。</span><span class="nobr">20日と25日は</span><span class="nobr">0と5のつく日も重なる</span><span class="nobr">おトク3連発！</span></p>
     <div class="calx-tbl">
       <div class="calx-hd" aria-hidden="true"><span></span><span>全品<br><b class="num">5</b>倍</span><span>お歳暮目玉<br><b class="num">24</b>倍</span><span>0と5の日<br><b class="num">4</b>倍</span><span>おトク<br>の数</span></div>
       <ul>
@@ -821,11 +835,12 @@ document.addEventListener('DOMContentLoaded',function(){
 <section class="p5" id="p5">
   <div class="wrap">
     <p class="sec-no">02 ／ 全品ポイント5倍</p>
+    <p class="shout" aria-hidden="true"><span class="s1">POINT ×5</span><span class="s2">CHEERS!</span></p>
     <p class="p5-term"><span class="num">11.19</span>（木）<span class="num">20:00</span> 〜 <span class="nobr"><span class="num">11.25</span>（水）<span class="num">1:59</span></span></p>
     <div class="p5-grid">
       <p class="big5" aria-hidden="true"><span class="num">5</span><b>倍</b></p>
       <div class="p5-txt">
-        <h2>エントリーするだけで、<br><em>店内全品ポイント5倍。</em></h2>
+        <h2>乾杯の前に<br>まずはエントリー<br><em>全品ポイント5倍</em></h2>
         <p>ビールもワインも日本酒も、ぜんぶ5倍。<br class="pc-br">ご自宅用のまとめ買いも、年末年始の買い置きも、<br class="pc-br">この期間にどうぞ。</p>
         <a class="entry-btn" href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener">まずはエントリー</a>
         <p class="p5-note">※ポイントアップの対象になるのは、エントリー後のご購入分からです。お買い物の前にエントリーをお済ませください。<br>※付与条件・上限などの詳細はエントリーページでご確認ください。</p>
@@ -842,9 +857,10 @@ document.addEventListener('DOMContentLoaded',function(){
 <section class="p20" id="p20">
   <div class="wrap">
     <p class="sec-no">03 ／ お歳暮目玉商品</p>
+    <p class="shout" aria-hidden="true"><span class="s1">GIFT ×24</span><span class="s2">BIG DEAL</span></p>
     <div class="p20-head">
       <div>
-        <h2>贈るなら、いま。<br>対象のお歳暮ギフトが<br><em>エントリーで<span class="nobr">ポイント24倍。</span></em></h2>
+        <h2>お歳暮だって<br>大盤振る舞い<br><em>ポイント24倍</em></h2>
         <p>この2点はお歳暮ギフトの20倍に、<br><span class="nobr">店内全品5倍</span>のエントリー分が重なって<span class="nobr">24倍に。</span><br><span class="nobr">のし・包装も承ります。</span></p>
       </div>
       <div class="badge20" aria-hidden="true"><p class="calc"><span>お歳暮ギフト <b class="num">20</b>倍</span><span class="plus">＋</span><span>エントリー <b class="num">5</b>倍</span></p><p class="x">POINT</p><p><span class="num">24</span><b>倍</b></p></div>
@@ -882,7 +898,8 @@ document.addEventListener('DOMContentLoaded',function(){
 <section class="sum" id="sum">
   <div class="wrap">
     <p class="sec-no">04 ／ おさらい</p>
-    <h2>ブラックフライデー<br class="sp-br">ここをチェック</h2>
+    <p class="shout" aria-hidden="true"><span class="s1">CHECK!</span><span class="s2">LAST CALL</span></p>
+    <h2>酔う前に<br><em>おさらい</em></h2>
     <ul class="sum-list">
       <li><span class="k">11/19（木）20:00〜11/25（水）1:59</span><span class="v">エントリーで店内全品 <span class="hp">ポイント5倍</span></span><a class="pk" href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener">エントリーページへ</a></li>
       <li><span class="k">お歳暮目玉商品</span><span class="v">エントリーで <span class="hp">ポイント24倍</span></span><a class="pk" href="#p20">対象ギフトを見る</a></li>
