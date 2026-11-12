@@ -1198,6 +1198,36 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
 </style>
 <style>.cm{font-size:.5em;margin:0 .04em;vertical-align:baseline}</style>
 <style>.big5.bigx .br .num{background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;color:#dcff2b!important;-webkit-text-fill-color:#dcff2b!important;text-shadow:0 0 30px #dcff2b44}.big5.bigx .br b{color:#dcff2b!important}</style>
+<style>
+/* カレンダーのポップアップを画面の高さに収める */
+.calx-pop{align-items:center!important;padding:12px!important;overflow:hidden!important}
+.calx-panel{max-height:calc(100vh - 24px);max-height:calc(100dvh - 24px);display:flex;flex-direction:column;padding:clamp(12px,2vh,22px) 14px clamp(12px,2vh,22px)!important}
+.calx-ph{font-size:clamp(14px,2.4vh,20px)!important;padding-right:70px}
+.calx-ph .en{font-size:clamp(10px,1.5vh,12px)!important}
+.calx-panel .calx-tbl{margin-top:clamp(6px,1.4vh,20px)!important}
+.calx-panel .calx-hd span{padding-bottom:clamp(2px,.8vh,8px)!important;font-size:clamp(9px,1.4vh,12px)!important}
+.calx-panel .calx-hd b{font-size:clamp(13px,2.4vh,24px)!important}
+.calx-panel .calx-tbl ul{gap:clamp(2px,.5vh,4px)!important}
+.calx-panel .cr{min-height:0!important;height:clamp(28px,6.4vh,60px)}
+.calx-panel .cd8 .num{font-size:clamp(18px,4.2vh,40px)!important}
+.calx-panel .cd8 .w{width:clamp(16px,2.6vh,22px);height:clamp(16px,2.6vh,22px);font-size:clamp(9px,1.3vh,11px)}
+.calx-panel .cx{padding-bottom:clamp(2px,.6vh,5px)!important}
+.calx-panel .cx small{font-size:clamp(9px,1.4vh,12px)!important}
+.calx-panel .ct b{font-size:clamp(14px,3vh,24px)!important}
+.calx-panel .hotlbl{font-size:clamp(9px,1.3vh,11px);top:-.9em}
+.calx-panel .calx-key{margin-top:clamp(8px,1.6vh,28px)!important;gap:clamp(3px,.8vh,12px)!important}
+.calx-panel .calx-key li{font-size:clamp(10px,1.45vh,13px)!important;line-height:1.4!important}
+.calx-panel .calx-key b{font-size:clamp(11px,1.6vh,14px)!important}
+.calx-panel .calx-key i{width:12px;height:12px;margin-top:3px}
+</style>
+<style>
+.calx-panel .cd8 .num{font-size:min(4.2vh,8cqw,40px)!important}
+/* 大きな倍率：「倍」を数字から離し、「倍」「ポイント」を太く */
+.bigx .br b{margin-left:.14em!important;font-weight:900!important;font-family:"Noto Sans JP",sans-serif!important}
+.bigx .pt{font-weight:900!important;font-family:"Noto Sans JP",sans-serif!important;-webkit-text-stroke:.5px currentColor}
+.bigx .br b{-webkit-text-stroke:1px currentColor}
+</style>
+<style>main section .sec-no{display:none!important}main section .shout{margin-top:0!important}</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
