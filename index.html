@@ -1011,6 +1011,18 @@ document.addEventListener('DOMContentLoaded',function(){
 .side-cd .t small:last-child{margin-right:0!important}
 </style>
 <style>.p20 .badge20 .num{text-shadow:none!important}.p5 .shout .s1{line-height:1.35}</style>
+<style>
+/* 説明文：かたまりは中央、文字は左詰め */
+.calx-lead,.p5-txt>p,.p20-head p,.p5-note,.p20-note,.pp-note{width:fit-content;max-width:100%;margin-left:auto!important;margin-right:auto!important;text-align:left!important}
+.p5-txt{display:flex;flex-direction:column;align-items:stretch}
+.d05-mini{width:fit-content;max-width:100%;margin-left:auto!important;margin-right:auto!important}
+.calx-key{width:fit-content;max-width:100%;margin-left:auto!important;margin-right:auto!important}
+</style>
+<style>
+.p5-txt .entry-btn{width:100%;max-width:none!important}
+.p20 .item .ribbon{display:none!important}
+.calx-lead,.p5-body,.p20-head p,.p5-note,.p20-note,.pp-note{white-space:nowrap}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -1089,7 +1101,7 @@ document.addEventListener('DOMContentLoaded',function(){
     <p class="sec-no">01 ／ カレンダー</p>
     <p class="shout" aria-hidden="true"><span class="s1">年に一度の</span><span class="s2">お祭り<span class="sn">7</span>日間</span></p>
     <h2 class="calx-h">毎日が<br><em>おトクな日</em></h2>
-    <p class="calx-lead"><span class="nobr">毎日5倍＆24倍。</span><span class="nobr">20日と25日は</span><span class="nobr">0と5のつく日も重なる</span><span class="nobr">おトク3連発！</span></p>
+    <p class="calx-lead">毎日5倍＆24倍。<br>20日と25日は0と5のつく日も重なる<br>おトク3連発！</p>
     <button type="button" class="calx-open" id="calOpen" aria-controls="calPop" aria-expanded="false"><span>日ごとのおトクを見る</span><b class="en">CALENDAR</b></button>
     <div class="calx-pop" id="calPop" role="dialog" aria-modal="true" aria-label="7日間のおトクカレンダー" hidden>
       <div class="calx-panel">
@@ -1127,9 +1139,9 @@ document.addEventListener('DOMContentLoaded',function(){
       <p class="big5" aria-hidden="true"><span class="num">5</span><b>倍</b></p>
       <div class="p5-txt">
         <h2>いつものお酒も<br><em>ギフトも！</em></h2>
-        <p>ビールもワインも日本酒も、ぜんぶ5倍。<br class="pc-br">ご自宅用のまとめ買いも、年末年始の買い置きも、<br class="pc-br">この期間にどうぞ。</p>
+        <p class="p5-body">ビールもワインも日本酒も<br>ぜんぶ5倍。<br>ご自宅用のまとめ買いも<br>年末年始の買い置きも<br>この期間にどうぞ。</p>
         <a class="entry-btn" href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener">まずはエントリー</a>
-        <p class="p5-note">※ポイントアップの対象になるのは、エントリー後のご購入分からです。お買い物の前にエントリーをお済ませください。<br>※付与条件・上限などの詳細はエントリーページでご確認ください。</p>
+        <p class="p5-note">※ポイントアップの対象は<br>　エントリー後のご購入分からです。<br>　お買い物の前にエントリーを<br>　お済ませください。<br>※付与条件・上限などの詳細は<br>　エントリーページでご確認ください。</p>
         <div class="d05-mini">
           <p><span class="lb">さらに</span><span class="nobr">20日・25日は</span><span class="nobr">0と5のつく日。</span><br><span class="nobr">エントリー＆楽天カードで</span><b>ポイント4倍</b></p>
           <a href="https://event.rakuten.co.jp/card/pointday/" target="_blank" rel="noopener">0と5のつく日のエントリーへ</a>
@@ -1148,7 +1160,7 @@ document.addEventListener('DOMContentLoaded',function(){
     <div class="p20-head">
       <div>
         <h2>この2商品だけの<br><em>特大ポイント</em></h2>
-        <p>この2点はお歳暮ギフトの20倍に、<br><span class="nobr">店内全品5倍</span>のエントリー分が重なって<span class="nobr">24倍に。</span><br><span class="nobr">のし・包装も承ります。</span></p>
+        <p>この2点はお歳暮ギフトの20倍に<br>店内全品5倍のエントリー分が<br>重なって24倍に。<br>のし・包装も承ります。</p>
       </div>
       <div class="badge20" aria-hidden="true"><span class="stamp"><b>店長</b>一推し</span><p class="calc"><span>お歳暮ギフト <b class="num">20</b>倍</span><span class="plus">＋</span><span>エントリー <b class="num">5</b>倍</span></p><p class="x">POINT</p><p><span class="num">24</span><b>倍</b></p></div>
     </div>
@@ -1177,7 +1189,7 @@ document.addEventListener('DOMContentLoaded',function(){
         </div>
       </article>
     </div>
-    <p class="p20-note">※ポイント24倍は、お歳暮ギフト20倍（通常1倍分を含む）＋エントリーによる店内全品5倍の追加4倍分の合計です。5倍キャンペーンへのエントリーが必要です。<br>※対象はブラックフライデー期間中（11/19（木）20:00〜11/25（水）1:59）のご注文が対象です。<br>※価格・在庫・ポイント倍率は変わることがあります。最新の情報は各商品ページでご確認ください。</p>
+    <p class="p20-note">※ポイント24倍は、お歳暮ギフト20倍<br>　（通常1倍分を含む）＋エントリーによる<br>　店内全品5倍の追加4倍分の合計です。<br>　5倍キャンペーンへのエントリーが必要です。<br>※ブラックフライデー期間中<br>　（11/19（木）20:00〜11/25（水）1:59）<br>　のご注文が対象です。<br>※価格・在庫・ポイント倍率は<br>　変わることがあります。<br>　最新の情報は各商品ページでご確認ください。</p>
   </div>
 </section>
 
@@ -1216,7 +1228,7 @@ document.addEventListener('DOMContentLoaded',function(){
         <div class="pp-grid"><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/10003720/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/c15/4582404893410.jpg?_ex=300x300" width="300" height="300" alt="金賞受賞 シャトー ピュイ ドゥ ギランド" loading="lazy"></span><span class="nm">金賞受賞 シャトー ピュイ ドゥ ギランド</span><span class="pr"><b class="num">908</b>円</span></a><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/4901777403680-f1/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/c46/4901777403680-f1_c0.jpg?_ex=300x300" width="300" height="300" alt="サントリー スパークリングワイン 白泡 24本" loading="lazy"></span><span class="nm">サントリー スパークリングワイン 白泡 24本</span><span class="pr"><b class="num">5,000</b>円</span></a><a class="pp-card" href="https://item.rakuten.co.jp/d-craft/4901777384897-3/" target="_blank" rel="noopener"><span class="ph"><img src="https://thumbnail.image.rakuten.co.jp/@0_mall/d-craft/cabinet/c14/4901777384897-3_c0.jpg?_ex=300x300" width="300" height="300" alt="サントリー デリカメゾン 甘口赤 1.8L×3" loading="lazy"></span><span class="nm">サントリー デリカメゾン 甘口赤 1.8L×3</span><span class="pr"><b class="num">3,599</b>円</span></a></div>
         <a class="pp-more" href="https://search.rakuten.co.jp/search/mall/%E3%83%AF%E3%82%A4%E3%83%B3/?sid=296346" target="_blank" rel="noopener">ワインをもっと見る</a>
       </div>
-    <p class="pp-note">※価格は2026年11月12日時点のものです。最新の価格・在庫は各商品ページでご確認ください。</p>
+    <p class="pp-note">※価格は2026年11月12日時点のものです。<br>　最新の価格・在庫は<br>　各商品ページでご確認ください。</p>
     <a class="pp-all" href="https://search.rakuten.co.jp/search/mall/?sid=296346" target="_blank" rel="noopener">ショップの全商品を見る</a>
   </div>
 </section>
