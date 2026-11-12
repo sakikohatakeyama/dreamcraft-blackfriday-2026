@@ -1023,6 +1023,20 @@ document.addEventListener('DOMContentLoaded',function(){
 .p20 .item .ribbon{display:none!important}
 .calx-lead,.p5-body,.p20-head p,.p5-note,.p20-note,.pp-note{white-space:nowrap}
 </style>
+<style>
+/* FV：ロゴを斜体＋矢印の線に（色はそのまま）、日付は少し小さく */
+.fvt-title{text-align:center}
+.fvt-title .l1,.fvt-title .l2{position:relative;display:table!important;margin:0 auto;font-style:italic!important;letter-spacing:-.005em!important}
+.fvt-title .l1{margin-bottom:.1em}
+.fvt-title .l1::after,.fvt-title .l2::after{content:"";position:absolute;bottom:-.06em;height:.13em;background:var(--pink)}
+.fvt-title .l1::after{left:-.38em;right:48%;clip-path:polygon(0 50%,.24em 0,.24em 30%,100% 30%,100% 70%,.24em 70%,.24em 100%)}
+.fvt-title .l2::after{left:52%;right:-.42em;bottom:-.1em;clip-path:polygon(100% 50%,calc(100% - .24em) 0,calc(100% - .24em) 30%,0 30%,0 70%,calc(100% - .24em) 70%,calc(100% - .24em) 100%)}
+.fv-tape .fv-date{margin-top:clamp(22px,6cqw,34px)!important}
+.fv-tape .fv-date .dt>.num{font-size:clamp(19px,5.7cqw,32px)!important}
+.fv-tape .fv-date .tm{font-size:clamp(13px,4cqw,21px)!important}
+.fv-tape .fv-date .wk{width:clamp(18px,5.4cqw,25px)!important;height:clamp(18px,5.4cqw,25px)!important;font-size:clamp(10px,2.9cqw,13px)!important}
+.fvt-kick{font-size:clamp(14px,4.2cqw,22px)!important}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -1294,12 +1308,12 @@ document.addEventListener('DOMContentLoaded',function(){
     var t=document.querySelector('.fvt-title');if(!t)return;
     var a=t.querySelector('.l1'),b=t.querySelector('.l2');if(!a||!b)return;
     [a,b].forEach(function(e){e.style.removeProperty('font-size');e.style.display='inline-block'});
-    var W=t.parentNode.clientWidth-32,fb=parseFloat(getComputedStyle(b).fontSize);
+    var W=(t.parentNode.clientWidth-32)*.84,fb=parseFloat(getComputedStyle(b).fontSize);
     var nb=fb*W/b.getBoundingClientRect().width;nb=Math.min(nb,fb*1.25);
     b.style.setProperty('font-size',nb+'px','important');
     var wb=b.getBoundingClientRect().width,fa=parseFloat(getComputedStyle(a).fontSize);
     a.style.setProperty('font-size',(fa*wb/a.getBoundingClientRect().width)+'px','important');
-    [a,b].forEach(function(e){e.style.display='block'});
+    [a,b].forEach(function(e){e.style.removeProperty('display')});
   }
   if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
   addEventListener('load',fit);addEventListener('resize',fit);
