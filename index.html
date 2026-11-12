@@ -1000,6 +1000,16 @@ document.addEventListener('DOMContentLoaded',function(){
 .cd .t [data-cd]{font-size:clamp(28px,8.4cqw,40px)!important}
 .side-cd .t [data-cd]{font-size:26px!important}
 </style>
+<style>
+/* タイマー：数字と単位が重ならないように */
+.cd-box [data-cd]{letter-spacing:.04em!important;margin:0 .18em 0 .1em!important;font-variant-numeric:tabular-nums}
+.cd-box [data-cd="d"]{margin-left:0!important}
+.cd-box .t small{display:inline-block;margin:0 .5em 0 0!important;white-space:nowrap}
+.side-cd .t{flex-wrap:nowrap!important;justify-content:center!important}
+.side-cd .t [data-cd]{font-size:21px!important}
+.side-cd .t small{font-size:10px!important;margin-right:6px!important}
+.side-cd .t small:last-child{margin-right:0!important}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
