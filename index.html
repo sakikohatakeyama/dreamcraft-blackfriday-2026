@@ -1721,6 +1721,18 @@ document.addEventListener('DOMContentLoaded',function(){
 .calx-lead{margin-top:6px!important}
 .calx-open{margin-top:14px!important;padding:12px 22px!important}
 </style>
+<style>
+/* FV内：期間中エントリーでポイント5倍 */
+.fv-pt{display:inline-flex;flex-direction:column;align-items:center;margin:clamp(14px,4cqw,22px) auto 0;padding:clamp(8px,2.4cqw,12px) clamp(22px,7cqw,40px) clamp(10px,2.6cqw,14px);border:3px solid #dcff2b;border-radius:18px;background:#0b0b0ccc;box-shadow:0 0 22px #dcff2b55;line-height:1.1;animation:fadeUp .6s ease-out 1.2s both}
+.fv-pt .l{font-weight:900;font-size:clamp(14px,4cqw,20px);color:#fff}
+.fv-pt .v{font-weight:900;font-size:clamp(22px,6.4cqw,34px);color:#dcff2b}
+.fv-pt .v b{font-family:Archivo,sans-serif!important;font-weight:900!important;font-variation-settings:'wdth' 100!important;font-size:2em;line-height:.9;margin:0 .04em;vertical-align:-.08em}
+/* FVの下：エントリーボタンだけ */
+.fv-entry{background:#000;padding:clamp(14px,4cqw,20px) clamp(16px,5cqw,40px)}
+.fv-entry a{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;border-radius:999px;background:#dcff2b;color:#0b0b0c;text-decoration:none;font-weight:900;font-size:clamp(16px,4.6cqw,20px);transition:background .2s}
+.fv-entry a::after{content:"";width:8px;height:8px;border-right:3px solid currentColor;border-bottom:3px solid currentColor;transform:rotate(-45deg)}
+.fv-entry a:hover{background:#fff}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -1794,10 +1806,12 @@ document.addEventListener('DOMContentLoaded',function(){
       <span class="to" aria-label="から"></span>
       <span class="dt"><span class="num">11.25</span><span class="wk">水</span><span class="tm num">1:59</span></span>
     </p>
+    <p class="fv-pt"><span class="l">期間中エントリーで</span><span class="v">ポイント<b class="num">5</b>倍</span></p>
     <div class="fv-cans"><span class="fc-burst" aria-hidden="true"></span><img class="cn c1" src="img/can-kuro.png" width="272" height="520" alt="サッポロ生ビール黒ラベル"><img class="cn c2" src="img/can-yebisu.png" width="272" height="520" alt="ヱビスビール"><img class="cn c3" src="img/can-black.png" width="272" height="520" alt="ヱビス プレミアムブラック"><img class="cn c4" src="img/can-ale.png" width="272" height="520" alt="ヱビス プレミアムエール"><img class="cn c5" src="img/can-mugi.png" width="272" height="520" alt="ヱビス 麦紡ぐ"><img class="cn c6" src="img/can-dryzero.png" width="272" height="520" alt="アサヒ ドライゼロ"><img class="gf g1" src="img/gift-bp5ag.png" width="520" height="421" alt="サントリー プレミアムモルツ 7種18缶 お歳暮ギフト"><img class="gf g2" src="img/gift-vm4s.png" width="520" height="380" alt="サントリー プレミアムモルツ マスターズドリーム入り お歳暮ギフト"><img class="gf g3" src="img/gift-fj3s.png" width="520" height="353" alt="サントリー プレミアムモルツ ファミリー お歳暮ギフト"></div>
   </div>
 </div>
 
+<div class="fv-entry"><a href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener">ポイント5倍エントリー</a></div>
 <div class="deco" aria-hidden="true"><div class="deco-in"><span>BLACK FRIDAY</span><span>CHEERS!</span><span>DREAM CRAFT</span><span>BLACK FRIDAY</span><span>CHEERS!</span><span>DREAM CRAFT</span></div></div>
 <!-- カウントダウン -->
 <div class="cd cd-box" id="cd" aria-live="polite">
