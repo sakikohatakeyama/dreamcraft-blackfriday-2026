@@ -1713,6 +1713,14 @@ document.addEventListener('DOMContentLoaded',function(){
 .bk-note,.p20-note,.pp-note,.p5-note{margin-bottom:0!important}
 .pp-all{margin-bottom:0!important}
 </style>
+<style>
+/* カレンダーブロックをコンパクトに */
+.calx{padding-top:clamp(24px,6cqw,36px)!important;padding-bottom:clamp(24px,6cqw,36px)!important}
+.calx .shout .s1{font-size:clamp(18px,5cqw,26px)!important}
+.calx .shout .s2{font-size:clamp(34px,10cqw,56px)!important}
+.calx-lead{margin-top:6px!important}
+.calx-open{margin-top:14px!important;padding:12px 22px!important}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -1805,9 +1813,9 @@ document.addEventListener('DOMContentLoaded',function(){
   <div class="wrap">
     <p class="sec-no">01 ／ カレンダー</p>
     <p class="shout" aria-hidden="true"><span class="s1">年に一度の</span><span class="s2">お祭り<span class="sn">7</span>日間</span></p>
-    <h2 class="calx-h">毎日が<em>おトクな日</em></h2>
+    
     <p class="calx-lead">毎日5倍＆24倍。20日と25日は0と5のつく日も重なる、おトク3連発！</p>
-    <button type="button" class="calx-open" id="calOpen" aria-controls="calPop" aria-expanded="false"><span>日ごとのおトクを見る</span><b class="en">CALENDAR</b></button>
+    <button type="button" class="calx-open" id="calOpen" aria-controls="calPop" aria-expanded="false"><span>カレンダーを見る</span><b class="en">CALENDAR</b></button>
     <div class="calx-pop" id="calPop" role="dialog" aria-modal="true" aria-label="7日間のおトクカレンダー" hidden>
       <div class="calx-panel">
         <button type="button" class="calx-close" id="calClose" aria-label="閉じる">CLOSE</button>
