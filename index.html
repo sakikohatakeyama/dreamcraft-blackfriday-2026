@@ -1826,6 +1826,17 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
 .p20 .it-fav svg{width:20px!important;height:20px!important}
 </style>
 <style>.p20 .item .ph{background:#fff;display:flex!important;align-items:center}.p20 .item .ph img{height:auto!important;aspect-ratio:1;object-fit:contain!important}.p20 .item .price small{display:none}</style>
+<style>
+/* FV上の余白をさらに詰める */
+.fvt-in{padding-top:clamp(36px,9cqw,70px)!important}
+/* ポイント5倍の枠：縦に3段（期間中エントリーで／ポイント5倍／ボタン） */
+.fe-box{flex-direction:column!important;align-items:stretch!important;text-align:center;gap:clamp(8px,2.4cqw,12px)!important;padding:clamp(12px,3.4cqw,18px) clamp(14px,4cqw,24px)!important}
+.fe-box .fv-pt{align-items:center!important}
+.fe-box .fv-pt .l{font-size:clamp(14px,4cqw,20px)!important}
+.fe-box .fv-pt .v{font-size:clamp(28px,8.4cqw,46px)!important}
+.fe-box a{flex:none!important;min-height:52px!important;font-size:clamp(15px,4.4cqw,20px)!important}
+.fe-box a::after{display:block!important}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
