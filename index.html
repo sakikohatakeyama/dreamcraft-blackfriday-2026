@@ -1750,6 +1750,11 @@ document.addEventListener('DOMContentLoaded',function(){
 .calx-open .co{font-style:normal;flex:none;margin-left:4px;background:#dcff2b;color:#0b0b0c;font-size:clamp(11px,3cqw,13px);font-weight:900;padding:3px 10px;border-radius:999px}
 .calx-close{font-family:"Noto Sans JP",sans-serif!important;letter-spacing:.04em!important;font-size:14px!important;padding:6px 12px!important;border-radius:999px}
 </style>
+<style>
+.p20-cut{display:flex;align-items:center;justify-content:center;max-width:520px;aspect-ratio:16/9;margin:clamp(10px,3cqw,18px) auto clamp(14px,4cqw,22px);border:2px dashed #0b0b0c66;border-radius:14px;color:#0b0b0caa;font-weight:900;font-size:14px;background:#ffffff33}
+.p20-cut img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 12px 16px #0005)}
+.p20-cut:has(img){border:0;background:none}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -1894,7 +1899,8 @@ document.addEventListener('DOMContentLoaded',function(){
 <section class="p20" id="p20">
   <div class="wrap">
     <p class="sec-no">03 ／ お歳暮目玉商品</p>
-    <h2 class="shout"><span class="s1">この2商品だけの</span><span class="s2">特大ポイント<span class="stamp" aria-hidden="true"><b>店長</b>一推し</span></span></h2>
+    <h2 class="shout"><span class="s1">この2商品だけの</span><span class="s2">特大ポイント</span></h2>
+    <div class="p20-cut"><!-- 商品の切り抜き画像：img/p20-cut.png を入れる --><span>商品の切り抜き画像が入ります</span></div>
     <div class="p20-head">
       <div>
         <p>この2点はお歳暮ギフトの20倍に、店内全品5倍のエントリー分が重なって24倍に。<span class="nobr">のし・包装も承ります。</span></p>
