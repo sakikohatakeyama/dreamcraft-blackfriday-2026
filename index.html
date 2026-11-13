@@ -1837,6 +1837,17 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
 .fe-box a{flex:none!important;min-height:52px!important;font-size:clamp(15px,4.4cqw,20px)!important}
 .fe-box a::after{display:block!important}
 </style>
+<style>
+/* カレンダーブロックをさらに低く、見出しは同じ大きさ */
+.calx{padding-top:clamp(14px,4cqw,22px)!important;padding-bottom:clamp(14px,4cqw,22px)!important}
+.calx .shout{font-size:min(6.2cqw,38px)!important;line-height:1.15!important}
+.calx .shout .s1{font-size:1em!important}
+.calx-lead{margin-top:2px!important;font-size:clamp(11px,3.1cqw,14px)!important;line-height:1.5!important}
+.calx-open{margin-top:8px!important;padding:8px 18px!important;min-height:0!important}
+.calx-open>span{font-size:clamp(14px,4cqw,18px)!important}
+.calx-open .ci{width:22px;height:22px}
+</style>
+<style>.calx-open .co.ck{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;padding:0!important;border-radius:6px}.calx-open .co.ck svg{width:18px;height:18px}</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -1929,7 +1940,7 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
     <p class="shout" aria-hidden="true"><span class="s1">年に一度の</span><span class="s2">お祭り<span class="sn">7</span>日間</span></p>
     
     <p class="calx-lead">毎日5倍＆24倍。20日と25日は0と5のつく日も重なる、おトク3連発！</p>
-    <button type="button" class="calx-open" id="calOpen" aria-controls="calPop" aria-expanded="false"><svg class="ci" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="7" y="13" width="3" height="3" rx=".6" fill="currentColor"/><rect x="14" y="13" width="3" height="3" rx=".6" fill="currentColor"/></svg><span>おトクカレンダーを見る</span><i class="co" aria-hidden="true">開く</i></button>
+    <button type="button" class="calx-open" id="calOpen" aria-controls="calPop" aria-expanded="false"><svg class="ci" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="7" y="13" width="3" height="3" rx=".6" fill="currentColor"/><rect x="14" y="13" width="3" height="3" rx=".6" fill="currentColor"/></svg><span>おトクカレンダーを見る</span><i class="co ck" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></i></button>
     <div class="calx-pop" id="calPop" role="dialog" aria-modal="true" aria-label="7日間のおトクカレンダー" hidden>
       <div class="calx-panel">
         <button type="button" class="calx-close" id="calClose" aria-label="閉じる">閉じる ×</button>
