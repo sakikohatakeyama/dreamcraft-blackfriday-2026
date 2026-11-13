@@ -1787,6 +1787,25 @@ document.addEventListener('DOMContentLoaded',function(){
 </style>
 <style>section.p20{padding-top:clamp(22px,5.4cqw,34px)!important}.p20 .shout{margin-top:0!important}.p20 .wrap>*:first-child{margin-top:0!important}</style>
 <style>.p20 .shout .s2{font-size:min(10.6cqw,64px)!important;white-space:nowrap}</style>
+<style>
+.p20 .shout{display:flex!important;flex-direction:column;align-items:center}
+.p20 .shout .s1,.p20 .shout .s2{display:block!important;width:max-content}
+.p20 .shout .s1{font-size:min(8.6cqw,46px)!important;letter-spacing:.02em!important}
+</style>
+<script>
+(function(){function fit(){var h=document.querySelector('.p20 .shout');if(!h)return;var a=h.querySelector('.s1'),b=h.querySelector('.s2');if(!a||!b||!a.offsetWidth)return;
+b.style.removeProperty('font-size');var fb=parseFloat(getComputedStyle(b).fontSize);b.style.setProperty('font-size',(fb*a.offsetWidth/b.offsetWidth)+'px','important');b.style.setProperty('line-height','1.05','important');}
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventListener('load',fit);addEventListener('resize',fit);})();
+</script>
+<style>
+/* 超目玉！の両端に切り抜き画像 */
+.p20-ttl{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:clamp(4px,1.6cqw,12px)}
+.p20-ttl .shout{margin:0!important}
+.p20-ttl img{width:100%;height:auto;filter:drop-shadow(0 10px 12px #0005)}
+.p20-ttl .pt-l{justify-self:end;max-width:clamp(90px,26cqw,170px)}
+.p20-ttl .pt-r{justify-self:start;max-width:clamp(100px,30cqw,190px)}
+.p20 .shout .s1{font-size:min(6cqw,40px)!important}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -1931,8 +1950,7 @@ document.addEventListener('DOMContentLoaded',function(){
 <section class="p20" id="p20">
   <div class="wrap">
     <p class="sec-no">03 ／ お歳暮目玉商品</p>
-    <h2 class="shout"><span class="s1">ブラックフライデー</span><span class="s2">超目玉アイテム</span></h2>
-    <div class="p20-cut"><img class="cs" src="img/p20-cut-s.png" width="671" height="652" alt="サッポロ ビールセット Sセット おつまみ付き"><img class="cf" src="img/p20-cut-f.png" width="655" height="381" alt="ノンアルコールビール 12種セット Fセット"></div>
+    <div class="p20-ttl"><img class="pt-l" src="img/p20-cut-s.png" width="671" height="652" alt="サッポロ ビールセット Sセット おつまみ付き"><h2 class="shout"><span class="s1">ブラックフライデー</span><span class="s2">超目玉！</span></h2><img class="pt-r" src="img/p20-cut-f.png" width="655" height="381" alt="ノンアルコールビール 12種セット Fセット"></div>
     <div class="p20-head">
       <div>
         <p>この2点はお歳暮ギフトの20倍に、店内全品5倍のエントリー分が重なって24倍に。<span class="nobr">のし・包装も承ります。</span></p>
