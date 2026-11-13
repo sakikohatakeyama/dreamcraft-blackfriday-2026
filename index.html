@@ -1858,6 +1858,30 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
 section.p20 .wrap{position:relative;z-index:1}
 </style>
 <style>.p20 .badge20 .calc{margin:clamp(12px,3.4cqw,20px) auto 4px!important}</style>
+<style>
+/* 期間中エントリーでを「ポイント」の上にぴったり */
+.fe-box .fp2{flex-direction:row!important;align-items:flex-end!important;justify-content:center;gap:.08em;font-size:clamp(28px,8.4cqw,46px)}
+.fp2 .lp{display:flex;flex-direction:column;align-items:stretch;line-height:1}
+.fp2 .lp .l{display:block;font-size:.38em!important;letter-spacing:0;text-align:justify;text-align-last:justify;white-space:nowrap;color:#fff;margin-bottom:.12em}
+.fp2 .fpp{display:block;font-weight:900;color:#dcff2b;font-size:1em;line-height:1;white-space:nowrap}
+.fp2 .v{font-size:1em!important;line-height:1;display:flex;align-items:baseline}
+.fp2 .v b{font-size:2.1em!important;line-height:.8!important}
+</style>
+<script>
+(function(){function fit(){document.querySelectorAll('.fp2').forEach(function(p){var l=p.querySelector('.lp .l'),pp=p.querySelector('.fpp');if(!l||!pp||!pp.offsetWidth)return;l.style.fontSize='';var f=parseFloat(getComputedStyle(l).fontSize);l.style.setProperty('font-size',(f*pp.offsetWidth/l.scrollWidth)+'px','important')})}
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventListener('load',fit);addEventListener('resize',fit);})();
+</script>
+<style>
+.fe-box .fv-pt.fp2{display:flex!important;flex-direction:row!important;align-items:flex-end!important;justify-content:center!important;gap:.1em!important;font-size:clamp(30px,9cqw,50px)!important}
+.fe-box .fp2 .lp{display:inline-flex!important;flex-direction:column!important;align-items:stretch!important}
+.fe-box .fp2 .lp .l{font-size:.36em!important;line-height:1.1!important;margin:0 0 .15em!important;text-align:center}
+.fe-box .fp2 .fpp{font-size:1em!important;line-height:1!important}
+.fe-box .fp2 .v{font-size:1em!important;line-height:1!important;color:#dcff2b;font-weight:900;display:inline-flex!important;align-items:baseline}
+.fe-box .fp2 .v b{font-size:1.9em!important;line-height:.78!important;margin:0 .03em}
+/* 超目玉：影と放射光なし */
+.p20 .shout .s2{text-shadow:none!important}
+.p20-beams .burst{display:none!important}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -1932,7 +1956,7 @@ section.p20 .wrap{position:relative;z-index:1}
   </div>
 </div>
 
-<div class="fv-entry"><div class="fe-box"><p class="fv-pt"><span class="l">期間中エントリーで</span><span class="v">ポイント<b class="num">5</b>倍</span></p><a href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener">エントリーはこちら</a></div></div>
+<div class="fv-entry"><div class="fe-box"><p class="fv-pt fp2"><span class="lp"><span class="l">期間中エントリーで</span><span class="fpp">ポイント</span></span><span class="v"><b class="num">5</b>倍</span></p><a href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener">エントリーはこちら</a></div></div>
 <div class="deco" aria-hidden="true"><div class="deco-in"><span>BLACK FRIDAY</span><span>CHEERS!</span><span>DREAM CRAFT</span><span>BLACK FRIDAY</span><span>CHEERS!</span><span>DREAM CRAFT</span></div></div>
 <!-- カウントダウン -->
 <div class="cd cd-box" id="cd" aria-live="polite">
