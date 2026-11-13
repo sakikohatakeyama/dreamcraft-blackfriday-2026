@@ -1807,6 +1807,25 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
 .p20 .shout .s1{font-size:min(6cqw,40px)!important}
 </style>
 <style>.p20-cut{gap:clamp(10px,3cqw,20px)!important}.p20-cut .cs{width:46%!important;margin-right:0!important}.p20-cut .cf{width:44%!important}</style>
+<style>
+/* 2商品カード：左に写真、右に詳細の横長 */
+.p20 .items{grid-template-columns:1fr!important;gap:16px!important}
+.p20 .item{display:grid!important;grid-template-columns:42% 1fr;align-items:stretch}
+.p20 .item .ph{display:block;height:100%;min-height:100%}
+.p20 .item .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.p20 .item .body{padding:clamp(12px,3.4cqw,20px) clamp(12px,3.4cqw,20px) clamp(12px,3.4cqw,18px)!important;min-width:0}
+.p20 .item .cat{font-size:clamp(10px,2.8cqw,13px)!important}
+.p20 .item h3{font-size:clamp(14px,4.2cqw,22px)!important}
+.p20 .item .spec{font-size:clamp(11px,3.1cqw,14px)!important;line-height:1.6!important}
+.p20 .item .price{margin-top:6px!important}
+.p20 .item .price .num{font-size:clamp(28px,8.4cqw,52px)!important}
+.p20 .item .price .sp.free{font-size:clamp(9.5px,2.6cqw,13px)!important;padding:2px 6px!important}
+.p20 .it-btns{gap:6px!important;margin-top:8px!important}
+.p20 .it-btns .buy{min-height:44px!important;font-size:clamp(12.5px,3.6cqw,17px)!important}
+.p20 .it-fav{width:44px!important;height:44px!important}
+.p20 .it-fav svg{width:20px!important;height:20px!important}
+</style>
+<style>.p20 .item .ph{background:#fff;display:flex!important;align-items:center}.p20 .item .ph img{height:auto!important;aspect-ratio:1;object-fit:contain!important}.p20 .item .price small{display:none}</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
