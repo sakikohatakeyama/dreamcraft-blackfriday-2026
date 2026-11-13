@@ -1755,6 +1755,29 @@ document.addEventListener('DOMContentLoaded',function(){
 .p20-cut img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 12px 16px #0005)}
 .p20-cut:has(img){border:0;background:none}
 </style>
+<style>
+.p20-cut{position:relative;aspect-ratio:auto!important;border:0!important;background:none!important;display:flex!important;align-items:flex-end!important;justify-content:center;gap:0;max-width:600px!important}
+.p20-cut img{width:auto!important;height:auto!important;object-fit:initial!important}
+.p20-cut .cs{width:48%!important;position:relative;z-index:2;margin-right:-4%}
+.p20-cut .cf{width:56%!important;position:relative;z-index:1}
+</style>
+<style>
+/* FV画像とポイント5倍枠の間を詰める */
+.fvt-in{padding-bottom:0!important}
+.fv-cans{margin-bottom:0!important}
+.fv-entry{margin-top:clamp(-40px,-9cqw,-14px)!important;position:relative;z-index:3;background:transparent!important;padding-top:0!important}
+.fv-tape{padding-bottom:0!important}
+.fe-box .fv-pt .l{font-size:clamp(13px,3.8cqw,18px)!important}
+.fe-box .fv-pt .v{font-size:clamp(24px,7cqw,38px)!important}
+.fe-box .fv-pt .v b{font-size:2.1em!important}
+</style>
+<style>
+.fv-entry{margin-top:0!important;padding-top:clamp(6px,2cqw,12px)!important;background:#000!important}
+.fe-box{gap:clamp(8px,2.4cqw,16px)!important;padding:clamp(10px,2.8cqw,14px) clamp(10px,3cqw,18px)!important}
+.fe-box a{min-width:0;font-size:clamp(12.5px,3.6cqw,18px)!important;padding:0 10px}
+.fe-box .fv-pt .v{font-size:clamp(22px,6.6cqw,38px)!important}
+</style>
+<style>@container (max-width:460px){.fe-box a::after{display:none}.fe-box a{padding:0 6px}}</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -1900,7 +1923,7 @@ document.addEventListener('DOMContentLoaded',function(){
   <div class="wrap">
     <p class="sec-no">03 ／ お歳暮目玉商品</p>
     <h2 class="shout"><span class="s1">この2商品だけの</span><span class="s2">特大ポイント</span></h2>
-    <div class="p20-cut"><!-- 商品の切り抜き画像：img/p20-cut.png を入れる --><span>商品の切り抜き画像が入ります</span></div>
+    <div class="p20-cut"><img class="cs" src="img/p20-cut-s.png" width="671" height="652" alt="サッポロ ビールセット Sセット おつまみ付き"><img class="cf" src="img/p20-cut-f.png" width="655" height="381" alt="ノンアルコールビール 12種セット Fセット"></div>
     <div class="p20-head">
       <div>
         <p>この2点はお歳暮ギフトの20倍に、店内全品5倍のエントリー分が重なって24倍に。<span class="nobr">のし・包装も承ります。</span></p>
