@@ -1742,6 +1742,14 @@ document.addEventListener('DOMContentLoaded',function(){
 .fe-box .fv-pt .v{font-size:clamp(18px,5.2cqw,28px)!important}
 .fe-box a{flex:1;min-height:50px!important;font-size:clamp(14px,4cqw,18px)!important;white-space:nowrap}
 </style>
+<style>
+/* カレンダーボタンをわかりやすく */
+.calx-open{justify-content:center!important;gap:10px!important}
+.calx-open .ci{width:26px;height:26px;flex:none}
+.calx-open>span{font-size:clamp(16px,4.6cqw,20px)!important}
+.calx-open .co{font-style:normal;flex:none;margin-left:4px;background:#dcff2b;color:#0b0b0c;font-size:clamp(11px,3cqw,13px);font-weight:900;padding:3px 10px;border-radius:999px}
+.calx-close{font-family:"Noto Sans JP",sans-serif!important;letter-spacing:.04em!important;font-size:14px!important;padding:6px 12px!important;border-radius:999px}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -1834,10 +1842,10 @@ document.addEventListener('DOMContentLoaded',function(){
     <p class="shout" aria-hidden="true"><span class="s1">年に一度の</span><span class="s2">お祭り<span class="sn">7</span>日間</span></p>
     
     <p class="calx-lead">毎日5倍＆24倍。20日と25日は0と5のつく日も重なる、おトク3連発！</p>
-    <button type="button" class="calx-open" id="calOpen" aria-controls="calPop" aria-expanded="false"><span>カレンダーを見る</span><b class="en">CALENDAR</b></button>
+    <button type="button" class="calx-open" id="calOpen" aria-controls="calPop" aria-expanded="false"><svg class="ci" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M3 10h18M8 3v4M16 3v4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><rect x="7" y="13" width="3" height="3" rx=".6" fill="currentColor"/><rect x="14" y="13" width="3" height="3" rx=".6" fill="currentColor"/></svg><span>おトクカレンダーを見る</span><i class="co" aria-hidden="true">開く</i></button>
     <div class="calx-pop" id="calPop" role="dialog" aria-modal="true" aria-label="7日間のおトクカレンダー" hidden>
       <div class="calx-panel">
-        <button type="button" class="calx-close" id="calClose" aria-label="閉じる">CLOSE</button>
+        <button type="button" class="calx-close" id="calClose" aria-label="閉じる">閉じる ×</button>
         <p class="calx-ph"><span class="en">NOVEMBER 2026</span>7日間のおトクカレンダー</p>
     <div class="calx-tbl">
           <div class="calx-hd" aria-hidden="true"><span></span><span>店内全品<br>ポイント<b class="num">5</b>倍</span><span>お歳暮目玉商品<br>ポイント<b class="num">24</b>倍</span><span>0と5のつく日<br>ポイント<b class="num">4</b>倍</span></div>
