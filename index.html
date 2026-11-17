@@ -2120,6 +2120,16 @@ html{-webkit-text-size-adjust:100%!important;text-size-adjust:100%!important}
 .fe-br{display:none}
 @media (min-width:768px){.fe-br{display:inline}}
 </style>
+<style>
+/* 価格行：PCは従来グリッドのまま、SPは送料無料＋価格を左詰め横並び */
+.p20 .pr-row{display:contents}
+@container (max-width:600px){
+  .p20 .item{grid-template-areas:"rb rb" "ph nm" "ph sp" "ph gap" "pr pr" "bt bt"!important}
+  .p20 .pr-row{grid-area:pr;display:flex;align-items:center;gap:12px;margin:14px clamp(14px,4cqw,22px) 0;white-space:nowrap}
+  .p20 .pr-row .it-ship2,.p20 .pr-row .price{margin:0!important;grid-area:auto!important}
+  .p20 .item .price .num{font-size:clamp(36px,10.6cqw,50px)!important}
+}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -2281,7 +2291,7 @@ html{-webkit-text-size-adjust:100%!important;text-size-adjust:100%!important}
         <div class="body">
           <h3>サッポロ ビールセット<br> Sセット おつまみ付き</h3>
           <p class="spec">350ml × 12缶＋おつまみ2個<br>ラガー・黒ラベル・ヱビス4種など12本に、チーズスナック2個を添えて。</p>
-          <p class="it-ship2"><span class="sp free">送料無料（本州のみ）</span></p><p class="price"><span class="num">4<span class="cm">,</span>380</span>円<small>（税込）</small></p><div class="it-btns"><a class="buy" href="https://item.rakuten.co.jp/d-craft/2101900000300/" target="_blank" rel="noopener">商品ページへ</a><a class="pq-fav it-fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=S&amp;shop_bid=296346&amp;iid=10019763" target="_blank" rel="noopener" aria-label="お気に入りに追加"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.5 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.5 21.6 11.8 19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/></svg></a></div>
+          <div class="pr-row"><p class="it-ship2"><span class="sp free">送料無料（本州のみ）</span></p><p class="price"><span class="num">4<span class="cm">,</span>380</span>円<small>（税込）</small></p></div><div class="it-btns"><a class="buy" href="https://item.rakuten.co.jp/d-craft/2101900000300/" target="_blank" rel="noopener">商品ページへ</a><a class="pq-fav it-fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=S&amp;shop_bid=296346&amp;iid=10019763" target="_blank" rel="noopener" aria-label="お気に入りに追加"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.5 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.5 21.6 11.8 19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/></svg></a></div>
         </div>
       </article>
       <article class="item">
@@ -2290,7 +2300,7 @@ html{-webkit-text-size-adjust:100%!important;text-size-adjust:100%!important}
         <div class="body">
           <h3>ノンアルコールビール<br> 12種セット Fセット</h3>
           <p class="spec">350ml × 12缶・送料無料<br>オールフリー・ドライゼロ・パーフェクトフリーなど4社12種。お酒を飲まない方への贈り物にも。</p>
-          <p class="it-ship2"><span class="sp free">送料無料</span></p><p class="price"><span class="num">3<span class="cm">,</span>281</span>円<small>（税込）</small></p><div class="it-btns"><a class="buy" href="https://item.rakuten.co.jp/d-craft/2140110000779/" target="_blank" rel="noopener">商品ページへ</a><a class="pq-fav it-fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=S&amp;shop_bid=296346&amp;iid=10015083" target="_blank" rel="noopener" aria-label="お気に入りに追加"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.5 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.5 21.6 11.8 19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/></svg></a></div>
+          <div class="pr-row"><p class="it-ship2"><span class="sp free">送料無料</span></p><p class="price"><span class="num">3<span class="cm">,</span>281</span>円<small>（税込）</small></p></div><div class="it-btns"><a class="buy" href="https://item.rakuten.co.jp/d-craft/2140110000779/" target="_blank" rel="noopener">商品ページへ</a><a class="pq-fav it-fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=S&amp;shop_bid=296346&amp;iid=10015083" target="_blank" rel="noopener" aria-label="お気に入りに追加"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.5 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.5 21.6 11.8 19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/></svg></a></div>
         </div>
       </article>
     </div>
