@@ -1944,6 +1944,23 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
 .p20 .badge20 .calc .num{vertical-align:baseline!important;line-height:1}
 .p20 .item .price{align-items:baseline!important}
 </style>
+<style>
+/* 数字と「倍」の下をそろえる（日本語は少し持ち上げる） */
+.bai{font-style:normal;display:inline-block;position:relative;top:-.08em}
+.bigx .br b{position:relative;top:-.06em}
+.p20 .badge20 .calc .cv{display:inline-flex!important;align-items:baseline!important}
+/* エントリーで24倍：写真の上の赤い枠に2段で中央 */
+.p20 .item{grid-template-columns:42% 1fr!important;grid-template-rows:1fr auto!important}
+.p20 .item .ribbon{position:static!important;grid-column:1;grid-row:1;width:auto!important;display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:clamp(10px,3cqw,16px) 6px!important;background:#e8202a!important;color:#fff!important;font-size:clamp(14px,4cqw,22px)!important;line-height:1.1}
+.p20 .item .ribbon .rl{display:block;font-weight:900}
+.p20 .item .ribbon .rv{display:flex;align-items:baseline;font-weight:900}
+.p20 .item .ribbon .num{font-size:2em!important;color:#ffe14a;line-height:1;margin-right:2px}
+.p20 .item .ribbon .bai{font-size:1.15em}
+.p20 .item .ph{grid-column:1;grid-row:2;background:#fff!important;align-self:end!important}
+.p20 .item .body{grid-column:2;grid-row:1/3}
+/* ポイント5倍の注意書き */
+.p20-pnote{margin:12px 0 0;font-size:clamp(11px,3.1cqw,13px);line-height:1.75;color:#2a2110;text-align:left;display:inline-block}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -2095,12 +2112,12 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
     <h2 class="shout"><span class="s1">ブラックフライデー</span><span class="s2">超目玉商品！</span></h2>
     <div class="p20-cut"><img class="cs" src="img/p20-cut-s.png" width="671" height="652" alt="サッポロ ビールセット Sセット おつまみ付き"><img class="cf" src="img/p20-cut-f.png" width="655" height="381" alt="ノンアルコールビール 12種セット Fセット"></div>
     <div class="p20-head">
-      <div class="badge20 bigx"><p class="bl">お歳暮ギフト2商品が<br>エントリーで</p><p class="br"><span class="pt">ポイント</span><span class="num">24</span><b>倍</b></p><p class="calc"><span class="c1"><i class="tg free">エントリー不要</i><span class="cv">お歳暮ギフト <b class="num">20</b>倍</span></span><span class="plus">＋</span><span class="c2"><i class="tg need">要エントリー</i><span class="cv">店内全品 <b class="num">5</b>倍</span></span></p></div>
+      <div class="badge20 bigx"><p class="bl">お歳暮ギフト2商品が<br>エントリーで</p><p class="br"><span class="pt">ポイント</span><span class="num">24</span><b>倍</b></p><p class="calc"><span class="c1"><i class="tg free">エントリー不要</i><span class="cv">お歳暮ギフト <b class="num">20</b><i class="bai">倍</i></span></span><span class="plus">＋</span><span class="c2"><i class="tg need">要エントリー</i><span class="cv">店内全品 <b class="num">5</b><i class="bai">倍</i></span></span></p></div>
     </div>
 
     <div class="items">
       <article class="item">
-        <span class="ribbon">エントリーで<span class="num">24</span>倍</span>
+        <span class="ribbon"><span class="rl">エントリーで</span><span class="rv"><span class="num">24</span><i class="bai">倍</i></span></span>
         <a class="ph" href="https://item.rakuten.co.jp/d-craft/2101900000300/" target="_blank" rel="noopener"><img src="img/gft-s.jpg" width="600" height="600" alt="サッポロ ビールセット Sセット" loading="lazy"></a>
         <div class="body">
           <h3>サッポロ ビールセット<br>Sセット おつまみ付き</h3>
@@ -2109,7 +2126,7 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
         </div>
       </article>
       <article class="item">
-        <span class="ribbon">エントリーで<span class="num">24</span>倍</span>
+        <span class="ribbon"><span class="rl">エントリーで</span><span class="rv"><span class="num">24</span><i class="bai">倍</i></span></span>
         <a class="ph" href="https://item.rakuten.co.jp/d-craft/2140110000779/" target="_blank" rel="noopener"><img src="img/gft-f.jpg" width="600" height="600" alt="ノンアルコールビール 12種セット Fセット" loading="lazy"></a>
         <div class="body">
           <h3>ノンアルコールビール<br>12種セット Fセット</h3>
@@ -2121,6 +2138,7 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
     <div class="p20-after">
       <p class="p20-msg">こちらの2点はブラックフライデー限定<b>20倍！</b><br>さらに店内全品5倍のエントリーをすると<b>24倍</b>になります。</p>
       <a class="p20-entry" href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener"><span>ポイント5倍エントリーはこちら</span><small>※エントリーしないと24倍になりません</small></a>
+      <p class="p20-pnote">※2027年1月19日（火）頃に、2027年1月31日（日）まで使える期間限定ポイントで進呈します。<br>※キャンペーンの特典ポイントは、購入画面の獲得予定ポイントには表示されません。</p>
     </div>
     <p class="p20-note">※ポイント24倍は、お歳暮ギフト20倍（通常1倍分を含む）＋エントリーによる店内全品5倍の追加4倍分の合計です。5倍キャンペーンへのエントリーが必要です。<br>※ブラックフライデー期間中（11/19（木）20:00〜11/25（水）1:59）のご注文が対象です。<br>※価格・在庫・ポイント倍率は変わることがあります。最新の情報は各商品ページでご確認ください。</p>
   </div>
