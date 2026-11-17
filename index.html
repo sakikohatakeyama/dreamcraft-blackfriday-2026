@@ -2025,6 +2025,41 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){set
 .fvt-title .en{will-change:transform,opacity}
 .fv-tape::after{display:none!important}
 </style>
+<style>
+/* 2商品カード：文字を大きく、送料無料は価格のすぐ上、価格の下を写真の下にそろえる */
+.p20 .item{grid-template-rows:auto auto auto 1fr auto!important}
+.p20 .item .ph{align-self:stretch!important;display:flex!important;align-items:flex-end!important}
+.p20 .item .ph img{aspect-ratio:1;height:auto!important}
+.p20 .item h3{font-size:clamp(15px,4.4cqw,26px)!important;line-height:1.35!important}
+.p20 .item .spec{font-size:clamp(11.5px,3.2cqw,16px)!important;line-height:1.55!important}
+.p20 .item .price{align-self:end!important;margin-top:6px!important;margin-bottom:0!important;line-height:1!important;gap:2px 4px!important}
+.p20 .item .price .sp.free{margin:0 0 4px!important;font-size:clamp(11px,3cqw,15px)!important}
+.p20 .item .price .num{font-size:clamp(34px,10cqw,64px)!important;line-height:.82!important;display:inline-block}
+.p20 .item .price>*:not(.sp){line-height:.82}
+</style>
+<style>
+.p20 .item .ph{background:transparent!important}
+@container (max-width:600px){
+  .p20 .item{grid-template-columns:44% 1fr!important;column-gap:12px!important}
+  .p20 .item .ph{align-items:flex-start!important;align-self:start!important}
+  .p20 .item h3{font-size:clamp(14px,4.1cqw,18px)!important}
+  .p20 .item .spec{font-size:clamp(11px,3cqw,13px)!important;line-height:1.5!important}
+  .p20 .item .price .num{font-size:clamp(30px,8.6cqw,40px)!important}
+}
+</style>
+<style>
+.p20 .item .body{display:contents!important}
+.p20 .it-ship2{grid-area:pr;align-self:end;margin:0 clamp(14px,4cqw,22px) 0 0;transform:translateY(calc(-1 * (clamp(34px,10cqw,64px) * .82 + 8px)))}
+.p20 .it-ship2 .sp.free{display:inline-block;font-size:clamp(11px,3cqw,15px)!important;padding:3px 9px!important;background:#dcff2b!important;color:#0b0b0c!important;border-radius:6px;font-weight:900;margin:0!important}
+.p20 .item .price{display:block!important;justify-content:flex-start!important;text-align:left!important}
+@container (max-width:600px){.p20 .it-ship2{transform:translateY(calc(-1 * (clamp(30px,8.6cqw,40px) * .82 + 8px)))}}
+</style>
+<style>
+.p20 .item{grid-template-rows:auto auto auto 1fr auto auto!important;grid-template-areas:"rb rb" "ph nm" "ph sp" "ph gap" "ph sh" "ph pr" "bt bt"!important}
+.p20 .it-ship2{grid-area:sh!important;transform:none!important;align-self:end;margin:8px clamp(14px,4cqw,22px) 6px 0!important}
+.p20 .item .price{grid-area:pr!important;align-self:end!important;margin-top:0!important}
+.p20 .item .ph{grid-row:2/7!important}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -2186,7 +2221,7 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){set
         <div class="body">
           <h3>サッポロ ビールセット<br> Sセット おつまみ付き</h3>
           <p class="spec">350ml × 12缶＋おつまみ2個<br>ラガー・黒ラベル・ヱビス4種など12本に、チーズスナック2個を添えて。</p>
-          <p class="price"><span class="num">4<span class="cm">,</span>380</span>円<small>（税込）</small><span class="sp free">送料無料（本州のみ）</span></p><div class="it-btns"><a class="buy" href="https://item.rakuten.co.jp/d-craft/2101900000300/" target="_blank" rel="noopener">商品ページへ</a><a class="pq-fav it-fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=S&amp;shop_bid=296346&amp;iid=10019763" target="_blank" rel="noopener" aria-label="お気に入りに追加"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.5 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.5 21.6 11.8 19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/></svg></a></div>
+          <p class="it-ship2"><span class="sp free">送料無料（本州のみ）</span></p><p class="price"><span class="num">4<span class="cm">,</span>380</span>円<small>（税込）</small></p><div class="it-btns"><a class="buy" href="https://item.rakuten.co.jp/d-craft/2101900000300/" target="_blank" rel="noopener">商品ページへ</a><a class="pq-fav it-fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=S&amp;shop_bid=296346&amp;iid=10019763" target="_blank" rel="noopener" aria-label="お気に入りに追加"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.5 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.5 21.6 11.8 19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/></svg></a></div>
         </div>
       </article>
       <article class="item">
@@ -2195,7 +2230,7 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){set
         <div class="body">
           <h3>ノンアルコールビール<br> 12種セット Fセット</h3>
           <p class="spec">350ml × 12缶・送料無料<br>オールフリー・ドライゼロ・パーフェクトフリーなど4社12種。お酒を飲まない方への贈り物にも。</p>
-          <p class="price"><span class="num">3<span class="cm">,</span>281</span>円<small>（税込）</small><span class="sp free">送料無料</span></p><div class="it-btns"><a class="buy" href="https://item.rakuten.co.jp/d-craft/2140110000779/" target="_blank" rel="noopener">商品ページへ</a><a class="pq-fav it-fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=S&amp;shop_bid=296346&amp;iid=10015083" target="_blank" rel="noopener" aria-label="お気に入りに追加"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.5 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.5 21.6 11.8 19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/></svg></a></div>
+          <p class="it-ship2"><span class="sp free">送料無料</span></p><p class="price"><span class="num">3<span class="cm">,</span>281</span>円<small>（税込）</small></p><div class="it-btns"><a class="buy" href="https://item.rakuten.co.jp/d-craft/2140110000779/" target="_blank" rel="noopener">商品ページへ</a><a class="pq-fav it-fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=S&amp;shop_bid=296346&amp;iid=10015083" target="_blank" rel="noopener" aria-label="お気に入りに追加"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.5 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.5 21.6 11.8 19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/></svg></a></div>
         </div>
       </article>
     </div>
