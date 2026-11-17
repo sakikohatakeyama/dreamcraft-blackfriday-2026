@@ -1968,6 +1968,25 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
 .p20-note,.bk-note,.pp-note,.p5-note{display:block!important;width:fit-content!important;max-width:100%!important;margin-left:auto!important;margin-right:auto!important;text-align:left!important}
 .p20-note .nl,.bk-note .nl,.pp-note .nl,.p5-note .nl{display:block;padding-left:1em;text-indent:-1em}
 </style>
+<style>
+/* スマホ：注釈・説明を横いっぱい（左右の余白そろえ）、行間を詰める */
+@container (max-width:600px){
+  .p20-note,.bk-note,.pp-note,.p5-note,.calx-lead,.p5-body,.p20-head p:not(.bl):not(.br):not(.calc),.os-lead,.bk-lead,.p20-msg{width:auto!important;max-width:none!important;margin-left:0!important;margin-right:0!important}
+}
+.p20-note,.bk-note,.pp-note,.p5-note{line-height:1.6!important}
+.p20-note .nl,.bk-note .nl,.pp-note .nl,.p5-note .nl{margin-bottom:2px}
+/* スマホ：斜めの帯がキャッチにかぶらないよう角へ */
+@container (max-width:600px){
+  .fv-tape .t1{top:-6px!important;left:-38%!important;transform:rotate(-24deg)!important}
+  .fv-tape .tape span{font-size:12px!important;padding:3px 14px!important}
+  .fvt-in{padding-top:clamp(52px,15cqw,80px)!important}
+}
+</style>
+<script>
+/* FVの日付をロゴの横幅に収める */
+(function(){function fit(){var d=document.querySelector('.fv-tape .fv-date'),l=document.querySelector('.fvt-title .l2');if(!d||!l)return;d.style.removeProperty('zoom');var w=d.scrollWidth,lw=l.offsetWidth;if(w>lw&&lw)d.style.zoom=(lw/w).toFixed(3)}
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){setTimeout(fit,50)});addEventListener('load',function(){setTimeout(fit,100)});addEventListener('resize',fit);})();
+</script>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
