@@ -1987,6 +1987,44 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
 (function(){function fit(){var d=document.querySelector('.fv-tape .fv-date'),l=document.querySelector('.fvt-title .l2');if(!d||!l)return;d.style.removeProperty('zoom');var w=d.scrollWidth,lw=l.offsetWidth;if(w>lw&&lw)d.style.zoom=(lw/w).toFixed(3)}
 if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){setTimeout(fit,50)});addEventListener('load',function(){setTimeout(fit,100)});addEventListener('resize',fit);})();
 </script>
+<style>
+/* 24倍の2商品カード：上に赤帯、写真左・詳細右、下にボタン */
+.p20 .item{display:grid!important;grid-template-columns:46% 1fr!important;grid-template-rows:auto auto auto 1fr auto!important;grid-template-areas:"rb rb" "ph nm" "ph sp" "ph pr" "bt bt"!important;column-gap:clamp(12px,3.6cqw,22px)!important;row-gap:0!important;padding:0 0 clamp(14px,4cqw,20px)!important;border:3px solid #0b0b0c!important;border-radius:18px!important;overflow:hidden!important;background:#fffaf3!important}
+.p20 .item .ribbon{grid-area:rb!important;flex-direction:row!important;align-items:baseline!important;justify-content:center!important;gap:.1em!important;padding:clamp(8px,2.4cqw,12px) 10px!important;border-bottom:3px solid #0b0b0c;font-size:clamp(20px,6cqw,34px)!important;margin-bottom:clamp(14px,4cqw,20px)!important}
+.p20 .item .ribbon .rl{font-size:1em}
+.p20 .item .ribbon .num{font-size:1.15em!important;color:#fff!important}
+.p20 .item .ribbon .bai{font-size:1em!important;top:0!important}
+.p20 .item .ph{grid-area:ph!important;margin-left:clamp(14px,4cqw,22px);align-self:start!important;border-radius:14px!important;overflow:hidden;background:#fff!important}
+.p20 .item .ph img{border-radius:14px;width:100%;aspect-ratio:1;object-fit:cover!important}
+.p20 .item .body{display:contents!important;grid-area:auto!important}
+.p20 .item h3,.p20 .item .spec,.p20 .item .price,.p20 .it-btns{grid-column:auto;grid-row:auto}
+.p20 .item h3{grid-area:nm;margin:0 clamp(14px,4cqw,22px) 0 0!important;font-size:clamp(14px,4.2cqw,24px)!important;line-height:1.35!important}
+.p20 .item .spec{grid-area:sp;margin:6px clamp(14px,4cqw,22px) 0 0!important;font-size:clamp(10.5px,2.9cqw,14px)!important;line-height:1.55!important}
+.p20 .item .price{grid-area:pr;align-self:end;margin:8px clamp(14px,4cqw,22px) 0 0!important;display:flex!important;flex-wrap:wrap;align-items:baseline!important;gap:4px 4px!important}
+.p20 .item .price .sp.free{order:-1;flex-basis:100%;width:max-content;max-width:max-content;margin:0 0 2px!important;align-self:flex-start}
+.p20 .item .price .num{font-size:clamp(30px,9.4cqw,58px)!important}
+.p20 .item .price small{display:none!important}
+.p20 .it-btns{grid-area:bt;margin:clamp(12px,3.4cqw,18px) clamp(14px,4cqw,22px) 0!important;display:flex;gap:clamp(10px,3cqw,18px)!important;align-items:center}
+.p20 .it-btns .buy{flex:1;min-height:clamp(44px,12cqw,58px)!important;border-radius:999px!important;margin:0!important}
+.p20 .it-fav{width:clamp(44px,12cqw,58px)!important;height:clamp(44px,12cqw,58px)!important}
+</style>
+<style>
+.p20 .item .price{justify-content:flex-start!important;flex-wrap:wrap!important;white-space:nowrap}
+.p20 .item .price .num{font-size:clamp(30px,8.6cqw,52px)!important}
+.p20 .item h3{font-size:clamp(14px,4cqw,22px)!important}
+@container (max-width:600px){.p20 .item h3 br{display:none}}
+</style>
+<style>.p20 .item .price .num{margin:0!important;padding:0!important}.p20 .item .price{padding:0!important;text-indent:0!important}.p20 .item h3{word-break:keep-all;overflow-wrap:anywhere}</style>
+<style>
+/* FV：最初から幅に収まる大きさ（JSは微調整だけ） */
+.fvt-title .l2{font-size:min(calc((100cqw - 32px)*.84/4.756),118px)!important}
+.fvt-title .l1{font-size:min(calc((100cqw - 32px)*.84/4.511),124px)!important}
+/* 軽くする：ぼかし・影のフィルターをやめる */
+@keyframes doon{0%{opacity:0;transform:scale(2.2)}55%{opacity:1;transform:scale(.94)}75%{transform:scale(1.03)}100%{opacity:1;transform:none}}
+.fv-cans .cn,.fv-cans .gf{filter:none!important;will-change:transform,opacity}
+.fvt-title .en{will-change:transform,opacity}
+.fv-tape::after{display:none!important}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -2060,7 +2098,7 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){set
       <span class="to" aria-label="から"></span>
       <span class="dt"><span class="num">11.25</span><span class="wk">水</span><span class="tm num">1:59</span></span>
     </p>
-    <div class="fv-cans"><span class="fc-burst" aria-hidden="true"></span><img class="cn c1" src="img/can-kuro.png" width="272" height="520" alt="サッポロ生ビール黒ラベル"><img class="cn c2" src="img/can-yebisu.png" width="272" height="520" alt="ヱビスビール"><img class="cn c3" src="img/can-black.png" width="272" height="520" alt="ヱビス プレミアムブラック"><img class="cn c4" src="img/can-ale.png" width="272" height="520" alt="ヱビス プレミアムエール"><img class="cn c5" src="img/can-mugi.png" width="272" height="520" alt="ヱビス 麦紡ぐ"><img class="cn c6" src="img/can-dryzero.png" width="272" height="520" alt="アサヒ ドライゼロ"><img class="gf g1" src="img/gift-bp5ag.png" width="520" height="421" alt="サントリー プレミアムモルツ 7種18缶 お歳暮ギフト"><img class="gf g2" src="img/gift-vm4s.png" width="520" height="380" alt="サントリー プレミアムモルツ マスターズドリーム入り お歳暮ギフト"><img class="gf g3" src="img/gift-fj3s.png" width="520" height="353" alt="サントリー プレミアムモルツ ファミリー お歳暮ギフト"></div>
+    <div class="fv-cans"><span class="fc-burst" aria-hidden="true"></span><img decoding="async" fetchpriority="high" class="cn c1" src="img/can-kuro.webp" width="272" height="520" alt="サッポロ生ビール黒ラベル"><img decoding="async" fetchpriority="high" class="cn c2" src="img/can-yebisu.webp" width="272" height="520" alt="ヱビスビール"><img decoding="async" fetchpriority="high" class="cn c3" src="img/can-black.webp" width="272" height="520" alt="ヱビス プレミアムブラック"><img decoding="async" fetchpriority="high" class="cn c4" src="img/can-ale.webp" width="272" height="520" alt="ヱビス プレミアムエール"><img decoding="async" fetchpriority="high" class="cn c5" src="img/can-mugi.webp" width="272" height="520" alt="ヱビス 麦紡ぐ"><img decoding="async" fetchpriority="high" class="cn c6" src="img/can-dryzero.webp" width="272" height="520" alt="アサヒ ドライゼロ"><img decoding="async" class="gf g1" src="img/gift-bp5ag.webp" width="520" height="421" alt="サントリー プレミアムモルツ 7種18缶 お歳暮ギフト"><img decoding="async" class="gf g2" src="img/gift-vm4s.webp" width="520" height="380" alt="サントリー プレミアムモルツ マスターズドリーム入り お歳暮ギフト"><img decoding="async" class="gf g3" src="img/gift-fj3s.webp" width="520" height="353" alt="サントリー プレミアムモルツ ファミリー お歳暮ギフト"></div>
   </div>
 </div>
 
@@ -2146,7 +2184,7 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){set
         <span class="ribbon"><span class="rl">エントリーで</span><span class="rv"><span class="num">24</span><i class="bai">倍</i></span></span>
         <a class="ph" href="https://item.rakuten.co.jp/d-craft/2101900000300/" target="_blank" rel="noopener"><img src="img/gft-s.jpg" width="600" height="600" alt="サッポロ ビールセット Sセット" loading="lazy"></a>
         <div class="body">
-          <h3>サッポロ ビールセット<br>Sセット おつまみ付き</h3>
+          <h3>サッポロ ビールセット<br> Sセット おつまみ付き</h3>
           <p class="spec">350ml × 12缶＋おつまみ2個<br>ラガー・黒ラベル・ヱビス4種など12本に、チーズスナック2個を添えて。</p>
           <p class="price"><span class="num">4<span class="cm">,</span>380</span>円<small>（税込）</small><span class="sp free">送料無料（本州のみ）</span></p><div class="it-btns"><a class="buy" href="https://item.rakuten.co.jp/d-craft/2101900000300/" target="_blank" rel="noopener">商品ページへ</a><a class="pq-fav it-fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=S&amp;shop_bid=296346&amp;iid=10019763" target="_blank" rel="noopener" aria-label="お気に入りに追加"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.5 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.5 21.6 11.8 19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/></svg></a></div>
         </div>
@@ -2155,7 +2193,7 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){set
         <span class="ribbon"><span class="rl">エントリーで</span><span class="rv"><span class="num">24</span><i class="bai">倍</i></span></span>
         <a class="ph" href="https://item.rakuten.co.jp/d-craft/2140110000779/" target="_blank" rel="noopener"><img src="img/gft-f.jpg" width="600" height="600" alt="ノンアルコールビール 12種セット Fセット" loading="lazy"></a>
         <div class="body">
-          <h3>ノンアルコールビール<br>12種セット Fセット</h3>
+          <h3>ノンアルコールビール<br> 12種セット Fセット</h3>
           <p class="spec">350ml × 12缶・送料無料<br>オールフリー・ドライゼロ・パーフェクトフリーなど4社12種。お酒を飲まない方への贈り物にも。</p>
           <p class="price"><span class="num">3<span class="cm">,</span>281</span>円<small>（税込）</small><span class="sp free">送料無料</span></p><div class="it-btns"><a class="buy" href="https://item.rakuten.co.jp/d-craft/2140110000779/" target="_blank" rel="noopener">商品ページへ</a><a class="pq-fav it-fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=S&amp;shop_bid=296346&amp;iid=10015083" target="_blank" rel="noopener" aria-label="お気に入りに追加"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.5 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.5 21.6 11.8 19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/></svg></a></div>
         </div>
