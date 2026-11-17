@@ -2112,6 +2112,14 @@ html{-webkit-text-size-adjust:100%!important;text-size-adjust:100%!important}
 /* FV下の5倍枠を気持ち下へ */
 .fv-entry{padding-top:clamp(18px,5cqw,30px)!important}
 </style>
+<style>
+/* 5倍枠の注釈：ブロック中央・文字左揃え */
+.fe-box .fe-note{flex-basis:auto!important;width:fit-content!important;max-width:100%!important;align-self:center!important;margin-left:auto!important;margin-right:auto!important}
+</style>
+<style>
+.fe-br{display:none}
+@media (min-width:768px){.fe-br{display:inline}}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -2189,7 +2197,7 @@ html{-webkit-text-size-adjust:100%!important;text-size-adjust:100%!important}
   </div>
 </div>
 
-<div class="fv-entry"><div class="fe-box"><p class="fv-pt fp2"><span class="lp"><span class="l">期間中エントリーで</span><span class="fpp">ポイント</span></span><span class="v"><b class="num">5</b>倍</span></p><a href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener">エントリーはこちら</a><p class="fe-note"><span class="nl">※ポイント5倍キャンペーンの特典ポイントは、購入画面の獲得予定ポイントには表示されません。2027年1月19日(火)頃に、2027年1月31日(日)まで使える期間限定ポイントで進呈します。</span></p></div></div>
+<div class="fv-entry"><div class="fe-box"><p class="fv-pt fp2"><span class="lp"><span class="l">期間中エントリーで</span><span class="fpp">ポイント</span></span><span class="v"><b class="num">5</b>倍</span></p><a href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener">エントリーはこちら</a><p class="fe-note"><span class="nl">※ポイント5倍キャンペーンの特典ポイントは、購入画面の獲得予定ポイントには表示されません。<br class="fe-br">2027年1月19日(火)頃に、2027年1月31日(日)まで使える期間限定ポイントで進呈します。</span></p></div></div>
 <div class="deco" aria-hidden="true"><div class="deco-in"><span>BLACK FRIDAY</span><span>CHEERS!</span><span>DREAM CRAFT</span><span>BLACK FRIDAY</span><span>CHEERS!</span><span>DREAM CRAFT</span></div></div>
 <!-- カウントダウン -->
 <div class="cd cd-box" id="cd" aria-live="polite">
