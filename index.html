@@ -2092,6 +2092,16 @@ html{-webkit-text-size-adjust:100%!important;text-size-adjust:100%!important}
 .fe-box .fe-note{flex-basis:100%;width:100%;box-sizing:border-box;margin:12px 0 0!important;font-size:12px;line-height:1.6;color:#bbb;text-align:left!important;font-weight:400;text-wrap:wrap!important;word-break:normal!important;letter-spacing:0}
 .fe-box .fe-note .nl{display:block;padding-left:1em;text-indent:-1em}
 </style>
+<style>
+/* SP 24倍カード：送料無料と価格を写真の下に横並び（見本どおり） */
+@container (max-width:600px){
+  .p20 .item{grid-template-rows:auto auto auto 1fr auto auto!important;grid-template-areas:"rb rb" "ph nm" "ph sp" "ph gap" "sh pr" "bt bt"!important}
+  .p20 .item .ph{grid-row:2/5!important}
+  .p20 .it-ship2{grid-area:sh!important;align-self:center!important;justify-self:end!important;margin:14px 0 0 clamp(14px,4cqw,22px)!important;transform:none!important;white-space:nowrap}
+  .p20 .item .price{grid-area:pr!important;align-self:center!important;margin:14px clamp(14px,4cqw,22px) 0 0!important;white-space:nowrap}
+  .p20 .it-btns{margin-top:clamp(14px,4cqw,18px)!important}
+}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
