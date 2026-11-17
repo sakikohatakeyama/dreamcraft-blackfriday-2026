@@ -1893,6 +1893,21 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
 .pp .pp-ttl .s1{font-size:clamp(24px,7.2cqw,40px)!important;color:#fff!important}
 .pp .pp-ttl .s2{font-size:min(7.8cqw,48px)!important;white-space:nowrap;color:#dcff2b!important;text-shadow:0 0 18px #dcff2b66!important;animation:none!important;opacity:1!important}
 </style>
+<style>
+/* ヘッダー・フッターのDREAM CRAFTも白 */
+.brand b{color:#fff!important}
+/* 右サイド：プレゼントキャンペーン */
+.side-present{display:block;text-decoration:none;color:#fff;border:2px solid #dcff2b!important;border-radius:14px;padding:12px 12px 14px!important;text-align:center;background:#0b0b0c;box-shadow:0 0 18px #dcff2b44;transition:box-shadow .2s}
+.side-present:hover{box-shadow:0 0 28px #dcff2b88}
+.sp-h{margin:0;font-weight:900;font-size:15px;color:#dcff2b}
+.sp-h .en{display:block;font-family:Archivo,sans-serif;font-variation-settings:'wdth' 125;font-weight:900;font-size:11px;letter-spacing:.24em;color:#fff;margin-bottom:2px}
+.sp-img{display:block;margin:10px auto 0;width:100%;aspect-ratio:1;background:#fff;border-radius:8px;overflow:hidden}
+.sp-img img{width:100%;height:100%;object-fit:contain;display:block}
+.sp-n{display:inline-block;margin:10px 0 0;background:#dcff2b;color:#0b0b0c;font-weight:900;font-size:13px;padding:3px 12px;border-radius:999px}
+.sp-n b{font-size:1.6em;margin:0 2px;vertical-align:-.08em}
+.sp-nm{margin:6px 0 0;font-size:12px;font-weight:900;line-height:1.4}
+.sp-sub{margin:2px 0 0;font-size:10.5px;color:#bdb4a6}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -1915,11 +1930,14 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
       <p class="lbl" data-cd-lbl>ブラックフライデーまで</p>
       <p class="t" data-cd-t><span class="num" data-cd="d">0</span><small>日</small><span class="num" data-cd="h">00</span><small>時間</small><span class="num" data-cd="m">00</span><small>分</small><span class="num" data-cd="s">00</span><small>秒</small></p>
     </div>
-    <div class="side-today">
-      <p class="st-h">今日はこれがお得！</p>
-      <p class="st-day" id="st-day"></p>
-      <ul id="st-list"></ul>
-    </div>
+    <a class="side-today side-present" href="#lottery">
+      <p class="sp-h"><span class="en">PRESENT</span>ブラックが当たる！</p>
+      <span class="sp-img"><img src="img/prize-5000267024233lb.jpg" width="600" height="600" alt="名入れ ジョニーウォーカー ブラック 700ml"></span>
+      <p class="sp-n">抽選で<b class="num">3</b>名様</p>
+      <p class="sp-nm">名入れ ジョニーウォーカー ブラック</p>
+      <p class="sp-sub">期間中のお買い物で自動応募</p>
+      <ul id="st-list" hidden></ul><p id="st-day" hidden></p>
+    </a>
     <a class="side-btn pink" id="st-btn2" href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener">5倍エントリーはこちら</a>
     <a class="side-btn gold" id="st-btn1" href="#p20">お歳暮目玉商品 24倍を見る</a>
   </div>
