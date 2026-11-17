@@ -1927,6 +1927,23 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
 .p20 .item .ph{display:flex!important;align-items:flex-end!important;align-self:stretch!important;background:#fff!important;height:auto!important;min-height:0!important;border-radius:0!important}
 .p20 .item .ph img{height:auto!important;aspect-ratio:1;object-fit:contain!important}
 </style>
+<style>
+/* 2商品の後のメッセージ＋エントリー */
+.p20-after{margin-top:clamp(20px,5cqw,30px);text-align:center}
+.p20-msg{margin:0;font-weight:900;font-size:clamp(14px,4cqw,19px);line-height:1.8;color:#0b0b0c}
+.p20-msg b{color:#c4121c;font-size:1.2em}
+.p20-after .p20-entry{margin-top:14px!important}
+/* エントリーで24倍：写真の上の白い余白も赤で埋めて大きく */
+.p20 .item .ph{background:#e8202a!important}
+.p20 .item .ribbon{left:0!important;top:0!important;width:42%!important;box-sizing:border-box;border-radius:0!important;padding:clamp(10px,3cqw,16px) 6px!important;text-align:center;font-size:clamp(14px,4.2cqw,22px)!important;display:flex!important;align-items:baseline;justify-content:center;flex-wrap:wrap;gap:0 2px;white-space:nowrap}
+.p20 .item .ribbon .num{vertical-align:baseline!important;font-size:1.7em!important;line-height:1}
+/* 数字と倍のベースラインをそろえる */
+.bigx .br{align-items:baseline!important}
+.bigx .br b{line-height:1!important;vertical-align:baseline!important}
+.p20 .badge20 .calc .cv{display:flex!important;align-items:baseline;justify-content:center;gap:2px}
+.p20 .badge20 .calc .num{vertical-align:baseline!important;line-height:1}
+.p20 .item .price{align-items:baseline!important}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -2075,16 +2092,12 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
   <div class="beams p20-beams" aria-hidden="true"><div class="burst"></div><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <div class="wrap">
     <p class="sec-no">03 ／ お歳暮目玉商品</p>
-    <h2 class="shout"><span class="s1">ブラックフライデー</span><span class="s2">超目玉！</span></h2>
+    <h2 class="shout"><span class="s1">ブラックフライデー</span><span class="s2">超目玉商品！</span></h2>
     <div class="p20-cut"><img class="cs" src="img/p20-cut-s.png" width="671" height="652" alt="サッポロ ビールセット Sセット おつまみ付き"><img class="cf" src="img/p20-cut-f.png" width="655" height="381" alt="ノンアルコールビール 12種セット Fセット"></div>
     <div class="p20-head">
-      <div>
-        <p>この2点はお歳暮ギフトの20倍に、店内全品5倍のエントリー分が重なって24倍に。<span class="nobr">のし・包装も承ります。</span></p>
-      </div>
-      <div class="badge20 bigx"><p class="bl">店長一推しのお歳暮ギフトが<br>エントリーで</p><p class="br"><span class="pt">ポイント</span><span class="num">24</span><b>倍</b></p><p class="calc"><span class="c1"><i class="tg free">エントリー不要</i><span class="cv">お歳暮ギフト <b class="num">20</b>倍</span></span><span class="plus">＋</span><span class="c2"><i class="tg need">要エントリー</i><span class="cv">店内全品 <b class="num">5</b>倍</span></span></p></div>
+      <div class="badge20 bigx"><p class="bl">お歳暮ギフト2商品が<br>エントリーで</p><p class="br"><span class="pt">ポイント</span><span class="num">24</span><b>倍</b></p><p class="calc"><span class="c1"><i class="tg free">エントリー不要</i><span class="cv">お歳暮ギフト <b class="num">20</b>倍</span></span><span class="plus">＋</span><span class="c2"><i class="tg need">要エントリー</i><span class="cv">店内全品 <b class="num">5</b>倍</span></span></p></div>
     </div>
 
-    <a class="p20-entry" href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener"><span>5倍のエントリーはこちら</span><small>エントリーしないと24倍になりません</small></a>
     <div class="items">
       <article class="item">
         <span class="ribbon">エントリーで<span class="num">24</span>倍</span>
@@ -2104,6 +2117,10 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
           <p class="price"><span class="num">3<span class="cm">,</span>281</span>円<small>（税込）</small><span class="sp free">送料無料</span></p><div class="it-btns"><a class="buy" href="https://item.rakuten.co.jp/d-craft/2140110000779/" target="_blank" rel="noopener">商品ページへ</a><a class="pq-fav it-fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=S&amp;shop_bid=296346&amp;iid=10015083" target="_blank" rel="noopener" aria-label="お気に入りに追加"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.5 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.5 21.6 11.8 19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/></svg></a></div>
         </div>
       </article>
+    </div>
+    <div class="p20-after">
+      <p class="p20-msg">こちらの2点はブラックフライデー限定<b>20倍！</b><br>さらに店内全品5倍のエントリーをすると<b>24倍</b>になります。</p>
+      <a class="p20-entry" href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener"><span>ポイント5倍エントリーはこちら</span><small>※エントリーしないと24倍になりません</small></a>
     </div>
     <p class="p20-note">※ポイント24倍は、お歳暮ギフト20倍（通常1倍分を含む）＋エントリーによる店内全品5倍の追加4倍分の合計です。5倍キャンペーンへのエントリーが必要です。<br>※ブラックフライデー期間中（11/19（木）20:00〜11/25（水）1:59）のご注文が対象です。<br>※価格・在庫・ポイント倍率は変わることがあります。最新の情報は各商品ページでご確認ください。</p>
   </div>
