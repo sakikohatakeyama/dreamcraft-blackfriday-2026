@@ -1917,6 +1917,16 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
 </style>
 <style>.bk-card{grid-template-columns:40% 1fr!important}.bk-ph{min-width:0;overflow:hidden}.bk-nm,.bk-sub{text-align:left!important;min-width:0}.bk-n{justify-self:start!important}.bk-nm{font-size:clamp(14px,4cqw,20px)!important}</style>
 <style>.bk-ph{width:100%!important;height:auto!important;align-self:center!important}.bk-card{column-gap:12px!important}</style>
+<style>.bk .shout .s2{white-space:normal!important;line-height:1.2!important}</style>
+<style>
+/* 2商品カード：左上に「エントリーで24倍」、写真は下揃え、角の崩れ修正 */
+.p20 .item{position:relative;overflow:hidden!important;border-radius:16px!important;background:#fffaf3!important;box-shadow:none!important;isolation:isolate}
+.p20 .item::before,.p20 .item::after{display:none!important}
+.p20 .item .ribbon{display:block!important;position:absolute;left:0;top:0;z-index:3;margin:0!important;background:#e8202a!important;color:#fff!important;font-weight:900;font-size:clamp(11px,3.2cqw,15px)!important;line-height:1.2;padding:6px 12px 7px 10px!important;border-radius:0 0 12px 0;box-shadow:none!important}
+.p20 .item .ribbon .num{font-family:Archivo,sans-serif;font-weight:900;font-size:1.5em;color:#ffe14a;margin:0 1px;vertical-align:-.06em}
+.p20 .item .ph{display:flex!important;align-items:flex-end!important;align-self:stretch!important;background:#fff!important;height:auto!important;min-height:0!important;border-radius:0!important}
+.p20 .item .ph img{height:auto!important;aspect-ratio:1;object-fit:contain!important}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -1940,7 +1950,7 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
       <p class="t" data-cd-t><span class="num" data-cd="d">0</span><small>日</small><span class="num" data-cd="h">00</span><small>時間</small><span class="num" data-cd="m">00</span><small>分</small><span class="num" data-cd="s">00</span><small>秒</small></p>
     </div>
     <a class="side-today side-present" href="#lottery">
-      <p class="sp-h"><span class="en">PRESENT</span>黒ラベルが当たる！</p>
+      <p class="sp-h"><span class="en">PRESENT</span>サッポロ黒ラベル<br>ギフトが当たる！</p>
       <span class="sp-img"><img src="img/prize-4901880859725.jpg" width="600" height="600" alt="サッポロ 黒ラベル ビールギフトセット KS3D"></span>
       <p class="sp-n">抽選で<b class="num">3</b>名様</p>
       <p class="sp-nm">サッポロ 黒ラベル ビールギフト</p>
@@ -2077,20 +2087,18 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
     <a class="p20-entry" href="https://event.rakuten.co.jp/incentive/ichiba/henbai/event/202611195x/" target="_blank" rel="noopener"><span>5倍のエントリーはこちら</span><small>エントリーしないと24倍になりません</small></a>
     <div class="items">
       <article class="item">
-        <span class="ribbon">エントリーで ポイント<span class="num">24</span>倍</span>
+        <span class="ribbon">エントリーで<span class="num">24</span>倍</span>
         <a class="ph" href="https://item.rakuten.co.jp/d-craft/2101900000300/" target="_blank" rel="noopener"><img src="img/gft-s.jpg" width="600" height="600" alt="サッポロ ビールセット Sセット" loading="lazy"></a>
         <div class="body">
-          <span class="cat">お歳暮ギフト ｜ ビール</span>
           <h3>サッポロ ビールセット<br>Sセット おつまみ付き</h3>
           <p class="spec">350ml × 12缶＋おつまみ2個<br>ラガー・黒ラベル・ヱビス4種など12本に、チーズスナック2個を添えて。</p>
           <p class="price"><span class="num">4<span class="cm">,</span>380</span>円<small>（税込）</small><span class="sp free">送料無料（本州のみ）</span></p><div class="it-btns"><a class="buy" href="https://item.rakuten.co.jp/d-craft/2101900000300/" target="_blank" rel="noopener">商品ページへ</a><a class="pq-fav it-fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=S&amp;shop_bid=296346&amp;iid=10019763" target="_blank" rel="noopener" aria-label="お気に入りに追加"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.5 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.5 21.6 11.8 19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/></svg></a></div>
         </div>
       </article>
       <article class="item">
-        <span class="ribbon">エントリーで ポイント<span class="num">24</span>倍</span>
+        <span class="ribbon">エントリーで<span class="num">24</span>倍</span>
         <a class="ph" href="https://item.rakuten.co.jp/d-craft/2140110000779/" target="_blank" rel="noopener"><img src="img/gft-f.jpg" width="600" height="600" alt="ノンアルコールビール 12種セット Fセット" loading="lazy"></a>
         <div class="body">
-          <span class="cat">お歳暮ギフト ｜ ノンアルコール</span>
           <h3>ノンアルコールビール<br>12種セット Fセット</h3>
           <p class="spec">350ml × 12缶・送料無料<br>オールフリー・ドライゼロ・パーフェクトフリーなど4社12種。お酒を飲まない方への贈り物にも。</p>
           <p class="price"><span class="num">3<span class="cm">,</span>281</span>円<small>（税込）</small><span class="sp free">送料無料</span></p><div class="it-btns"><a class="buy" href="https://item.rakuten.co.jp/d-craft/2140110000779/" target="_blank" rel="noopener">商品ページへ</a><a class="pq-fav it-fav" href="https://my.bookmark.rakuten.co.jp/?func=reg&amp;svid=S&amp;shop_bid=296346&amp;iid=10015083" target="_blank" rel="noopener" aria-label="お気に入りに追加"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.5 3 5 6.4 5c2 0 3.4 1.1 4.1 2.3h3C14.2 6.1 15.6 5 17.6 5 21 5 23.1 8.5 21.6 11.8 19.5 16.4 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/></svg></a></div>
@@ -2106,7 +2114,7 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);addEventL
   <div class="beams bk-beams" aria-hidden="true"><div class="burst"></div><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <div class="wrap">
     <p class="bk-present" aria-hidden="true">PRESENT</p>
-    <h2 class="shout"><span class="s1">ブラックフライデーだけに</span><span class="s2">黒ラベルが当たる！</span></h2>
+    <h2 class="shout"><span class="s1">ブラックフライデーだけに</span><span class="s2">サッポロ黒ラベル<br>ギフトが当たる！</span></h2>
     <p class="bk-lead">期間中にお買い物いただいた方の中から、<br>抽選で<b class="num">3</b>名様に、サッポロ「黒ラベル」のビールギフトをプレゼント！</p>
     <p class="bk-auto"><span>エントリー不要</span>お買い物で自動応募！</p>
     <div class="bk-grid"><a class="bk-card" href="https://item.rakuten.co.jp/d-craft/4901880859725/" target="_blank" rel="noopener"><span class="bk-ph"><img src="img/prize-4901880859725.jpg" width="600" height="600" alt="サッポロ 黒ラベル ビールギフトセット KS3D" loading="lazy"></span><span class="bk-n">抽選で<b class="num">3</b>名様</span><span class="bk-nm">サッポロ 黒ラベル<br>ビールギフトセット（KS3D）</span><span class="bk-sub">350ml缶×10本・500ml缶×2本</span></a></div>
