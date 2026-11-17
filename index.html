@@ -2073,6 +2073,12 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){set
 <style>.p20-msg{font-size:min(3.55cqw,19px)!important;letter-spacing:-.01em}.p20-msg b{font-size:1.15em!important}.p20-note{display:block!important;width:100%!important}.p20-note .nl{width:auto}</style>
 <style>.p20-note .nl,.bk-note .nl,.pp-note .nl{text-align:justify;text-justify:inter-character;line-break:anywhere;padding-left:1em!important;text-indent:-1em!important}.p20-msg{font-size:min(3.4cqw,19px)!important}</style>
 <style>.p20-note .nl,.bk-note .nl,.pp-note .nl,.p5-note .nl{text-align:left!important;text-justify:auto!important;line-break:auto!important;letter-spacing:0!important;word-spacing:0!important}.p20-note,.bk-note,.pp-note{text-align:left!important;letter-spacing:0!important;font-feature-settings:"palt" 0}</style>
+<style>
+/* iPhoneの文字自動拡大を止める（行が途中で折り返して左に寄るのを防ぐ） */
+html{-webkit-text-size-adjust:100%!important;text-size-adjust:100%!important}
+.p20-note,.bk-note,.pp-note{font-size:12.5px!important;width:100%!important;box-sizing:border-box}
+.p20-note .nl,.bk-note .nl,.pp-note .nl{width:auto!important;max-width:none!important;word-break:normal!important;overflow-wrap:anywhere}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
