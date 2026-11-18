@@ -2160,6 +2160,27 @@ html{-webkit-text-size-adjust:100%!important;text-size-adjust:100%!important}
   .p20 .pr-row .price{text-align:right!important}
 }
 </style>
+<style>
+/* 抽選リード：3行、抽選で3名様を大きく */
+.bk-lead{line-height:1.5!important}
+.bk-lead>span{display:block;white-space:nowrap}
+.bk-lead .l1,.bk-lead .l3{font-size:min(4.1cqw,19px)}
+.bk-lead .l2{font-size:min(9cqw,44px);font-weight:900;line-height:1.25;margin:.12em 0 .1em}
+.bk-lead .l2 b{font-size:1.45em!important;color:#dcff2b!important;margin:0 .04em!important}
+/* SP：プレゼント枠は写真が上で大きく、その下に商品名 */
+@container (max-width:600px){
+  .bk-card{grid-template-columns:1fr!important;grid-template-rows:auto!important;row-gap:0!important;text-align:center!important}
+  .bk-card>*{grid-column:1/-1!important;grid-row:auto!important}
+  .bk-ph{width:100%!important;aspect-ratio:1;display:block}
+  .bk-ph img{width:100%;height:100%;object-fit:cover;display:block}
+  .bk-n{justify-self:center!important;margin:16px auto 0!important}
+  .bk-nm{text-align:center!important;margin:10px 14px 0!important;font-size:clamp(17px,5cqw,22px)!important}
+  .bk-sub{text-align:center!important;margin:6px 14px 18px!important}
+}
+</style>
+<style>
+@container (max-width:600px){.bk-lead .l1,.bk-lead .l3{letter-spacing:0!important}.bk-lead .l3{font-size:min(3.45cqw,19px)}}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -2348,7 +2369,7 @@ html{-webkit-text-size-adjust:100%!important;text-size-adjust:100%!important}
   <div class="wrap">
     <p class="bk-present" aria-hidden="true">PRESENT</p>
     <h2 class="shout"><span class="s1">ブラックフライデーだけに</span><span class="s2">サッポロ黒ラベル<br>ギフトが当たる！</span></h2>
-    <p class="bk-lead">期間中にお買い物いただいた方の中から、<br>抽選で<b class="num">3</b>名様に、サッポロ「黒ラベル」のビールギフトをプレゼント！</p>
+    <p class="bk-lead"><span class="l1">期間中にお買い物いただいた方の中から</span><span class="l2">抽選で<b class="num">3</b>名様に</span><span class="l3">サッポロ「黒ラベル」のビールギフトをプレゼント！</span></p>
     <p class="bk-auto"><span>エントリー不要</span>お買い物で自動応募！</p>
     <div class="bk-grid"><a class="bk-card" href="https://item.rakuten.co.jp/d-craft/4901880859725/" target="_blank" rel="noopener"><span class="bk-ph"><img src="img/prize-4901880859725.jpg" width="600" height="600" alt="サッポロ 黒ラベル ビールギフトセット KS3D" loading="lazy"></span><span class="bk-n">抽選で<b class="num">3</b>名様</span><span class="bk-nm">サッポロ 黒ラベル<br>ビールギフトセット（KS3D）</span><span class="bk-sub">350ml缶×10本・500ml缶×2本</span></a></div>
     <p class="bk-note"><span class="nl">※対象期間：11/19（木）20:00〜11/25（水）1:59のご注文。</span><span class="nl">※期間中にご購入いただいた方は自動で応募となります。エントリーは不要です。</span><span class="nl">※当選者の方には、ご注文時のメールアドレスへメールでご連絡いたします。</span><span class="nl">※賞品はサッポロ 黒ラベル ビールギフトセット（KS3D）です。</span><span class="nl">※20歳未満の方は対象外です。</span></p>
