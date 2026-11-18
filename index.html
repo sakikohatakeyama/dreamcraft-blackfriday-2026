@@ -2152,6 +2152,14 @@ html{-webkit-text-size-adjust:100%!important;text-size-adjust:100%!important}
   .p20 .item .price .num{font-size:20.5cqw!important}
 }
 </style>
+<style>
+/* SP：送料無料と価格は右揃え */
+@container (max-width:600px){
+  .p20 .pr-row{align-items:flex-end!important}
+  .p20 .pr-row .it-ship2{align-self:flex-end!important;text-align:right!important}
+  .p20 .pr-row .price{text-align:right!important}
+}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
