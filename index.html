@@ -2200,6 +2200,11 @@ html{-webkit-text-size-adjust:100%!important;text-size-adjust:100%!important}
 }</style>
 <style>/* 11/18 人気の商品：タブ10個をSPで3行に収める */
 @container (max-width:600px){.pp-tabs{gap:6px!important}.pp-tab{padding:7px 9px!important;font-size:clamp(12px,3.5cqw,15px)!important}}</style>
+<style>/* 11/18 SP：ヘッダー固定 */
+@media(max-width:1219px){.col>header{position:-webkit-sticky;position:sticky;top:0;z-index:150}
+[id]{scroll-margin-top:56px}}
+/* bodyのoverflow-x:hiddenだとstickyが効かないのでclipに */
+body{overflow-x:clip!important}</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
@@ -2238,7 +2243,7 @@ html{-webkit-text-size-adjust:100%!important;text-size-adjust:100%!important}
 <nav class="hb-menu" id="hbMenu" hidden>
   <p class="hb-ttl"><span>BLACK</span><span>FRIDAY</span></p>
   <p class="hb-date"><b class="num">11.19</b>（木）20:00 〜 <b class="num">11.25</b>（水）1:59</p>
-  <a href="#top">トップ</a>
+  <a href="#top">ブラックフライデー</a>
   <a href="#calendar">おトクカレンダー</a>
   <a href="#p20">お歳暮目玉商品 24倍</a>
   <a href="#lottery">抽選で黒ラベルが当たる！</a>
