@@ -2211,6 +2211,19 @@ body{overflow-x:clip!important}</style>
   .fv-tape .tape span{font-size:13px!important;padding:4px 14px!important}
   .fvt-in{padding-top:clamp(84px,24cqw,110px)!important}
 }</style>
+<style>/* 11/18 SP：FVロゴと日付を少し大きく */
+@container (max-width:600px){
+.fvt-title .l2{font-size:calc((100cqw - 32px)*.92/4.756)!important}
+.fvt-title .l1{font-size:calc((100cqw - 32px)*.92/4.511)!important}
+.fv-tape .fv-date .dt>.num{font-size:5.7cqw!important}
+.fv-tape .fv-date .tm{font-size:4.1cqw!important}
+.fv-tape .fv-date .wk{width:5.4cqw!important;height:5.4cqw!important;font-size:2.9cqw!important}
+}</style>
+<style>/* 11/18 ハンバーガー：丸なし・線を蛍光黄緑 */
+.hb{background:transparent!important;box-shadow:none!important;border-radius:0!important}
+.hb i{background:#dcff2b!important;transition:transform .25s,opacity .2s,background .2s}
+.hb:hover i{background:#fff!important}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
