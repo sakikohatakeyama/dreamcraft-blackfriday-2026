@@ -2205,6 +2205,12 @@ html{-webkit-text-size-adjust:100%!important;text-size-adjust:100%!important}
 [id]{scroll-margin-top:56px}}
 /* bodyのoverflow-x:hiddenだとstickyが効かないのでclipに */
 body{overflow-x:clip!important}</style>
+<style>/* 11/18 SP：FVの帯をもう少し内側に（文字が角で切れないように） */
+@container (max-width:600px){
+  .fv-tape .t1{top:clamp(30px,9cqw,44px)!important;left:-14%!important;width:62%!important;transform:rotate(-24deg)!important}
+  .fv-tape .tape span{font-size:13px!important;padding:4px 14px!important}
+  .fvt-in{padding-top:clamp(84px,24cqw,110px)!important}
+}</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
