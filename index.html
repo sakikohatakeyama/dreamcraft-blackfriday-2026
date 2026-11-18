@@ -2130,6 +2130,28 @@ html{-webkit-text-size-adjust:100%!important;text-size-adjust:100%!important}
   .p20 .item .price .num{font-size:clamp(36px,10.6cqw,50px)!important}
 }
 </style>
+<style>
+/* SP：送料無料ラベルは価格の上（左揃え） */
+@container (max-width:600px){
+  .p20 .pr-row{flex-direction:column;align-items:flex-start;gap:6px}
+  .p20 .item .price .num{font-size:clamp(40px,12cqw,56px)!important}
+}
+</style>
+<style>
+/* SP：価格はめいっぱい大きく、左揃え */
+@container (max-width:600px){
+  .p20 .pr-row{align-items:flex-start!important;text-align:left!important}
+  .p20 .pr-row .price{text-align:left!important;width:100%}
+  .p20 .item .price .num{font-size:20cqw!important}
+}
+</style>
+<style>
+@container (max-width:600px){
+  .p20 .pr-row .it-ship2{text-align:left!important;align-self:flex-start!important;justify-self:start!important;width:auto!important}
+  .p20 .pr-row .price{font-size:6cqw!important}
+  .p20 .item .price .num{font-size:20.5cqw!important}
+}
+</style>
 </head>
 <body>
 <aside class="side side-l" aria-label="メニュー">
