@@ -1,0 +1,20 @@
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td align="center">
+<a href="https://item.rakuten.co.jp/d-craft/2101900000300/">
+<img src="https://image.rakuten.co.jp/d-craft/cabinet/08723019/bf2026_top_p24_1.png"
+ width="624" alt="サッポロ ビールセット Sセット おつまみ付き エントリーで24倍"
+ border="0" style="display:block;max-width:100%;height:auto;">
+</a>
+</td>
+</tr>
+<tr>
+<td align="center">
+<a href="https://item.rakuten.co.jp/d-craft/2140110000779/">
+<img src="https://image.rakuten.co.jp/d-craft/cabinet/08723019/bf2026_top_p24_2.png"
+ width="624" alt="ノンアルコールビール 12種セット Fセット エントリーで24倍"
+ border="0" style="display:block;max-width:100%;height:auto;">
+</a>
+</td>
+</tr>
+</table>
