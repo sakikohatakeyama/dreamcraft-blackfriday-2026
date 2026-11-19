@@ -94,9 +94,9 @@
 </tr>
 <tr>
 <td style="line-height:0;font-size:0;">
-<a href="https://search.rakuten.co.jp/search/mall/%E3%81%8A%E6%AD%B3%E6%9A%AE%20%E3%83%93%E3%83%BC%E3%83%AB/?sid=296346">
-<img src="https://image.rakuten.co.jp/d-craft/cabinet/08723019/bf_11b.jpg"
- width="600" height="1347"
+<a href="https://www.rakuten.co.jp/gold/d-craft/dreamcraft-blackfriday-2026/index.html#oseibo">
+<img src="https://image.rakuten.co.jp/d-craft/cabinet/08723019/bf_20.jpg"
+ width="600" height="291"
  alt="お歳暮ビールもブラックフライデーがお得"
  border="0" style="display:block;">
 </a>
@@ -104,9 +104,105 @@
 </tr>
 <tr>
 <td style="line-height:0;font-size:0;">
+<table width="600" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="300" style="line-height:0;font-size:0;">
+<a href="https://item.rakuten.co.jp/d-craft/4901004045874/">
+<img src="https://image.rakuten.co.jp/d-craft/cabinet/08723019/bf_21.jpg"
+ width="300" height="528"
+ alt="ビール 飲み比べ セット アサヒ AVG-3 アサヒビール 5種12缶セット 2,966円"
+ border="0" style="display:block;">
+</a>
+</td>
+<td width="300" style="line-height:0;font-size:0;">
+<a href="https://item.rakuten.co.jp/d-craft/4901004061713/">
+<img src="https://image.rakuten.co.jp/d-craft/cabinet/08723019/bf_22.jpg"
+ width="300" height="528"
+ alt="ビール ジュース 飲み比べ セット アサヒ FS-5G スーパードライ ウェルチ 4,899円"
+ border="0" style="display:block;">
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="line-height:0;font-size:0;">
+<table width="600" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="300" style="line-height:0;font-size:0;">
+<a href="https://item.rakuten.co.jp/d-craft/4901880879952/">
+<img src="https://image.rakuten.co.jp/d-craft/cabinet/08723019/bf_23.jpg"
+ width="300" height="528"
+ alt="ビール セット サッポロ エビス YE4DN恵比寿 ヱビス 3,899円"
+ border="0" style="display:block;">
+</a>
+</td>
+<td width="300" style="line-height:0;font-size:0;">
+<a href="https://item.rakuten.co.jp/d-craft/4901777423923/">
+<img src="https://image.rakuten.co.jp/d-craft/cabinet/08723019/bf_24.jpg"
+ width="300" height="528"
+ alt="ビール セット サントリー BPCK3S プレミアムモルツ 干支デザインセットプレモル  2,966円"
+ border="0" style="display:block;">
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="line-height:0;font-size:0;">
+<table width="600" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="300" style="line-height:0;font-size:0;">
+<a href="https://item.rakuten.co.jp/d-craft/4901777419131/">
+<img src="https://image.rakuten.co.jp/d-craft/cabinet/08723019/bf_25.jpg"
+ width="300" height="526"
+ alt="ビール 飲み比べ セット サントリー BP5AG 7種18缶セットプレモル 4,389円"
+ border="0" style="display:block;">
+</a>
+</td>
+<td width="300" style="line-height:0;font-size:0;">
+<a href="https://item.rakuten.co.jp/d-craft/4901880897581-ec/">
+<img src="https://image.rakuten.co.jp/d-craft/cabinet/08723019/bf_26.jpg"
+ width="300" height="526"
+ alt="ビール 飲み比べ セット サッポロ エビス YEV3DEC ヱビス 5種 11缶 EC限 2,966円"
+ border="0" style="display:block;">
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="line-height:0;font-size:0;">
+<table width="600" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td width="300" style="line-height:0;font-size:0;">
+<a href="https://item.rakuten.co.jp/d-craft/2101900000140/">
+<img src="https://image.rakuten.co.jp/d-craft/cabinet/08723019/bf_27.jpg"
+ width="300" height="533"
+ alt="ビール セット究極12種 ビールセット 350ml×12本 4,280円"
+ border="0" style="display:block;">
+</a>
+</td>
+<td width="300" style="line-height:0;font-size:0;">
+<a href="https://item.rakuten.co.jp/d-craft/4901411040493/">
+<img src="https://image.rakuten.co.jp/d-craft/cabinet/08723019/bf_28.jpg"
+ width="300" height="533"
+ alt="ビール セット キリン K-IS3 一番搾り 12缶セット 2,966円"
+ border="0" style="display:block;">
+</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td style="line-height:0;font-size:0;">
 <a href="https://search.rakuten.co.jp/search/mall/%E3%81%8A%E6%AD%B3%E6%9A%AE%20%E3%83%93%E3%83%BC%E3%83%AB/?sid=296346">
-<img src="https://image.rakuten.co.jp/d-craft/cabinet/08723019/bf_12b.jpg"
- width="600" height="1192"
+<img src="https://image.rakuten.co.jp/d-craft/cabinet/08723019/bf_29.jpg"
+ width="600" height="133"
  alt="お歳暮ビールをもっと見る"
  border="0" style="display:block;">
 </a>
